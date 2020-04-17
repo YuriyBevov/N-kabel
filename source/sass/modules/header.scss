@@ -1,5 +1,4 @@
 .header {
-
   &__wrapper {
     @include container();
     display: flex;
@@ -9,7 +8,7 @@
   }
 
   &__logo {
-    margin-right: $prs*5.6 ;
+    margin-right: $prs*5.6;
   }
 
   &__search-box {
@@ -37,14 +36,14 @@
       position: absolute;
       top: 0;
       right: 53px;
-      content: '';
+      content: "";
       width: 63px;
       height: 42px;
       border: 0;
       padding: 0;
       cursor: pointer;
       background-color: $seach-btn;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 10px;
 
       &:hover svg,
@@ -97,7 +96,7 @@
       position: absolute;
       top: 50%;
       left: 10px;
-      content: '';
+      content: "";
       width: 11px;
       height: 11px;
       background-image: url("../img/icon-phone.svg");
@@ -118,7 +117,7 @@
       position: absolute;
       top: 50%;
       left: -5px;
-      content: '';
+      content: "";
       width: 13px;
       height: 12px; // change it
       background-image: url("../img/icon-mail.svg");
@@ -134,7 +133,6 @@
 
 @media (max-width: $desktop-width) {
   .header {
-
     &__wrapper {
       padding-top: 20px;
     }

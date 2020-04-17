@@ -1,5 +1,4 @@
 .description {
-
   &__wrapper {
     @include container();
     padding-top: 50px;
@@ -16,7 +15,7 @@
     color: $black;
   }
 
-  &__list input[type=checkbox] {
+  &__list input[type="checkbox"] {
     position: absolute;
     opacity: 0;
   }
@@ -31,9 +30,9 @@
     }
   }
 
-  &__list input[type=checkbox]:checked + label + article,
-  &__list input[type=checkbox]:checked + label:nth-of-type(n) + article {
-  	display: block;
+  &__list input[type="checkbox"]:checked + label + article,
+  &__list input[type="checkbox"]:checked + label:nth-of-type(n) + article {
+    display: block;
     opacity: 1;
   }
 
@@ -50,7 +49,7 @@
     cursor: pointer;
     color: $black;
     background: $lightgreen;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s 0.1s, color 0.3s 0.1s;
     border-bottom: 1px solid $lightgrey;
 
@@ -60,7 +59,7 @@
       left: 20px;
       width: 16px;
       height: 16px;
-      content: '';
+      content: "";
       background-image: url("../img/description-arrow.svg");
       background-repeat: no-repeat;
       transform: translateY(-50%);
@@ -69,10 +68,10 @@
   }
 
 
-  &__list input[type=checkbox]:checked + label {
+  &__list input[type="checkbox"]:checked + label {
     color: $white;
     background: $secondblue;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
     border-bottom: none;
 
     &::before {

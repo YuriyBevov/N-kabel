@@ -94,7 +94,6 @@
   }
 
   &__submit {
-
     label {
       position: relative;
       font-size: $prs*0.9;
@@ -109,9 +108,9 @@
         left: 0;
         width: 10px;
         height: 10px;
-        content: '';
+        content: "";
         border: none;
-        background-color: #C4C4C4;
+        background-color: #c4c4c4;
       }
     }
 
@@ -135,8 +134,7 @@
 }
 
 @media (max-width: $desktop-width) {
-  .footer-request-form  {
-
+  .footer-request-form {
     &__wrapper {
       flex-direction: column;
       justify-content: center;
