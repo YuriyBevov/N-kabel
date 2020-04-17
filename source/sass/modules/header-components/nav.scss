@@ -1,0 +1,135 @@
+.nav {
+  background-color: $primBlack;
+
+  &__wrapper {
+    @include container();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 62px;
+  }
+
+  &__toggle {
+    cursor: pointer;
+    margin-right: 35px;
+    background: transparent;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-right: 24px;
+    min-height: 62px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-family: $bold;
+    font-size: $prs*1.4;
+    line-height: $prs*1.9;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 100%;
+    padding-right: 15px;
+
+    color: $white;
+
+    @include transition($color: $blue);
+
+    &--company,
+    &--catalog {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 8px;
+        height: 8px;
+        content: '';
+        background-image: url("../img/arrow-down.svg");
+        background-repeat: no-repeat;
+        transform: translate(0, -25%);
+      }
+    }
+  }
+
+  &__item--company {
+    position: relative;
+
+    ul {
+      position: absolute;
+      display: none;
+      width: 260px;
+      top: 62px;
+      left: 0;
+      padding: 0 10px;
+      background-color: $primBlack;
+
+
+      & li {
+        padding: 15px 0;
+        border-bottom: 1px solid $brd-grey;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      & a {
+        font-family: $reg;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        text-transform: inherit;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      & ul {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .nav {
+
+    &__toggle {
+      display: none;
+    }
+
+    &__wrapper {
+      display: none;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & a {
+        margin-left: auto;
+      }
+
+      &--company ul {
+        position: static;
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+.header {
+
+  &__wrapper {
+    @include container();
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 72px;
+  }
+
+  &__logo {
+    margin-right: $prs*5.6 ;
+  }
+
+  &__search-box {
+    position: relative;
+  }
+
+  &__search {
+    width: 455px;
+    height: 42px;
+    background: $grey;
+    border: 1px solid $brd-grey;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 56px;
+    padding-left: 30px;
+
+    &::placeholder { // change it
+      font-size: 12px;
+      line-height: 16px;
+      padding: 0;
+      color: $brd-black;
+    }
+
+    &-btn {
+      position: absolute;
+      top: 0;
+      right: 53px;
+      content: '';
+      width: 63px;
+      height: 42px;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      background-color: $seach-btn;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+
+      &:hover svg,
+      &:focus svg {
+        color: $blue;
+      }
+
+      &:active svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &-icon {
+      vertical-align: middle;
+      transition: width 0.1s, height 0.1s;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 170px;
+    margin-right: 56px;
+
+    &--mail {
+      width: 133px;
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-size: $scs*1.5;
+    line-height: $scs*2;
+    color: $lightblue;
+  }
+
+  p {
+    font-size: $prs*1.4;
+    line-height: $prs*1.9;
+
+    color: $black;
+  }
+
+  &__phone {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      content: '';
+      width: 11px;
+      height: 11px;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      transform: translate(0, -40%);
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__mail {
+    position: relative;
+    font-weight: 700;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: -5px;
+      content: '';
+      width: 13px;
+      height: 12px; // change it
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      transform: translate(0, -35%);
+    }
+  }
+
+  &__nav-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .header {
+
+    &__wrapper {
+      padding-top: 20px;
+    }
+
+    &__logo {
+      order: 1;
+    }
+
+    &__box {
+      order: 2;
+
+      &--phone {
+        margin-left: auto;
+      }
+    }
+
+    &__search-box {
+      width: 100%;
+      order: 3;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    &__search {
+      width: inherit;
+
+      &-btn {
+        right: -2px;
+      }
+    }
+
+    &__nav-toggle {
+      width: 56px;
+      height: 46px;
+      background-color: black;
+      border-radius: 10px;
+      order: 2;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.rules {
+
+  &__wrapper {
+    @include container();
+  }
+}

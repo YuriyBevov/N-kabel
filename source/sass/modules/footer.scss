@@ -1,0 +1,59 @@
+.footer {
+  margin-top: auto;
+  background-color: $primBlack;
+
+  &__top-wrapper {
+    @include container();
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+  }
+
+  &__bottom-wrapper {
+    @include container();
+  }
+
+  &__container  {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 10px;
+    min-height: 307px;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__nav {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 800px;
+      width: 66.66%;
+    }
+
+    &-item {
+      width: 50%;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-link {
+      font-family: $bold;
+      font-size: $scs*1.5;
+      line-height: $scs*2;
+
+      color: $white;
+    }
+  }
+}

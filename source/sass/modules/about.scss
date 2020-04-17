@@ -1,0 +1,244 @@
+.about {
+  padding-top: 30px;
+  padding-bottom: 85px;
+
+  &__wrapper {
+    @include container();
+    display: flex;
+    padding: 0;
+    padding-left: 150px;
+  }
+
+  // catalog
+
+  &__catalog {
+    display: flex;
+
+
+    &-list {
+      width: 280px;
+      margin-right: 30px;
+    }
+
+    &-item {
+      display: flex;
+      position: relative;
+      align-items: center;
+      width: 100%;
+      padding-left: 80px;
+      border-bottom: 1px solid $brd-black;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        width: 37px;
+        height: 37px;
+        content: '';
+        background-image: url("../img/cable-small.png");
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+      }
+    }
+
+    &-link {
+      font-size: $prs*1.4;
+      line-height: $prs*1.9;
+      padding: 12.3px 0;
+      width: 100%;
+
+      color: $black;
+
+      @include transition($blue);
+    }
+  }
+
+  // content
+
+  &__content {
+    width: 100%;
+  }
+
+  &__banner {
+    min-height: 364px;
+    padding: 60px 80px;
+    margin-bottom: 30px;
+    background-color: $lightgrey;
+    background-image: url("../img/banner-man.png");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+
+  &__mark {
+    font-size: $prs*1.8;
+    line-height: $prs*2.5;
+    width: 245px;
+    min-height: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 100px;
+    color: $black;
+    background-color: $white;
+  }
+
+  &__title {
+    font-family: $bold;
+    font-size: $prs*3.6;
+    line-height: $prs*4.9;
+    margin-bottom: 40px;
+    max-width: 530px;
+
+    color: $black;
+
+    span {
+      font-family: $reg;
+      font-weight: 400;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: $prs*1.8;
+    line-height: $prs*2.5;
+    width: 165px;
+    min-height: 49px;
+    padding: 10px;
+    border-radius: 5px;
+    color: $black;
+    background-color: $yellow;
+
+    @include transition($color: $white);
+  }
+
+  // list
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    border-right: 1px solid $black;
+
+    & > span {
+      color: $brd-black;
+    }
+
+    &:first-child {
+      width: 240px;
+      padding-right: 10px;
+    }
+
+    &:nth-child(2) {
+      padding: 0 10px;
+      width: 290px;
+    }
+
+    &:last-child {
+      padding-left: 10px;
+      width: 250px;
+      border: none;
+    }
+  }
+
+  &__advantage {
+    font-family: $reg;
+    font-size: $prs*1.8;
+    line-height: $prs*2.5;
+    width: 100%;
+
+    color: $black;
+
+    span {
+      font-family: $bold;
+    }
+  }
+
+  // request
+
+  &__form-container {
+    padding-right: 150px;
+    background-color: $about-form-bg;
+  }
+
+  &__request {
+    display: flex;
+    align-items: center;
+    min-height: 110px; // не работает в ие
+    // height: 110px; // нужно так
+    padding-left: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+
+    &-title {
+      font-family: $bold;
+      font-size: $prs*2;
+      line-height: $prs*2.7;
+      margin-right: auto;
+      width: 190px;
+
+      color: $black;
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .about {
+    &__wrapper {
+      position: relative;
+    }
+
+    &__catalog {
+      position: absolute;
+      top: 0;
+      left: 15px;
+    }
+
+    &__banner,
+    &__list {
+      margin-left: 310px;
+    }
+
+    &__form-container {
+      padding-right: 0;
+    }
+
+    &__item {
+
+      &:first-child,
+      &:nth-child(2) {
+        width: 50%;
+        padding: 0 5px;
+      }
+
+      &:nth-child(2) {
+        border-right: none;
+      }
+
+      &:nth-child(3) {
+        width: 100%;
+        padding: 20px 10px 0;
+      }
+    }
+
+    &__advantage {
+      max-width: 250px;
+    }
+
+    &__request {
+      padding: 0 5px;
+    }
+  }
+}

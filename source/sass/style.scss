@@ -1,0 +1,42 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "fonts";
+@import "global";
+
+// modules
+
+// header
+
+@import "modules/header";
+@import "modules/header-components/nav";
+
+// about
+
+@import "modules/about";
+@import "modules/about-components/about-request-form";
+
+// dealership
+
+@import "modules/dealership";
+@import "modules/dealership-components/swiper-slider";
+
+// stock
+
+@import "modules/stock";
+
+// description
+
+@import "modules/description";
+
+// footer
+
+@import "modules/footer";
+@import "modules/footer-components/contacts";
+@import "modules/footer-components/social";
+@import "modules/footer-components/info";
+@import "modules/footer-components/footer-request-form";
+
+// questions
+
+@import "modules/rules";

@@ -1,0 +1,90 @@
+.description {
+
+  &__wrapper {
+    @include container();
+    padding-top: 50px;
+    padding-bottom: 120px;
+  }
+
+  &__title {
+    margin-bottom: 70px;
+    font-family: $bold;
+    font-size: $prs*3;
+    line-height: $prs*4.1;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: $black;
+  }
+
+  &__list input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__list article {
+    display: none;
+    padding: 15px 20px;
+    overflow: hidden;
+
+    & p {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list input[type=checkbox]:checked + label + article,
+  &__list input[type=checkbox]:checked + label:nth-of-type(n) + article {
+  	display: block;
+    opacity: 1;
+  }
+
+  &__list label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    min-height: 70px;
+    padding: 20px 80px;
+    border: none;
+    font-size: $prs*1.8;
+    line-height: $prs*2.5;
+    cursor: pointer;
+    color: $black;
+    background: $lightgreen;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s 0.1s, color 0.3s 0.1s;
+    border-bottom: 1px solid $lightgrey;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      width: 16px;
+      height: 16px;
+      content: '';
+      background-image: url("../img/description-arrow.svg");
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+      transition: transform 0.3s;
+    }
+  }
+
+
+  &__list input[type=checkbox]:checked + label {
+    color: $white;
+    background: $secondblue;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    border-bottom: none;
+
+    &::before {
+      transform: rotate(-180deg) translateY(50%);
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .description {
+    &__wrapper {
+      padding-bottom: 100px;
+    }
+  }
+}

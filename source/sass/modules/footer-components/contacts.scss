@@ -1,0 +1,100 @@
+.contacts {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-right: 110px;
+  }
+
+  &__item {
+    width: 220px;
+    margin-right: 30px;
+    margin-bottom: 15px;
+
+
+    &:first-child {
+      margin-left: 250px;
+    }
+
+    address {
+      width: 210px;
+      font-size: $prs;
+      line-height: $prs*1.4;
+      font-style: normal;
+
+      color: $white;
+    }
+
+
+    &--working-mode {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-75%);
+
+      width: 110px;
+      font-size: $scs*1.5;
+      line-height: $scs*2;
+
+      align-self: center;
+      color: $white;
+
+      span {
+        font-family: $bold;
+      }
+    }
+  }
+
+  &__link {
+    font-size: $prs*1.4;
+    line-height: $prs*1.9;
+    color: $white;
+
+    span {
+      font-family: $bold;
+      color: $yellow;
+    }
+
+    &--mr {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .contacts {
+    &__list {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    &__item {
+      &--kazan,
+      &--moscow {
+        order: 1;
+      }
+
+      &--primary,
+      &--nn,
+      &--novsib {
+        order: 2;
+      }
+
+      &--ekb,
+      &--perm {
+        order: 3;
+      }
+
+      &--working-mode {
+        position: static;
+        transform: translateY(0);
+        order: 4;
+      }
+    }
+  }
+}
