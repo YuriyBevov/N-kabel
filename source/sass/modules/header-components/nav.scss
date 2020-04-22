@@ -41,10 +41,13 @@
     text-transform: uppercase;
     height: 100%;
     padding-right: 15px;
-
     color: $white;
 
-    @include transition($color: $blue);
+    @include hover($color: $blue);
+
+    &.active {
+      color: $blue;
+    }
 
     &--company,
     &--catalog {
@@ -75,7 +78,7 @@
       left: 0;
       padding: 0 10px;
       background-color: $primBlack;
-
+      z-index: 1000;
 
       & li {
         padding: 15px 0;

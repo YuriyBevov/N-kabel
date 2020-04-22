@@ -1,27 +1,49 @@
 @mixin container() {
   max-width: 1440px;
-  padding: 0 150px;
+  padding-right: 150px;
+  padding-left: 150px;
   margin: 0 auto;
 
   @media (max-width: $desktop-width) {
     max-width: 1439px;
-    padding: 0 15px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   @media (max-width: $tablet-width) {
     max-width: 834px;
+    min-width: 375px;
   }
 }
 
-@mixin transition($color) {
+@mixin hover($color, $bkg: inherit) {
   transition: 0.1s 0.05s;
 
   &:hover,
   &:focus {
+    background-color: $bkg;
     color: $color;
   }
 
   &:active {
     opacity: 0.8;
+  }
+}
+
+@mixin path() {
+  display: block;
+  font-size: $prs*1.2;
+  line-height: $prs*1.6;
+  text-transform: lowercase;
+  margin-bottom: 55px;
+  padding-top: 10px;
+  color: $black;
+
+  & span {
+    color: $brd-grey;
+  }
+
+  @media (max-width: $desktop-width) {
+    display: none;
   }
 }

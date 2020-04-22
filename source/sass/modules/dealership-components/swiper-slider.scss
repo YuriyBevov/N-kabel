@@ -14,8 +14,8 @@
   }
 }
 
-.swiper-button-prev {
-  transform: rotate(180deg);
+.swiper-container {
+  padding: 0 50px;
 }
 
 .swiper-slide {
@@ -23,10 +23,21 @@
   justify-content: center;
   align-items: center;
   //width: 240px !important; работает в ие, не работает в хроме
+
   height: 350px;
   background-color: transparent;
   transform: scale(0.6);
   transition: transform 0.7s 0.1s;
+}
+
+
+.swiper-button-prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.swiper-button-next {
+  right: 0;
 }
 
 .swiper-slide-next,
@@ -37,4 +48,11 @@
 .swiper-slide-active {
   transform: scale(1);
   z-index: 1;
+}
+
+@media (max-width: $tablet-width) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 }

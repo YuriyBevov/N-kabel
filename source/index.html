@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="description" CONTENT="ООО НОВАКАБЕЛЬ. Продажа кабеля и провода из налия и под заказ">
+  <meta name="description" CONTENT="ООО НОВАКАБЕЛЬ. Продажа кабеля и провода из наличия и под заказ">
   <title>N-Kabel</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="css/swiper.min.css">
 </head>
   <body>
     <div style="display:none">
@@ -16,10 +15,12 @@
     <header class="header">
       <div class="header__wrapper">
 
-        <img  class="header__logo logo" src="../img/logo.svg" alt="Логотип компании" width="210" height="58">
+        <a href="index.html" class="header__logo logo">
+          <img src="../img/logo.svg" alt="Логотип компании" width="210" height="58">
+        </a>
 
         <div class="header__search-box">
-          <label for="search" class="visually-hidden"></label>
+          <label for="search" class="visually-hidden">Поиск</label>
           <input class="header__search" type="search" name="search" id="search" placeholder="Поиск">
           <button type="submit" class="header__search-btn" aria-label="Кнопка поиска">
             <svg class="header__search-icon" width="16" height="16">
@@ -50,13 +51,14 @@
           <ul class="nav__list">
             <li class="nav__item nav__item--catalog"><a class="nav__link nav__link--catalog" href="#">каталог</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Статьи</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Производство</a></li>
+            <li class="nav__item"><a class="nav__link" href="production.html">Производство</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Стандарты</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Производство</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Срочное производство</a></li>
             <li class="nav__item nav__item--company"><a class="nav__link nav__link--company" href="#">О компании</a>
               <ul>
+                <li><a class="nav__link" href="company.html">О компании</a></li>
                 <li><a class="nav__link" href="#">Склад</a></li>
-                <li><a class="nav__link" href="#">Документы и реквизиты</a></li>
+                <li><a class="nav__link" href="documents.html">Документы и реквизиты</a></li>
                 <li><a class="nav__link" href="#">Сертификаты и паспорта</a></li>
                 <li><a class="nav__link" href="#">Партнерство&nbsp;и&nbsp;сотрудничество</a></li>
               </ul>
@@ -86,6 +88,7 @@
                 <li class="about__catalog-item"><a class="about__catalog-link" href="#">Саморегулирующийся греющий кабель FINE KOREA</a></li>
                 <li class="about__catalog-item"><a class="about__catalog-link" href="#">NIKOMAX</a></li>
                 <li class="about__catalog-item"><a class="about__catalog-link" href="#">NETLAN</a></li>
+
               </ul>
             </div>
             <div class="about__content">
@@ -111,31 +114,31 @@
                 <li class="about__item">
                   <span>-3-</span>
                   <p class="about__advantage">
-                    <span>Осуществляем доставку</span> в любой населенный пункт России
+                    <span>Осуществляем доставку</span> в любой населенный пункт <br> России
                   </p>
                 </li>
               </ul>
-              <div class="about__form-container">
-                <div class="about__request">
-                  <p class="about__request-title">Отправьте заявку</p>
+            </div>
+            <div class="about__form-container">
+              <div class="about__request">
+                <p class="about__request-title">Отправьте заявку</p>
 
-                  <form class="request__form about-request-form" action="#">
+                <form class="about-form" action="#">
 
-                    <fieldset class="about-request-form__content">
-                      <label for="about-request-form__email"></label>
-                      <input class="about-request-form__mail" type="email" id="about-request-form__email" placeholder="Введите ваш Email">
+                  <fieldset class="about-form__content">
+                    <label for="about-form__email" class="visually-hidden">Почта</label>
+                    <input class="about-form__mail" type="email" id="about-form__email" placeholder="Введите ваш Email">
 
-                      <button type="button">Загрузить файл</button>
-                    </fieldset>
+                    <button type="button">Загрузить файл</button>
+                  </fieldset>
 
-                    <fieldset class="about-request-form__submit">
-                      <button class="about-request-form__submit-btn" type="submit">Отправить</button>
+                  <fieldset class="about-form__submit">
+                    <button class="about-form__submit-btn" type="submit">Отправить</button>
 
-                      <input class="visually-hidden" type="checkbox" id="about-request-form__accept-rules">
-                      <label class="about-request-form__submit-accept-rules" for="about-request-form__accept-rules">Согласен на обработку персональных данных</label>
-                    </fieldset>
-                  </form>
-                </div>
+                    <input class="visually-hidden" type="checkbox" id="about-form__accept-rules">
+                    <label class="about-form__submit-accept-rules" for="about-form__accept-rules">Согласен на обработку персональных данных</label>
+                  </fieldset>
+                </form>
               </div>
             </div>
         </div>
@@ -167,8 +170,8 @@
               </div>
 
               <!-- If we need navigation buttons -->
-              <!--<div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>-->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
 
             </div>
           </div>
@@ -192,7 +195,7 @@
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
-                <b class="stock__item-price">от <span>29.59</span> руб/м</b>
+                <p class="stock__item-price">от <span>29.59</span> руб/м</p>
                 <div class="stock__item-order-btn">Заказать</div>
                 </a>
               </div>
@@ -205,7 +208,7 @@
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
-                <b class="stock__item-price">от <span>29.59</span> руб/м</b>
+                <p class="stock__item-price">от <span>29.59</span> руб/м</p>
                 <div class="stock__item-order-btn">Заказать</div>
                 </a>
               </div>
@@ -218,7 +221,7 @@
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
-                <b class="stock__item-price">от <span>29.59</span> руб/м</b>
+                <p class="stock__item-price">от <span>29.59</span> руб/м</p>
                 <div class="stock__item-order-btn">Заказать</div>
                 </a>
               </div>
@@ -231,7 +234,7 @@
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
-                <b class="stock__item-price">от <span>29.59</span> руб/м</b>
+                <p class="stock__item-price">от <span>29.59</span> руб/м</p>
                 <div class="stock__item-order-btn">Заказать</div>
                 </a>
               </div>
@@ -244,7 +247,7 @@
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
-                <b class="stock__item-price">от <span>29.59</span> руб/м</b>
+                <p class="stock__item-price">от <span>29.59</span> руб/м</p>
                 <div class="stock__item-order-btn">Заказать</div>
                 </a>
               </div>
@@ -257,7 +260,7 @@
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
-                <b class="stock__item-price">от <span>29.59</span> руб/м</b>
+                <p class="stock__item-price">от <span>29.59</span> руб/м</p>
                 <div class="stock__item-order-btn">Заказать</div>
                 </a>
               </div>
@@ -270,7 +273,7 @@
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
-                <b class="stock__item-price">от <span>29.59</span> руб/м</b>
+                <p class="stock__item-price">от <span>29.59</span> руб/м</p>
                 <div class="stock__item-order-btn">Заказать</div>
                 </a>
               </div>
@@ -283,7 +286,7 @@
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
-                <b class="stock__item-price">от <span>29.59</span> руб/м</b>
+                <p class="stock__item-price">от <span>29.59</span> руб/м</p>
                 <div class="stock__item-order-btn">Заказать</div>
                 </a>
               </div>
@@ -296,7 +299,7 @@
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
-                <b class="stock__item-price">от <span>29.59</span> руб/м</b>
+                <p class="stock__item-price">от <span>29.59</span> руб/м</p>
                 <div class="stock__item-order-btn">Заказать</div>
                 </a>
               </div>
@@ -313,7 +316,7 @@
               <input type="checkbox" name="description__article" id="description__article-1" checked>
               <label for="description__article-1">Как выбрать кабель?</label>
               <article>
-                <h3 class="visualy-hidden">Как выбрать кабель?</h3>
+                <h3 class="visually-hidden">Как выбрать кабель?</h3>
                 <p>
                   Кабель представляет собой систему проводников. Их может быть два и больше. Проводники объединены между собой оболочкой, которая может быть пластмассовой, пластиковой, резиновой.
                   Оболочка выполняет защитную функцию. Она изолирует проводники от влаги, солнечных лучей и других вредных факторов внешней среды.
@@ -329,63 +332,157 @@
                 </p>
               </article>
             </li>
+            <li class="description__item">
+              <input type="checkbox" name="description__article" id="description__article-2">
+              <label for="description__article-2">Как купить кабель?</label>
+              <article>
+                <h3 class="visually-hidden">Как купить кабель?</h3>
+                <p>
+                  Строительство дома или его ремонт не может обойтись без оснащения здания кабельно-проводными системами.
+                  Сегодня они представлены в различных модификациях, поэтому каждый потребитель сможет легко найти тот кабель, который лучше всего справится с поставленными задачами.
+                </p>
+                <p>
+                  Продажа кабеля осуществляется через специализированные магазины, а также через онлайн-магазины.
+                </p>
+              </article>
+            </li>
+            <li class="description__item">
+              <input type="checkbox" name="description__article" id="description__article-3">
+              <label for="description__article-3">Составляющие себестоимости на кабель</label>
+              <article>
+                <h3 class="visually-hidden">Составляющие себестоимости на кабель</h3>
+                <p>
+                  Кабель представляет собой систему проводников. Их может быть два и больше. Проводники объединены между собой оболочкой, которая может быть пластмассовой, пластиковой, резиновой.
+                  Оболочка выполняет защитную функцию. Она изолирует проводники от влаги, солнечных лучей и других вредных факторов внешней среды.
+                  Перед тем как купить кабель в интернет-магазине необходимо ознакомиться с его параметрами. Особое внимание следует обращать на такие факторы: компания-производитель; металл;  сечение.
+                  Лучше отдавать предпочтение проверенным производителям, которые успели зарекомендовать себя на рынке. Их продукция может быть немного дороже относительно товаров менее известных компаний,
+                  однако высокое качество окупает каждую копейку.
+                </p>
+                <p>
+                  Хороший кабель прослужит на протяжении многих лет, отлично выполняя свои основные функции.
+                  Металл, из которого сделан кабель, не должен окисляться при контакте с воздухом, должен иметь высокую проводимость, быть гибким. Всем этим качествам  соответствует медный кабель.
+                  Алюминиевый кабель, хоть и стоит дешевле, но имеет множество недостатков.Сечение кабеля должно подходить под уровень предполагаемой нагрузки. Для жилых квартир подойдут кабели ВВГ, ВВГнг, ВВГнг-LS, NYM.
+                  Последний обладает хорошей изоляцией, которая предотвращает его растрескивание в сложных условиях эксплуатации.
+                </p>
+              </article>
+            </li>
+            <li class="description__item">
+              <input type="checkbox" name="description__article" id="description__article-4">
+              <label for="description__article-4">Как выбрать кабель?</label>
+              <article>
+                <h3 class="visually-hidden">Как выбрать кабель?</h3>
+                <p>
+                  Кабель представляет собой систему проводников. Их может быть два и больше. Проводники объединены между собой оболочкой, которая может быть пластмассовой, пластиковой, резиновой.
+                  Оболочка выполняет защитную функцию. Она изолирует проводники от влаги, солнечных лучей и других вредных факторов внешней среды.
+                  Перед тем как купить кабель в интернет-магазине необходимо ознакомиться с его параметрами. Особое внимание следует обращать на такие факторы: компания-производитель; металл;  сечение.
+                  Лучше отдавать предпочтение проверенным производителям, которые успели зарекомендовать себя на рынке. Их продукция может быть немного дороже относительно товаров менее известных компаний,
+                  однако высокое качество окупает каждую копейку.
+                </p>
+                <p>
+                  Хороший кабель прослужит на протяжении многих лет, отлично выполняя свои основные функции.
+                  Металл, из которого сделан кабель, не должен окисляться при контакте с воздухом, должен иметь высокую проводимость, быть гибким. Всем этим качествам  соответствует медный кабель.
+                  Алюминиевый кабель, хоть и стоит дешевле, но имеет множество недостатков.Сечение кабеля должно подходить под уровень предполагаемой нагрузки. Для жилых квартир подойдут кабели ВВГ, ВВГнг, ВВГнг-LS, NYM.
+                  Последний обладает хорошей изоляцией, которая предотвращает его растрескивание в сложных условиях эксплуатации.
+                </p>
+              </article>
+            </li>
+            <li class="description__item">
+              <input type="checkbox" name="description__article" id="description__article-5">
+              <label for="description__article-5">Отличие материала оболочки кабеля</label>
+              <article>
+                <h3 class="visually-hidden">Отличие материала оболочки кабеля</h3>
+                <p>
+                  Поскольку провода и кабели прокладывают практически в любых условиях, большое значение имеет тип защитной оболочки, которую использует производитель.
+                  Этот элемент конструкции напрямую отвечает за надежность проложенной линии и длительность эксплуатации в целом.
+                </p>
+                <p>
+                  На сегодняшний день самым распространенным материалом считается поливинилхлоридный пластикат. Он состоит из поливинилхлорида, в структуре которого присутствуют пластификаторы и стабилизаторы. Наличие хлора позволяет защитить оболочку от агрессивной среды – щелочей, кислот, возгорания. Также продукция отличается в зависимости от исполнения – не распространяющая горение, с минимальным газо- и дымовыделением и так далее.
+                  Полиэтилен тоже находит широкое применение в производстве кабельных оболочек. Причина – повышенные физико-механические показатели. Зачастую шитый полиэтилен применяют в качестве изоляционного материала в кабелях с маркировкой N2XH, а также в конструкции самонесущего изолированного провода. При производстве используется сшитый светостабилизированный, обычный стабилизированный и стабилизированный полиэтилен, не поддерживающий горение.
+                  В последнее время популярность набирает поливинит. Это представитель полимерных оболочек, который состоит из гранулированного материала, устойчивого к экстремальным температурам и старению. Его применение практикуется при производстве изоляции и оболочек для безгалогенных негорючих кабелей типа YnKY.
+                  В процессе создания медных силовых кабелей типа РПШ и КГ используется шланговая резина. Оболочка из этого материала прекрасно справляется с растягивающим усилием, а также другими механическими нагрузками. Результат – повышение гибкости проводки, даже если температура доходит до -50 градусов Цельсия.
+                  Что касается металлических оболочек, самым популярным решением считается алюминий и его сплавы. Конструкция становится максимально герметичной, прочной, способной справиться с любыми механическими нагрузками.
+                  Однозначно стоит отметить, что качественная оболочка, вне зависимости от того, какой использован материал при ее производстве, способна обеспечить эффективную защиту от нежелательных воздействий. Поэтому покупатель обязан максимально внимательно выбирать поставщика. Наша компания готова предложить вам качественный товар по разумной цене!
+                </p>
+              </article>
+            </li>
+            <li class="description__item">
+              <input type="checkbox" name="description__article" id="description__article-6">
+              <label for="description__article-6">В чем отличие кабеля от провода?</label>
+              <article>
+                <h3 class="visually-hidden">В чем отличие кабеля от провода?</h3>
+                <p>
+                  Люди, не владеющие углубленными знаниями в области электрики, думают, что понятие «провод» является синонимом слова «кабель».
+                  С одной стороны, эти изделия визуально очень похожи между собой, и в этом причина ошибочного мнения.
+                  Обычный человек вряд ли визуально определит, в чем разница, в то время как электронщик или другой специалист без особого труда определит, к какому типу относится продукция.
+                  Понимание основ терминологии в будущем поможет получать корректную информацию.
+                </p>
+                <p>
+                  В чем заключается различие и сходство? Кабельно-проводниковая продукция сильно напоминает друг друга с визуальной точки зрения. Но в документах они называются «кабелями» или «проводами». При просмотре строительной сметы сразу напрашивается вывод – стоимость провода меньше, чем кабеля.
+                  В профильной литературе – справочниках и учебниках, эти понятия имеют свои определения, всех их объединяет пространность. Но в ГОСТ и ТУ присутствует характеристика продукции, относящейся к кабельной или проводной.
+                  В ТУ указаны лишь основные детали, позволяющие отличить изделия. К примеру, по форме (круглая или плоская), толщине оболочки, количеству жил, типу изоляции и так далее.
+                  Когда речь идет о форме, здесь отсутствует специфическая нагрузка. Форма изделия определяет разве удобство применения в тех или иных ситуациях. Основной определяющий фактор – это спецификация. Здесь развернуто указано, к какому типу относится то или иное изделие.
+                  Провод – это одножильный или многожильный проводник, в конструкции которого присутствует легкая трубчатая изоляция. Иногда ее и вовсе нет.
+                  Кабель – это комплекс изолированных проводников, которые объединены в одно целое. Это сделано, чтобы обеспечить удобство установки и дальнейшего применения, безопасность и изолированность от негативного влияния окружающей среды. Чтобы повысить безопасность применения, электрические провода собираются вместе. Для этого предусмотрен соответствующий внешний слой. В некоторых разновидностях продукции предусмотрен броневой кожух.
+                  Поэтому если говорить в общем, отличие кабеля заключается в том, что у провода есть только один проводник, в то время как кабель состоит минимум из двух изолированных жил с отдельной изоляцией, объединенных единой оболочкой. Как вы видите, все очень просто, но не забывайте, что у каждой категории товаров есть десятки подвидов, в зависимости от применения и характеристик.
+                </p>
+              </article>
+            </li>
           </ul>
         </div>
       </section>
-
     </main>
 
     <footer class="footer">
-      <div class="footer__top-wrapper">
+      <div class="footer__wrapper">
         <div class="footer__container">
           <img  class="footer__logo logo" src="../img/footer-logo.svg" alt="Логотип компании" width="195" height="54">
-          <div class="footer__contacts contacts">
-            <ul class="contacts__list">
-              <li class="contacts__item contacts__item--kazan">
-                <a href="tel:+7(843)240-67-70" class="contacts__link">+7 (843) <span>240-67-70</span></a>
+          <div class="footer-contacts">
+            <ul class="footer-contacts__list">
+              <li class="footer-contacts__item footer-contacts__item--kazan">
+                <a href="tel:+7(843)240-67-70" class="footer-contacts__link">+7 (843) <span>240-67-70</span></a>
                 <address>
                   420073, г. Казань, Аделя Кутуя 151
                 </address>
               </li>
-              <li class="contacts__item contacts__item--moscow">
-                <a href="tel:+7(499)130-74-21" class="contacts__link">+7 (499) <span>130-74-21</span></a>
+              <li class="footer-contacts__item footer-contacts__item--moscow">
+                <a href="tel:+7(499)130-74-21" class="footer-contacts__link">+7 (499) <span>130-74-21</span></a>
                 <address>
                   109316, г. Москва, Волгоградский&nbsp;Проспект,&nbsp;42&nbsp;корп.23
                 </address>
               </li>
-              <li class="contacts__item contacts__item--ekb">
-                <a href="tel:+7(342)344-89-91" class="contacts__link">+7 (342) <span>344-89-91</span></a>
+              <li class="footer-contacts__item footer-contacts__item--ekb">
+                <a href="tel:+7(342)344-89-91" class="footer-contacts__link">+7 (342) <span>344-89-91</span></a>
                 <address>
                   620057, г. Екатеринбург, <br> Таганская улица 60
                 </address>
               </li>
-              <li class="contacts__item contacts__item--primary">
-                <a href="tel:+7(800)700-41-71" class="contacts__link contacts__link--mr">+7 (800) <span>700-41-71</span></a>
+              <li class="footer-contacts__item footer-contacts__item--primary">
+                <a href="tel:+7(800)700-41-71" class="footer-contacts__link footer-contacts__link--mr">+7 (800) <span>700-41-71</span></a>
                 <br>
-                <a href="tel:+7(812)642-94-11" class="contacts__link">+7 (812) <span>642-94-11</span></a>
+                <a href="tel:+7(812)642-94-11" class="footer-contacts__link">+7 (812) <span>642-94-11</span></a>
                 <address>
                   Головной офис: г. Санкт-Петербург 198216,&nbsp;Трамвайный пр-кт,&nbsp;д.&nbsp;32&nbsp;офис&nbsp;110
                 </address>
               </li>
-              <li class="contacts__item contacts__item--nn">
-                <a href="tel:+7(831)416-93-30" class="contacts__link">+7 (831) <span>416-93-30</span></a>
+              <li class="footer-contacts__item footer-contacts__item--nn">
+                <a href="tel:+7(831)416-93-30" class="footer-contacts__link">+7 (831) <span>416-93-30</span></a>
                 <address>
                   603116, г. Нижний Новгород, Московское&nbsp;шоссе&nbsp;52
                 </address>
               </li>
-              <li class="contacts__item contacts__item--novsib">
-                <a href="tel:+7(843)258-99-97" class="contacts__link">+7 (843) <span>258-99-97</span></a>
+              <li class="footer-contacts__item footer-contacts__item--novsib">
+                <a href="tel:+7(843)258-99-97" class="footer-contacts__link">+7 (843) <span>258-99-97</span></a>
                 <address>
                   630064, г. Новосибирск, <br> им. Карла Маркса 7
                 </address>
               </li>
-              <li class="contacts__item contacts__item--perm">
-                <a href="tel:+7(342)259-18-55" class="contacts__link">+7 (342) <span>259-18-55</span></a>
+              <li class="footer-contacts__item footer-contacts__item--perm">
+                <a href="tel:+7(342)259-18-55" class="footer-contacts__link">+7 (342) <span>259-18-55</span></a>
                 <address>
                   614095, г. Пермь, Танкистов, 50. Балатово,&nbsp;Индустриальный район
                 </address>
               </li>
-              <li class="contacts__item contacts__item--working-mode">
+              <li class="footer-contacts__item footer-contacts__item--working-mode">
                 <p>Режим работы:</p>
                 <span>пн-пт 9:00-20:00</span>
                 <span>сб-вс: 10:00-15:00</span>
@@ -431,56 +528,56 @@
               </li>
             </ul>
 
-            <div class="footer__social social">
-              <a href="#" class="social__link">Вконтакте</a>
-              <a href="#" class="social__link">Twitter</a>
-              <a href="#" class="social__link">Facebook</a>
-              <a href="#" class="social__link">Facebook</a>
-              <a href="mailto:info@n-kabel.ru" class="social__link social__link--mail">Email: <span>info@n-kabel.ru</span></a>
+            <div class="footer-social">
+              <a href="#" class="footer-social__link">Вконтакте</a>
+              <a href="#" class="footer-social__link">Twitter</a>
+              <a href="#" class="footer-social__link">Facebook</a>
+              <a href="#" class="footer-social__link">Telegram</a>
+              <a href="mailto:info@n-kabel.ru" class="footer-social__link footer-social__link--mail">Email: <span>info@n-kabel.ru</span></a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="footer__form footer-request-form">
-        <div class="footer-request-form__wrapper">
-          <p class="footer-request-form__title">Отправить заявку</p>
-          <form class="footer-request-form__form">
-            <fieldset class="footer-request-form__content">
-              <label for="footer-request-form__mail"></label>
-              <input type="text" id="footer-request-form__mail" placeholder="Email" required>
+      <div class="footer-form">
+        <div class="footer-form__wrapper">
+          <p class="footer-form__title">Отправить заявку</p>
+          <form class="footer-form__form">
+            <fieldset class="footer-form__content">
+              <label for="footer-form__mail" class="visually-hidden">Почта</label>
+              <input type="text" id="footer-form__mail" placeholder="Email" required>
 
               <button type="button">Загрузить файл</button>
             </fieldset>
 
-            <fieldset class="footer-request-form__textarea">
-              <label for="footer-request-form__message"></label>
-              <textarea id="footer-request-form__message" cols="30" rows="10" placeholder="Сообщение"></textarea>
+            <fieldset class="footer-form__textarea">
+              <label for="footer-form__message" class="visually-hidden">Поле для сообщения</label>
+              <textarea id="footer-form__message" cols="30" rows="10" placeholder="Сообщение"></textarea>
             </fieldset>
 
-            <fieldset class="footer-request-form__submit">
-              <button class="footer-request-form__submit-btn" type="submit">Отправить</button>
+            <fieldset class="footer-form__submit">
+              <button class="footer-form__submit-btn" type="submit">Отправить</button>
 
-              <input type="checkbox" id="footer-request-form__accept-rules" required class="visually-hidden">
-              <label for="footer-request-form__accept-rules">Согласен на обработку персональных данных</label>
+              <input type="checkbox" id="footer-form__accept-rules" required class="visually-hidden">
+              <label for="footer-form__accept-rules">Согласен на обработку персональных данных</label>
             </fieldset>
           </form>
         </div>
       </div>
 
-      <div class="footer__bottom-wrapper">
-        <div class="footer__info info">
-          <div class="info__rights">
-            <p class="info__rights-description">Информация на сайте о технических характеристиках, наличии на складе, стоимости и изображениях товаров не является публичной офертой</p>
-            <p class="info__rights-description"> Все изображения, размещенные на сайте, несут ознакомительный, информационный характер. Копирование и использование изображений</p>
+      <div class="footer-info">
+        <div class="footer-info__wrapper">
+          <div class="footer-info__rights">
+            <p class="footer-info__rights-description">Информация на сайте о технических характеристиках, наличии на складе, стоимости и изображениях товаров не является публичной офертой</p>
+            <p class="footer-info__rights-description"> Все изображения, размещенные на сайте, несут ознакомительный, информационный характер. Копирование и использование изображений</p>
           </div>
-          <p class="info__company">© 2019 Новакабель</p>
+          <p class="footer-info__company">© 2019 Новакабель</p>
         </div>
       </div>
 
     </footer>
 
-    <script src="scripts/plugins/swiper.min.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/vendor.min.js"></script>
+    <script src="scripts/main.min.js"></script>
   </body>
 </html>

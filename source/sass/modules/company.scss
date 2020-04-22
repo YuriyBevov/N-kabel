@@ -1,0 +1,50 @@
+.company {
+  &__wrapper {
+    @include container();
+    padding-bottom: 30px;
+  }
+
+  &__path {
+    @include path();
+  }
+
+  &__title {
+    font-family: $bold;
+    font-size: $prs*3;
+    line-height: $prs*4.1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+    color: $black;
+  }
+
+  &__description {
+    font-size: $prs*1.6;
+    line-height: $prs*2.2;
+    margin-bottom: 85px;
+    max-width: 1083px;
+
+    color: $black;
+
+    & span {
+      font-family: $bold;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .company {
+    &__wrapper {
+      padding-top: 45px;
+    }
+
+    &__title {
+      font-size: $prs*2.4;
+      line-height: $prs*3.3;
+    }
+
+    &__description {
+      margin-bottom: 60px;
+    }
+  }
+}

@@ -4,39 +4,36 @@
 @import "fonts";
 @import "global";
 
-// modules
+// plugins
+
+@import "plugins/swiper";
 
 // header
 
 @import "modules/header";
 @import "modules/header-components/nav";
 
-// about
+// modules
 
 @import "modules/about";
-@import "modules/about-components/about-request-form";
-
-// dealership
-
+@import "modules/about-components/about-form";
 @import "modules/dealership";
 @import "modules/dealership-components/swiper-slider";
-
-// stock
-
 @import "modules/stock";
-
-// description
-
 @import "modules/description";
+@import "modules/documents";
+@import "modules/documents-components/requisites";
+@import "modules/production";
+@import "modules/production-inner/custom";
+@import "modules/production-inner/engineering";
+@import "modules/company";
+@import "modules/company-components/advantages";
+@import "modules/company-components/workers";
 
 // footer
 
 @import "modules/footer";
-@import "modules/footer-components/contacts";
-@import "modules/footer-components/social";
-@import "modules/footer-components/info";
-@import "modules/footer-components/footer-request-form";
-
-// questions
-
-@import "modules/rules";
+@import "modules/footer-components/footer-contacts";
+@import "modules/footer-components/footer-social";
+@import "modules/footer-components/footer-info";
+@import "modules/footer-components/footer-form";

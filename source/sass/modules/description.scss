@@ -26,7 +26,10 @@
     overflow: hidden;
 
     & p {
+      font-size: $prs*1.4;
+      line-height: $prs*2.5;
       margin-bottom: 30px;
+      color: $black;
     }
   }
 
@@ -42,7 +45,8 @@
     align-items: center;
     position: relative;
     min-height: 70px;
-    padding: 20px 80px;
+    padding: 20px;
+    padding-left: 80px;
     border: none;
     font-size: $prs*1.8;
     line-height: $prs*2.5;
@@ -84,6 +88,27 @@
   .description {
     &__wrapper {
       padding-bottom: 100px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .description {
+    &__wrapper {
+      padding-top: 40px;
+      padding-bottom: 70px;
+    }
+
+    &__list article {
+      & p {
+        font-size: $prs*1.2;
+        line-height: $prs*2.1;
+      }
+    }
+
+    &__list label {
+      font-size: $prs*1.6;
+      line-height: $prs*2.2;
     }
   }
 }

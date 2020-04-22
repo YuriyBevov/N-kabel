@@ -1,0 +1,212 @@
+.footer-form {
+  background-color: $footer-black;
+
+  &__wrapper {
+    @include container();
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 143px;
+    padding: 40px 150px;
+  }
+
+  &__title {
+    font-family: $bold;
+    font-size: $prs*1.8;
+    line-height: $prs*2.5;
+    margin-right: 50px;
+    color: $white;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      border: none;
+    }
+  }
+
+  &__textarea,
+  &__content,
+  &__submit {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__content {
+
+    margin-right: 25px;
+
+    input,
+    button {
+      width: 220px;
+      min-height: 26px;
+      padding: 5px 10px;
+      font-size: $prs;
+      line-height: $prs*1.4;
+      text-align: left;
+      border: none;
+      background-color: $footer-form-grey;
+      color: $white;
+    }
+
+    input {
+      margin-bottom: $prs;
+
+      &::placeholder {
+        font-size: $prs;
+        line-height: $prs*1.4;
+        color: $white;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      @include hover($yellow, $footer-form-grey);
+    }
+  }
+
+  &__textarea {
+
+    margin-right: 50px;
+
+    textarea {
+      width: 218px;
+      height: 62px;
+      resize: none;
+      border: none;
+      font-size: $prs;
+      line-height: $prs*1.4;
+      color: $white;
+      padding: 5px;
+      background-color: $footer-form-grey;
+
+      &::placeholder {
+        font-size: $prs;
+        line-height: $prs*1.4;
+        color: $white;
+      }
+    }
+  }
+
+  &__submit {
+    label {
+      position: relative;
+      font-size: $prs*0.9;
+      line-height: $scs*1.5;
+      padding-left: 15px;
+      cursor: pointer;
+      color: $easygrey;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        content: "";
+        border: none;
+        background-color: #c4c4c4;
+      }
+    }
+
+    input:checked + label::before {
+      background-color: red; // попросить иконку
+    }
+
+    button {
+      width: 175px;
+      min-height: 38px;
+      font-size: $prs*1.8;
+      line-height: $prs*2.5;
+      border: 1px solid $footer-form-btn-brd;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 19px;
+      color: $yellow;
+      background-color: transparent;
+      @include hover($black, $yellow);
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .footer-form {
+    &__wrapper {
+      flex-direction: column;
+      justify-content: center;
+      padding: 25px 0 35px;
+    }
+
+    &__content,
+    &__textarea,
+    &__title {
+      margin-right: 0;
+    }
+
+    &__title {
+      margin-right: 0;
+      margin-bottom: 35px;
+    }
+
+    &__form {
+      width: 465px;
+    }
+
+    &__textarea {
+      margin-left: auto;
+    }
+
+    &__submit {
+      padding-top: 30px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .footer-form {
+    &__wrapper {
+      padding: 25px 15px;
+    }
+
+    &__title {
+      align-self: flex-start;
+    }
+
+    &__form {
+      flex-direction: column;
+      width: 100%;
+
+      & fieldset {
+        width: 100%;
+      }
+    }
+
+    &__content {
+      & input,
+      button {
+        width: inherit;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__textarea {
+      margin-left: 0;
+
+      & textarea {
+        width: inherit;
+      }
+    }
+
+    &__submit {
+      & button {
+        width: 100%;
+      }
+    }
+  }
+}
