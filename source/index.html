@@ -7,10 +7,20 @@
   <meta name="description" CONTENT="ООО НОВАКАБЕЛЬ. Продажа кабеля и провода из наличия и под заказ">
   <title>N-Kabel</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="scripts/polyfills/picturefill.min.js" async></script>
+  <script src="scripts/polyfills/svgxuse.min.js" defer></script>
 </head>
   <body>
     <div style="display:none">
       <include src="build/img/sprite_auto.svg"></include>
+    </div>
+    <div class="visually-hidden">
+      <svg class="header__search-icon" width="16" height="16">
+        <use xlink:href="../img/sprite_auto.svg"></use>
+      </svg>
     </div>
     <header class="header">
       <div class="header__wrapper">
@@ -52,15 +62,15 @@
             <li class="nav__item nav__item--catalog"><a class="nav__link nav__link--catalog" href="#">каталог</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Статьи</a></li>
             <li class="nav__item"><a class="nav__link" href="production.html">Производство</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Стандарты</a></li>
+            <li class="nav__item"><a class="nav__link" href="standarts.html">Стандарты</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Срочное производство</a></li>
             <li class="nav__item nav__item--company"><a class="nav__link nav__link--company" href="#">О компании</a>
               <ul>
                 <li><a class="nav__link" href="company.html">О компании</a></li>
-                <li><a class="nav__link" href="#">Склад</a></li>
+                <li><a class="nav__link" href="storage.html">Склад</a></li>
                 <li><a class="nav__link" href="documents.html">Документы и реквизиты</a></li>
                 <li><a class="nav__link" href="#">Сертификаты и паспорта</a></li>
-                <li><a class="nav__link" href="#">Партнерство&nbsp;и&nbsp;сотрудничество</a></li>
+                <li><a class="nav__link" href="partnership.html">Партнерство&nbsp;и&nbsp;сотрудничество</a></li>
               </ul>
             </li>
             <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>

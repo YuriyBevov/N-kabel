@@ -122,7 +122,7 @@
 @media (max-width: $desktop-width) {
   .production {
     &__wrapper {
-      padding-top: 30px;
+      padding-top: 40px;
     }
 
     &__title {
@@ -152,9 +152,6 @@
 
 @media (max-width: $tablet-width) {
   .production {
-    &__wrapper {
-
-    }
 
     &__title {
       font-size: $prs*2.4;

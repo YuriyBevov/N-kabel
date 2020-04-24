@@ -30,19 +30,6 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-/*gulp.task("additionalCss", function () {
-  return gulp.src("source/css/swiper.css")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([ autoprefixer() ]))
-    .pipe(csso())
-    .pipe(rename("swiper.min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(server.stream());
-});*/
-
 gulp.task("js", function () {
   return gulp.src("source/js/scripts/*.js")
     .pipe(plumber())
@@ -61,6 +48,12 @@ gulp.task("vendor", function () {
     .pipe(gulp.dest("build/scripts"));
 });
 
+gulp.task("polyfills", function () {
+  return gulp.src("source/js/polyfills/*.js")
+    .pipe(plumber())
+    .pipe(gulp.dest("build/scripts/polyfills"));
+});
+
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -73,7 +66,7 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
-  gulp.watch("source/js/**/*.js", gulp.series("js", "refresh"));
+  gulp.watch("source/js/**/*.js", gulp.series("polyfills", "vendor", "js", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
@@ -130,5 +123,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "vendor", "js", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "polyfills", "vendor", "js", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));

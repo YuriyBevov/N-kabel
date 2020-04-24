@@ -1,4 +1,5 @@
 "use strict";
+
 (function () {
   const tab = document.querySelectorAll('.workers__toggle-label');
   const list = document.querySelectorAll('.workers__list');

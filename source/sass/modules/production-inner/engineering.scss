@@ -131,13 +131,12 @@
 
       & a {
         display: flex;
-        align-items: center;
         justify-content: center;
         width: 165px;
-        min-height: 50px;
+        min-height: 49px;
         font-size: $prs*1.8;
         line-height: $prs*2.5;
-        padding: 10px;
+        padding: 12px 10px;
         color: $black;
         background-color: $yellow;
         border-radius: 5px;
