@@ -38,6 +38,13 @@
 @import "modules/company-inner/documents";
 @import "modules/company-inner/documents-components/requisites";
 @import "modules/company-inner/storage";
+@import "modules/company-inner/certificates";
+@import "modules/company-inner/certificates-components/conformity.scss";
+@import "modules/company-inner/certificates-components/fire.scss";
+@import "modules/company-inner/certificates-components/river.scss";
+@import "modules/company-inner/certificates-components/maritime.scss";
+@import "modules/company-inner/certificates-components/quality.scss";
+@import "modules/company-inner/certificates-components/certificate-swiper-slider-styles.scss";
 @import "modules/company-inner/partnership";
 
 // footer
