@@ -116,7 +116,8 @@
         flex-direction: column;
         margin-bottom: 20px;
         margin-right: 20px;
-        width: 30%;
+        width: 40%;
+        min-width: 400px;
       }
 
       &-item {
@@ -134,10 +135,30 @@
         &:last-child {
           margin-bottom: 0;
         }
+
+        &-info {
+          p {
+            font-size: $prs*2;
+            line-height: $prs*2.7;
+
+            color: $black;
+          }
+          span {
+            font-family: $bold;
+          }
+
+          address {
+            font-style: normal;
+            font-size: $prs*2;
+            line-height: $prs*2.7;
+
+            color: $black;
+          }
+        }
       }
 
       &-map {
-        width: 70%;
+        width: 60%;
         height: 362px;
 
         iframe {
