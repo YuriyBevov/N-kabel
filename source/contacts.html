@@ -18,7 +18,7 @@
       <include src="build/img/sprite_auto.svg"></include>
     </div>
     <div class="visually-hidden">
-      <svg class="header__search-icon" width="16" height="16">
+      <svg>
         <use xlink:href="../img/sprite_auto.svg"></use>
       </svg>
     </div>
@@ -33,7 +33,7 @@
           <label for="search" class="visually-hidden">Поиск</label>
           <input class="header__search" type="search" name="search" id="search" placeholder="Поиск">
           <button type="submit" class="header__search-btn" aria-label="Кнопка поиска">
-            <svg class="documents__download-icon" width="16" height="16">
+            <svg class="header__search-icon" width="16" height="16">
               <use xlink:href="#icon-search"></use>
             </svg>
           </button>
@@ -81,11 +81,131 @@
     </header>
 
     <main>
-      <section class="documents">
-        <div class="documents__wrapper">
-          <span class="documents__path">Главная / <span>Контакты</span></span>
-          <h1 class="documents__title">Контакты</h1>
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <span class="contacts__path">Главная / <span>Контакты</span></span>
+          <h1 class="contacts__title">Контакты</h1>
 
+          <div class="contacts__header">
+
+            <div class="contacts__header-select">
+              <label for="city">Выберите город</label>
+              <select class="contacts__select" id="city">
+                <option id="0" selected>Санкт-петербург</option>
+                <option id="1">Казань</option>
+                <option id="2">Москва</option>
+              </select>
+            </div>
+
+            <ul class="contacts__header-list">
+              <li class="contacts__header-item contacts__header-item--working-mode">
+                <p>Режим работы:</p>
+                <p>пн-пт:<span> 9:00-20:00</span></p>
+                <p>сб-вс:<span> 10:00-15:00</span></p>
+              </li>
+              <li class="contacts__header-item contacts__header-item--head-office">
+                <p>ГОЛОВНОЙ ОФИС:</p>
+                <address>г.&nbsp;Санкт-Петербург<br> 198216, Трамвайный пр&nbsp;-&nbsp;кт&nbsp;,&nbsp;д.&nbsp;32 офис&nbsp;110</address>
+              </li>
+            </ul>
+
+          </div>
+
+           <div class="contacts__content">
+
+             <ul class="contacts__content-list">
+                <li class="contacts__content-item">
+                  <svg width="60" height="60">
+                    <use xlink:href="#icon-phone-contacts"></use>
+                  </svg>
+                  <div class="contacts__content-item-info">
+                    <p>+7(800) 700-41-71</p>
+                    <p>+7(812) 642-94-11</p>
+                  </div>
+                </li>
+                <li class="contacts__content-item">
+                  <svg width="60" height="60">
+                    <use xlink:href="#icon-pin-contacts"></use>
+                  </svg>
+                  <div class="contacts__content-item-info">
+                    <address>
+                      198216, г. Санкт-Петербург,<br> пр-кт&nbsp;Трамвайный,&nbsp;д.&nbsp;32 офис&nbsp;110
+                    </address>
+                  </div>
+                </li>
+                <li class="contacts__content-item">
+                  <svg width="60" height="60">
+                    <use xlink:href="#icon-post-contacts"></use>
+                  </svg>
+                  <div class="contacts__content-item-info">
+                    <p>Почта для заявок</p>
+                    <p>info@n-kabel.ru</p>
+                  </div>
+                </li>
+             </ul>
+
+            <div class="contacts__content-map">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A55236b387b6c38922ad1e0105f464babe6e04900fb5ff1b2d4cea26b2bbe6f38&amp;source=constructor">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts__footer">
+          <div class="contacts__footer-wrapper">
+            <b>Не нашли, что искали?</b>
+            <h2 class="contacts__footer-title">Рассчитаем Вашу заявку и составим коммерческое предложение за 15 минут!</h2>
+            <p class="contacts__footer-description">Отправьте ваш запрос</p>
+
+            <ul class="contacts__footer-list">
+              <li class="contacts__footer-item">
+                <a href="mailto:info@n-kabel.ru">
+                  <div class="contacts__footer-icon">
+                    <svg width="15" height="15">
+                      <use xlink:href="#icon-post"></use>
+                    </svg>
+                  </div>
+                  на почту <span>info@n-kabel.ru</span>
+                </a>
+              </li>
+              <li class="contacts__footer-item">
+                <a href="">
+                  <div class="contacts__footer-icon">
+                    <svg width="16.68" height="16.68">
+                      <use xlink:href="#icon-icq"></use>
+                    </svg>
+                  </div>
+                  на ICQ <span>719-292-322</span>
+                </a>
+              </li>
+              <li class="contacts__footer-item">
+                <ul class="contacts__footer-social">
+                  <li>
+                    <a href="#" aria-label="Вконтакте">
+                      <svg width="44" height="44">
+                        <use xlink:href="#icon-vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="Facebook">
+                      <svg width="44" height="44">
+                        <use xlink:href="#icon-fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="Telegramm">
+                      <svg width="44" height="44">
+                        <use xlink:href="#icon-twit"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -142,8 +262,8 @@
               </li>
               <li class="footer-contacts__item footer-contacts__item--working-mode">
                 <p>Режим работы:</p>
-                <span>пн-пт 9:00-20:00</span>
-                <span>сб-вс: 10:00-15:00</span>
+                <p>пн-пт:<span> 9:00-20:00</span></p>
+                <p>сб-вс:<span> 10:00-15:00</span></p>
               </li>
             </ul>
           </div>
