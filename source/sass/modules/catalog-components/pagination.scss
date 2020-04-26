@@ -1,10 +1,38 @@
 .pagination {
-  display: flex;
-  width: 100%;
-  padding: 70px 0;
+  min-width: 375px;
   border-top: 1px solid $catalog-brd;
-  border-bottom: 1px solid $catalog-brd;
-  justify-content: center;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  &__show-btn {
+    width: 150px;
+    font-size: $prs*1.6;
+    line-height: $prs*2.8;
+    min-height: 40px;
+    border: none;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    background-color: $white;
+    color: $black;
+    @include hover($yellow, $black);
+  }
+
+  &__box {
+    display: flex;
+    width: 100%;
+    padding: 70px 0;
+    border-top: 1px solid $catalog-brd;
+    border-bottom: 1px solid $catalog-brd;
+    justify-content: center;
+  }
 
   &__btn-prev,
   &__btn-next,
@@ -32,19 +60,20 @@
   }
 }
 
-
 @media (max-width: $desktop-width) {
   .pagination {
-    padding: 30px 0;
+    padding: 0;
   }
 }
 
 @media (max-width: $tablet-width) {
   .pagination {
-    padding: 30px 0;
-  }
+    &__box {
+      padding: 30px 0;
+    }
 
-  &__btn {
-    
+    &__show-btn {
+      min-height: 30px;
+    }
   }
 }
