@@ -49,8 +49,7 @@
       color: $blue;
     }
 
-    &--company,
-    &--catalog {
+    &--company {
       position: relative;
 
       &::after {

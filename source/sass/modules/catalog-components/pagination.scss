@@ -1,0 +1,50 @@
+.pagination {
+  display: flex;
+  width: 100%;
+  padding: 70px 0;
+  border-top: 1px solid $catalog-brd;
+  border-bottom: 1px solid $catalog-brd;
+  justify-content: center;
+
+  &__btn-prev,
+  &__btn-next,
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    font-family: $bold;
+    font-size: $prs*1.2;
+    line-height: $prs*2.1;
+    color: $black;
+    transition: border 0.3s;
+    border: none;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #c4c4c4;
+    }
+  }
+
+  &__btn.active {
+    background-color: #c4c4c4;
+  }
+}
+
+
+@media (max-width: $desktop-width) {
+  .pagination {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .pagination {
+    padding: 30px 0;
+  }
+
+  &__btn {
+    
+  }
+}

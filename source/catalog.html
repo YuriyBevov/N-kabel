@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" CONTENT="ООО НОВАКАБЕЛЬ. Продажа кабеля и провода из наличия и под заказ">
+  <title>N-Kabel</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="scripts/polyfills/picturefill.min.js" async></script>
+  <script src="scripts/polyfills/svgxuse.min.js" defer></script>
+</head>
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+    <div class="visually-hidden">
+      <svg>
+        <use xlink:href="../img/sprite_auto.svg"></use>
+      </svg>
+    </div>
+    <header class="header">
+      <div class="header__wrapper">
+
+        <a href="index.html" class="header__logo logo">
+          <img src="../img/logo.svg" alt="Логотип компании" width="210" height="58">
+        </a>
+
+        <div class="header__search-box">
+          <label for="search" class="visually-hidden">Поиск</label>
+          <input class="header__search" type="search" name="search" id="search" placeholder="Поиск">
+          <button type="submit" class="header__search-btn" aria-label="Кнопка поиска">
+            <svg class="header__search-icon" width="16" height="16">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="header__box header__box--phone">
+          <p class="header__phone">+7(800) <span>700 41 71</span></p>
+          <a class="header__link header__link--phone" href="#">Заказать бесплатный звонок</a>
+        </div>
+
+        <div class="header__box header__box--mail">
+          <p class="header__mail">info@n-kabel.ru</p>
+          <a class="header__link header__link--mail" href="#">Отправить заявку</a>
+        </div>
+
+        <div class="header__nav-toggle">
+          <img src="../img/toggle.svg" alt="Кнопка показа меню" width="25" height="25">
+        </div>
+      </div>
+
+      <nav class="header__nav nav">
+        <div class="nav__wrapper">
+          <img class="nav__toggle" src="../img/toggle.svg" alt="Кнопка показа блока с формой отправки заявки" width="25" height="25">
+
+          <ul class="nav__list">
+            <li class="nav__item nav__item--catalog"><a class="nav__link active" href="#">каталог</a></li>
+            <li class="nav__item"><a class="nav__link" href="articles.html">Статьи</a></li>
+            <li class="nav__item"><a class="nav__link" href="production.html">Производство</a></li>
+            <li class="nav__item"><a class="nav__link" href="standarts.html">Стандарты</a></li>
+            <li class="nav__item"><a class="nav__link" href="urgent.html">Срочное производство</a></li>
+            <li class="nav__item nav__item--company"><a class="nav__link nav__link--company" href="#">О компании</a>
+              <ul>
+                <li><a class="nav__link" href="company.html">О компании</a></li>
+                <li><a class="nav__link" href="storage.html">Склад</a></li>
+                <li><a class="nav__link" href="#">Документы и реквизиты</a></li>
+                <li><a class="nav__link" href="certificates.html">Сертификаты и паспорта</a></li>
+                <li><a class="nav__link" href="partnership.html">Партнерство&nbsp;и&nbsp;сотрудничество</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+
+    <main>
+      <section class="catalog">
+        <div class="catalog__wrapper">
+          <span class="catalog__path">Главная / <span>Каталог</span></span>
+          <h1 class="catalog__title">Каталог</h1>
+
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <div class="cable-card">
+                <img src="../img/catalog-cable1.png" width="164" height="164" alt="Изображение кабеля">
+
+                <div class="cable-card__box">
+                  <h2 class="cable-card__title">Силовой кабель</h2>
+                  <ul class="cable-card__list">
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с ПВХ изоляцией</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с ПВХ изоляцией бронированный</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с изоляцией из СПЭ</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с бумажной изоляцией</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабель гибкий силовой в резиновой изоляции</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабель с изоляцией и оболочкой из полимерных композиций</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Медный силовой кабель</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабель силовой алюминиевый</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <a class="catalog__link" href="#">Посмотреть все</a>
+            </li>
+
+            <li class="catalog__item">
+              <div class="cable-card">
+                <img src="../img/catalog-cable2.png" width="195" height="195" alt="Изображение кабеля">
+
+                <div class="cable-card__box">
+                  <h2 class="cable-card__title">Провода</h2>
+                  <ul class="cable-card__list">
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода соединительные</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода выводные</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода для подвижного состава</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода автомобильные</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода авиационные</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода установочные</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода связи</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода изолированные для воздушных линий</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода неизолированные</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода для геофизических работ</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода обмоточные</a></li>
+                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провод термостойкий</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <a class="catalog__link" href="#">Посмотреть все</a>
+            </li>
+
+            <li class="catalog__item">
+              <div class="cable-card">
+                <img src="../img/catalog-cable3.png" width="172" height="97" alt="Изображение кабеля">
+
+                <div class="cable-card__box">
+                  <h2 class="cable-card__title">Кабель судовой</h2>
+                </div>
+              </div>
+
+              <a class="catalog__link" href="#">Посмотреть все</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="catalog__pagination">
+          <div class="catalog__pagination-wrapper">
+            <button class="catalog__pagination-btn">Показать еще</button>
+
+            <div class="pagination">
+              <a class="pagination__btn-prev" href="#">
+                <svg width="12" height="12">
+                  <use xlink:href="#icon-pagination-l"></use>
+                </svg>
+              </a>
+              <a class="pagination__btn" href="#">1</a>
+              <a class="pagination__btn active" href="#">2</a>
+              <a class="pagination__btn" href="#">3</a>
+              <a class="pagination__btn" href="#">4</a>
+              <a class="pagination__btn" href="#">5</a>
+              <a class="pagination__btn" href="#">...</a>
+              <a class="pagination__btn" href="#">60</a>
+              <a class="pagination__btn-next" href="#">
+                <svg width="12" height="12">
+                  <use xlink:href="#icon-pagination-r"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <article class="catalog__article">
+          <div class="catalog__article-wrapper">
+            <h3 class="catalog__article-title">Где купить силовой кабель?</h3>
+
+            <p class="catalog__article-text">
+              Силовой кабель – это жильный провод, который передает электроэнергию от главного распределительного щитка непосредственно к ее потребителям.
+              Купить силовой кабель необходимо промышленным предприятиям, коммунальным учреждениям, транспортным объектам и т.п.
+              Он, как правило, рассчитан на напряжение 35 Вольт и имеет бумажную изоляцию, пропитанную специальным средством.
+              В качестве материала для изготовления может использоваться никель или медь.
+            </p>
+
+            <picture>
+              <source type="image/webp" srcset="img/catalog-image1x.webp 1x, img/catalog-image2x.webp 2x">
+
+              <img src="img/catalog-image1x.png" srcset="img/catalog-image2x.png 2x"  alt="Изображение жильного провода">
+            </picture>
+
+            <strong>Конструкционные особенности</strong>
+            <p class="catalog__article-text">
+              Вне зависимости от сферы применения силового кабеля, его конструкция в обязательном порядке включает в себя следующие элементы:
+            </p>
+
+            <ul>
+              <li>
+               &mdash; жила, чья функция заключается в поставке тока;
+              </li>
+              <li>
+               &mdash; изоляция, которая призвана обеспечить высокий уровень защиты токопроводящей жилы (например, резиновая);
+              </li>
+              <li>
+               &mdash; оболочка, которая защищает силовой кабель целиком от воздействия неблагоприятных факторов, к примеру дождя.
+              </li>
+            </ul>
+
+            <p class="catalog__article-text">
+              Помимо вышеописанных элементов конструкция кабеля может дополнительно включать в себя экран, броню, подушку изоляции и т.п.
+              Ее особенности напрямую зависят от того, в каких условиях будет применяться кабель и какие задачи перед ним ставятся.
+            </p>
+
+            <strong>Где силовой кабель купить оптом?</strong>
+            <p class="catalog__article-text">
+              Если вам нужно купить силовой кабель, то обращайтесь в наш интернет-магазин.
+              У нас представлены различные модификации кабеля, поэтому вы сможете подобрать наиболее оптимальный вариант для себя.
+              Нашим клиентам мы гарантируем высокое качество товаров и доступные цены на них. У нас вы также можете купить силовой кабель оптом.
+              Это очень выгодное предложение, которое позволит существенно сэкономить.
+              Для оформления заказа заполните форму на сайте или свяжитесь с нами по контактному телефону.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__container">
+          <img  class="footer__logo logo" src="../img/footer-logo.svg" alt="Логотип компании" width="195" height="54">
+          <div class="footer-contacts">
+            <ul class="footer-contacts__list">
+              <li class="footer-contacts__item footer-contacts__item--kazan">
+                <a href="tel:+7(843)240-67-70" class="footer-contacts__link">+7 (843) <span>240-67-70</span></a>
+                <address>
+                  420073, г. Казань, Аделя Кутуя 151
+                </address>
+              </li>
+              <li class="footer-contacts__item footer-contacts__item--moscow">
+                <a href="tel:+7(499)130-74-21" class="footer-contacts__link">+7 (499) <span>130-74-21</span></a>
+                <address>
+                  109316, г. Москва, Волгоградский&nbsp;Проспект,&nbsp;42&nbsp;корп.23
+                </address>
+              </li>
+              <li class="footer-contacts__item footer-contacts__item--ekb">
+                <a href="tel:+7(342)344-89-91" class="footer-contacts__link">+7 (342) <span>344-89-91</span></a>
+                <address>
+                  620057, г. Екатеринбург, <br> Таганская улица 60
+                </address>
+              </li>
+              <li class="footer-contacts__item footer-contacts__item--primary">
+                <a href="tel:+7(800)700-41-71" class="footer-contacts__link footer-contacts__link--mr">+7 (800) <span>700-41-71</span></a>
+                <br>
+                <a href="tel:+7(812)642-94-11" class="footer-contacts__link">+7 (812) <span>642-94-11</span></a>
+                <address>
+                  Головной офис: г. Санкт-Петербург 198216,&nbsp;Трамвайный пр-кт,&nbsp;д.&nbsp;32&nbsp;офис&nbsp;110
+                </address>
+              </li>
+              <li class="footer-contacts__item footer-contacts__item--nn">
+                <a href="tel:+7(831)416-93-30" class="footer-contacts__link">+7 (831) <span>416-93-30</span></a>
+                <address>
+                  603116, г. Нижний Новгород, Московское&nbsp;шоссе&nbsp;52
+                </address>
+              </li>
+              <li class="footer-contacts__item footer-contacts__item--novsib">
+                <a href="tel:+7(843)258-99-97" class="footer-contacts__link">+7 (843) <span>258-99-97</span></a>
+                <address>
+                  630064, г. Новосибирск, <br> им. Карла Маркса 7
+                </address>
+              </li>
+              <li class="footer-contacts__item footer-contacts__item--perm">
+                <a href="tel:+7(342)259-18-55" class="footer-contacts__link">+7 (342) <span>259-18-55</span></a>
+                <address>
+                  614095, г. Пермь, Танкистов, 50. Балатово,&nbsp;Индустриальный район
+                </address>
+              </li>
+              <li class="footer-contacts__item footer-contacts__item--working-mode">
+                <p>Режим работы:</p>
+                <p>пн-пт:<span> 9:00-20:00</span></p>
+                <p>сб-вс:<span> 10:00-15:00</span></p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__nav">
+
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Оплата и доставка</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Гарантия качества</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Документы и реквизиты</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Статьи</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">О компании</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Каталог</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Страхование</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Сертификаты</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Склад</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Вакансии</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Контакты</a>
+              </li>
+            </ul>
+
+            <div class="footer-social">
+              <a href="#" class="footer-social__link">Вконтакте</a>
+              <a href="#" class="footer-social__link">Twitter</a>
+              <a href="#" class="footer-social__link">Facebook</a>
+              <a href="#" class="footer-social__link">Telegram</a>
+              <a href="mailto:info@n-kabel.ru" class="footer-social__link footer-social__link--mail">Email: <span>info@n-kabel.ru</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-form">
+        <div class="footer-form__wrapper">
+          <p class="footer-form__title">Отправить заявку</p>
+          <form class="footer-form__form">
+            <fieldset class="footer-form__content">
+              <label for="footer-form__mail" class="visually-hidden">Почта</label>
+              <input type="text" id="footer-form__mail" placeholder="Email" required>
+
+              <button type="button">Загрузить файл</button>
+            </fieldset>
+
+            <fieldset class="footer-form__textarea">
+              <label for="footer-form__message" class="visually-hidden">Поле для сообщения</label>
+              <textarea id="footer-form__message" cols="30" rows="10" placeholder="Сообщение"></textarea>
+            </fieldset>
+
+            <fieldset class="footer-form__submit">
+              <button class="footer-form__submit-btn" type="submit">Отправить</button>
+
+              <input type="checkbox" id="footer-form__accept-rules" required class="visually-hidden">
+              <label for="footer-form__accept-rules">Согласен на обработку персональных данных</label>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-info">
+        <div class="footer-info__wrapper">
+          <div class="footer-info__rights">
+            <p class="footer-info__rights-description">Информация на сайте о технических характеристиках, наличии на складе, стоимости и изображениях товаров не является публичной офертой</p>
+            <p class="footer-info__rights-description"> Все изображения, размещенные на сайте, несут ознакомительный, информационный характер. Копирование и использование изображений</p>
+          </div>
+          <p class="footer-info__company">© 2019 Новакабель</p>
+        </div>
+      </div>
+
+    </footer>
+
+    <script src="scripts/vendor.min.js"></script>
+    <script src="scripts/main.min.js"></script>
+  </body>
+</html>
