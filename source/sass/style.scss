@@ -21,12 +21,18 @@
 @import "modules/dealership-components/dealership-swiper-slider-styles";
 @import "modules/stock";
 @import "modules/description";
+
 @import "modules/catalog";
+@import "modules/catalog-components/catalog-article";
 @import "modules/catalog-components/cable-card";
 @import "modules/catalog-components/cable-mark-card";
+@import "modules/catalog-components/item-card-lg";
+@import "modules/catalog-components/item-card-sm";
 @import "modules/catalog-components/pagination";
 @import "modules/catalog-inner/power-cable";
 @import "modules/catalog-inner/power-cable-inner/pvc";
+@import "modules/catalog-inner/power-cable-inner/pvc-copper";
+@import "modules/catalog-inner/power-cable-inner/NYMнг";
 
 @import "modules/production";
 @import "modules/production-inner/custom";
