@@ -1,4 +1,4 @@
-.power-cable {
+.pvc {
   &__wrapper {
     @include container();
     padding-bottom: 60px;
@@ -142,7 +142,7 @@
 
 
 @media (max-width: $desktop-width) {
-  .power-cable {
+  .pvc {
     &__wrapper {
       padding-top: 45px;
       padding-bottom: 30px;
@@ -226,7 +226,7 @@
 }
 
 @media (max-width: $tablet-width) {
-  .power-cable {
+  .pvc {
     &__wrapper {
       padding-bottom: 0;
     }
