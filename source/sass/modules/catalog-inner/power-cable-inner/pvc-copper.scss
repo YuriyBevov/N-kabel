@@ -1,10 +1,12 @@
 .pvc-copper {
   &__wrapper {
     @include container();
+    position: relative;
     padding-bottom: 60px;
   }
 
   &__path {
+    @include container();
     @include path();
   }
 
@@ -15,7 +17,16 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-bottom: 70px;
+    padding-right: 255px;
     color: $black;
+  }
+
+  &__search-box {
+    width: 255px;
+    min-height: 41px;
+    position: absolute;
+    top: 0;
+    right: 150px;
   }
 
   &__mark-list {

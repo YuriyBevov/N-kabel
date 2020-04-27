@@ -1,0 +1,75 @@
+.catalog-search {
+  position: relative;
+  width: inherit;
+  min-height: inherit;
+
+  input {
+    position: relative;
+    width: inherit;
+    min-height: inherit;
+    border: 1px solid $brd-grey;
+    border-radius: 5px;
+    background-color: $white;
+    padding: 8px 40px 12px 10px;
+
+    &::placeholder {
+      font-size: $scs*1.5;
+      line-height: $scs*2;
+
+      color: $brd-black;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      width: 16px;
+      height: 16px;
+      content: "";
+      background-image: url("../img/catalog-search-icon.svg");
+      background-repeat: no-repeat;
+      background-size: 16px;
+    }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 36px;
+    height: 41px;
+    transform: translateY(-50%);
+
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+
+    &:active svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &-icon {
+    vertical-align: middle;
+    transition: width 0.1s, height 0.1s;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .catalog-search {
+    display: none;
+  }
+}

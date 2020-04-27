@@ -20,5 +20,4 @@
   for (let i = 0; i < item.length; i++) {
     item[i].addEventListener('click', onClickHandler)
   }
-
 })();

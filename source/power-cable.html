@@ -82,9 +82,21 @@
 
     <main>
       <section class="power-cable">
+        <span class="power-cable__path">Главная / Каталог / <span>Силовой кабель</span></span>
         <div class="power-cable__wrapper">
-          <span class="power-cable__path">Главная / Каталог / <span>Силовой кабель</span></span>
           <h1 class="power-cable__title">Силовой кабель</h1>
+
+          <div class="power-cable__search-box">
+            <div class="catalog-search">
+              <label class="visually-hidden" for="catalog-search">Поиск по категориям</label>
+              <input id="catalog-search" type="search" placeholder="Поиск по категориям"></input>
+              <button type="submit" class="catalog-search__btn" aria-label="Кнопка поиска">
+                <svg class="catalog-search-icon" width="16" height="16">
+                  <use xlink:href="#icon-catalog-search"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
 
           <ul class="power-cable__list">
             <li class="power-cable__item">

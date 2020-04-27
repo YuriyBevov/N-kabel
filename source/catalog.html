@@ -82,9 +82,22 @@
 
     <main>
       <section class="catalog">
+        <span class="catalog__path">Главная / <span>Каталог</span></span>
         <div class="catalog__wrapper">
-          <span class="catalog__path">Главная / <span>Каталог</span></span>
+
           <h1 class="catalog__title">Каталог</h1>
+
+          <div class="catalog__search-box">
+            <div class="catalog-search">
+              <label class="visually-hidden" for="catalog-search">Поиск по категориям</label>
+              <input id="catalog-search" type="search" placeholder="Поиск по категориям"></input>
+              <button type="submit" class="catalog-search__btn" aria-label="Кнопка поиска">
+                <svg class="catalog-search-icon" width="16" height="16">
+                  <use xlink:href="#icon-catalog-search"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
 
           <ul class="catalog__list">
             <li class="catalog__item">

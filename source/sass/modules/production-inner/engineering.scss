@@ -5,6 +5,7 @@
   }
 
   &__path {
+    @include container();    
     @include path();
   }
 
