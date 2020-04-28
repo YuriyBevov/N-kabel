@@ -50,7 +50,7 @@
       line-height: $prs*1.4;
       text-align: left;
       border: none;
-      background-color: $footer-form-grey;
+      background-color: $form-grey;
       color: $white;
     }
 
@@ -66,7 +66,7 @@
 
     button {
       cursor: pointer;
-      @include hover($yellow, $footer-form-grey);
+      @include hover($yellow, $form-grey);
     }
   }
 
@@ -83,7 +83,7 @@
       line-height: $prs*1.4;
       color: $white;
       padding: 5px;
-      background-color: $footer-form-grey;
+      background-color: $form-grey;
 
       &::placeholder {
         font-size: $prs;
@@ -123,7 +123,7 @@
       min-height: 38px;
       font-size: $prs*1.8;
       line-height: $prs*2.5;
-      border: 1px solid $footer-form-btn-brd;
+      border: 1px solid $darkyellow;
       border-radius: 5px;
       cursor: pointer;
       margin-bottom: 19px;

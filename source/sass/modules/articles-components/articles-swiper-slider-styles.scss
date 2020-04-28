@@ -1,0 +1,22 @@
+.articles-swiper-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    width: 138px !important;
+  }
+
+  .swiper-pagination {
+    top: calc(100% - 5px);
+  }
+
+  .swiper-pagination-progressbar-fill {
+    background: $lightblue;
+  }
+}

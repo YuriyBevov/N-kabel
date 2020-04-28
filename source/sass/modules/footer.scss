@@ -53,20 +53,8 @@
   }
 }
 
-@media (max-width: $desktop-width) {
-  .footer {
-    &__wrapper {
-    //  padding-top: 15px;
-    }
-  }
-}
-
 @media (max-width: $tablet-width) {
   .footer {
-    &__wrapper {
-    //  padding-top: 15px;
-    }
-
     &__nav {
       &-list {
         width: 100%;

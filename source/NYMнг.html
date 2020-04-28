@@ -56,7 +56,7 @@
 
       <nav class="header__nav nav">
         <div class="nav__wrapper">
-          <img class="nav__toggle" src="../img/toggle.svg" alt="Кнопка показа блока с формой отправки заявки" width="25" height="25">
+          <img class="nav__toggle" src="../img/toggle.svg" alt="Кнопка показа меню" width="25" height="25">
 
           <ul class="nav__list">
             <li class="nav__item nav__item--catalog"><a class="nav__link active" href="catalog.html">каталог</a></li>
@@ -93,7 +93,7 @@
                 <p class="item-card-lg__price">Цена: от <span>21.99 </span>руб</p>
 
                 <div class="item-card-lg__btn-box">
-                  <a class="item-card-lg__btn item-card-lg__btn--order" href="">Заказать</a>
+                  <a class="item-card-lg__btn item-card-lg__btn--order order-btn" href="">Заказать</a>
                   <a class="item-card-lg__btn item-card-lg__btn--consultation" href="">Получить консультацию</a>
                 </div>
                 <small>
@@ -118,7 +118,7 @@
                   </p>
                 </div>
 
-                <a class="item-card-sm__btn" href="NYMнг.html">Заказать</a>
+                <a class="item-card-sm__btn order-btn" href="NYMнг.html">Заказать</a>
               </div>
             </li>
             <li class="NYMнг__core-item">
@@ -133,7 +133,7 @@
                   </p>
                 </div>
 
-                <a class="item-card-sm__btn" href="NYMнг.html">Заказать</a>
+                <a class="item-card-sm__btn order-btn" href="NYMнг.html">Заказать</a>
               </div>
             </li>
             <li class="NYMнг__core-item">
@@ -148,7 +148,7 @@
                   </p>
                 </div>
 
-                <a class="item-card-sm__btn" href="NYMнг.html">Заказать</a>
+                <a class="item-card-sm__btn order-btn" href="NYMнг.html">Заказать</a>
               </div>
             </li>
           </ul>
@@ -399,8 +399,29 @@
           <p class="footer-info__company">© 2019 Новакабель</p>
         </div>
       </div>
-
     </footer>
+
+    <section class="order-modal hidden">
+      <div class="order-modal__wrapper">
+        <h2 class="order-modal__title">Отправить заявку</h2>
+        <form action="#">
+          <label class="visually-hidden" for="mail">Email</label>
+          <input type="text" id="mail" placeholder="Email" required>
+
+          <button class="order-modal__upload-btn" type="button">Загрузить файл</button>
+
+          <label class="visually-hidden" for="message">Ваше сообщение</label>
+          <textarea type="text" id="message" placeholder="Сообщение"></textarea>
+
+          <fieldset class="order-modal__submit">
+            <input type="checkbox" id="order-modal__accept-rules" required class="visually-hidden">
+            <label for="order-modal__accept-rules">Согласен на обработку персональных данных</label>
+
+            <button class="order-modal__submit-btn" type="submit">Отправить</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
 
     <script src="scripts/vendor.min.js"></script>
     <script src="scripts/main.min.js"></script>

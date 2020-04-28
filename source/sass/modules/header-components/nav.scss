@@ -14,11 +14,14 @@
     cursor: pointer;
     margin-right: 35px;
     background: transparent;
+
+    display: none; // временно
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
+    width: 100%; // если нет бургера
   }
 
   &__item {
@@ -115,11 +118,13 @@
       display: none;
     }
 
+
+    // ??????????????
     &__list {
-      flex-direction: column;
+      //flex-direction: column;
     }
 
-    &__item {
+    /*&__item {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -131,6 +136,6 @@
       &--company ul {
         position: static;
       }
-    }
+    }*/
   }
 }

@@ -81,5 +81,32 @@
     });
   }
 
+  const isArticlesSlider = document.querySelector('.articles-swiper-container');
 
+  if (isArticlesSlider) {
+    const articlePageSwiper = new Swiper ('.articles-swiper-container', {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      freeMode: true,
+
+      breakpoints: {
+        600: {
+          slidesPerView: 3,
+        },
+        // when window width is >= 836px
+        836: {
+          slidesPerView: 5,
+        },
+        // when window width is >= 1160px
+        1439: {
+          slidesPerView: 3,
+        }
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar',
+      },
+    });
+  }
 })();

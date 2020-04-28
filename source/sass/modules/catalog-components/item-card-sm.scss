@@ -5,7 +5,7 @@
   padding: 20px 30px 30px 10px;
 
   img {
-    margin-right: 20px;
+    margin-right: auto;
   }
 
   &__title-box {
@@ -75,14 +75,11 @@
 
 @media (max-width: $desktop-width) {
   .item-card-sm {
-    img {
-      margin-right: 45px;
-    }
 
     &__title-box {
       flex-direction: column;
       max-width: 350px;
-      padding-right: 20px;
+      padding: 0 10px;
     }
 
     &__price {
