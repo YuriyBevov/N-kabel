@@ -1,5 +1,6 @@
 .footer-info {
   @include container();
+
   &__wrapper {
     display: flex;
     flex-wrap: wrap;

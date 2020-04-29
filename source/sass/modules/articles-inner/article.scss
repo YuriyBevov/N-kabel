@@ -48,6 +48,7 @@
 @media (max-width: $desktop-width) {
   .article {
     padding: 0;
+
     &__wrapper {
       @include container();
       padding-top: 45px;

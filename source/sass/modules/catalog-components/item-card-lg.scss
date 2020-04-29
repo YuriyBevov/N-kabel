@@ -36,6 +36,7 @@
     text-align: center;
     margin-bottom: 35px;
     color: $black;
+
     @include hover($white, $yellow);
 
     &--order {

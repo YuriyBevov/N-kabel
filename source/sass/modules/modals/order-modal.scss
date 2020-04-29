@@ -28,7 +28,6 @@
   }
 
   form {
-
     fieldset {
       border: none;
       padding: 0;
@@ -88,7 +87,7 @@
       border: 0;
       cursor: pointer;
 
-      @include hover($yellow)
+      @include hover($yellow);
     }
 
     span {

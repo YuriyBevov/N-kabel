@@ -59,7 +59,7 @@
     &--order {
       margin-right: 25px;
 
-      @include hover($white, $yellow)
+      @include hover($white, $yellow);
     }
 
     &--catalog {
@@ -68,7 +68,7 @@
       border-radius: 5px;
       background-color: transparent;
 
-      @include hover($white, $yellow)
+      @include hover($white, $yellow);
     }
   }
 

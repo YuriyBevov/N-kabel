@@ -43,6 +43,7 @@
     text-decoration-line: underline;
 
     color: $card-grey;
+
     @include hover($lightblue);
   }
 }

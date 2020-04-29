@@ -5,7 +5,7 @@
   }
 
   &__path {
-    @include container();    
+    @include container();
     @include path();
   }
 
@@ -31,7 +31,7 @@
       max-width: 453px;
       height: 336px;
       order: 1;
-      box-shadow: 30px 30px 0px $yellow;
+      box-shadow: 30px 30px 0 $yellow;
       border-radius: 5px;
 
       & img {
@@ -58,7 +58,7 @@
 
     &:nth-child(2n) {
       & picture {
-        box-shadow: -30px 30px 0px $yellow;
+        box-shadow: -30px 30px 0 $yellow;
         order: 2;
       }
 
@@ -139,6 +139,7 @@
         color: $black;
         background-color: $yellow;
         border-radius: 5px;
+
         @include hover($white, $yellow);
       }
     }

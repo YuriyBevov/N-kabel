@@ -73,6 +73,7 @@
       border-radius: 5px;
       color: $white;
       background-color: $primBlack;
+
       @include hover($yellow, $primBlack);
     }
 

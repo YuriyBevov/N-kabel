@@ -76,6 +76,7 @@
     label {
       width: 40%;
       cursor: pointer;
+
       @include hover($yellow, $form-grey);
     }
 
@@ -142,6 +143,7 @@
       margin-bottom: 19px;
       color: $yellow;
       background-color: transparent;
+
       @include hover($black, $yellow);
     }
   }

@@ -53,6 +53,7 @@
     border-radius: 5px;
     color: $black;
     background: $yellow;
+
     @include hover($white, $yellow);
   }
 }

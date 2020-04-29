@@ -1,27 +1,16 @@
 .urgent-swiper-container {
-   width: calc(100% - 24px);
-   height: 100%;
-   overflow: hidden;
-   margin: 0 auto;
-   position: relative;
+  width: calc(100% - 24px);
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
 
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+    background-color: $white;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
   }
 
@@ -33,7 +22,7 @@
     height: 34px;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     transform: translateY(-50%);
     background-color: $strongblue;
     background-repeat: no-repeat;
@@ -54,6 +43,6 @@
 
 @media (max-width: $tablet-width) {
   .urgent-swiper-container {
-     min-width: 360px;
-   }
- }
+    min-width: 360px;
+  }
+}
