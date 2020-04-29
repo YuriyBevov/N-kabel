@@ -3,21 +3,24 @@
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  max-width: 570px;
-
-  fieldset {
-    padding: 0;
-    border: none;
-  }
+  max-width: 565px;
 
   &__content {
-    input {
+    width: calc(100% - 180px);
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    margin-right: auto;
+
+    .about-form__mail {
       width: 170px;
       height: 22px;
       padding: 0 5px;
       margin-right: 25px;
       border: 0;
-      border-bottom: 1px solid $lightblue;
+      border-bottom: 1px solid $easygrey;
       background-color: transparent;
 
       &::placeholder {
@@ -27,24 +30,35 @@
         color: $black;
       }
     }
+  }
 
-    button {
-      font-size: $scs*1.5;
-      line-height: $scs*2;
-      width: 148px;
-      min-height: 31px;
-      padding: 0;
+  &__upload {
+    display: flex;
+    justify-content: center;
+    font-size: $scs*1.5;
+    line-height: $scs*2;
+    width: 148px;
+    min-height: 31px;
+    padding: 0;
+    padding-top: 7px;
+    cursor: pointer;
+    border: 1px solid $lightblue;
+    color: $lightblue;
+    background-color: transparent;
+
+    @include hover($white, $lightblue);
+
+    label {
       cursor: pointer;
-      border: 1px solid $lightblue;
-      color: $lightblue;
-      background-color: transparent;
-      @include hover($white, $lightblue);
     }
   }
 
   &__submit {
     display: flex;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
+    border: none;
     margin-left: auto;
 
     &-btn {
