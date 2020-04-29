@@ -197,7 +197,7 @@
           <ul class="stock__list">
             <li class="stock__item">
               <div class="stock__item-box">
-                <a class="stock__item-link" href="#">
+                <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
@@ -210,7 +210,7 @@
             </li>
             <li class="stock__item">
               <div class="stock__item-box">
-                <a class="stock__item-link" href="#">
+                <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
@@ -223,7 +223,7 @@
             </li>
             <li class="stock__item">
               <div class="stock__item-box">
-                <a class="stock__item-link" href="#">
+                <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
@@ -236,7 +236,7 @@
             </li>
             <li class="stock__item">
               <div class="stock__item-box">
-                <a class="stock__item-link" href="#">
+                <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
@@ -249,7 +249,7 @@
             </li>
             <li class="stock__item">
               <div class="stock__item-box">
-                <a class="stock__item-link" href="#">
+                <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
@@ -262,7 +262,7 @@
             </li>
             <li class="stock__item">
               <div class="stock__item-box">
-                <a class="stock__item-link" href="#">
+                <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
@@ -275,7 +275,7 @@
             </li>
             <li class="stock__item">
               <div class="stock__item-box">
-                <a class="stock__item-link" href="#">
+                <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
@@ -288,7 +288,7 @@
             </li>
             <li class="stock__item">
               <div class="stock__item-box">
-                <a class="stock__item-link" href="#">
+                <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
@@ -301,7 +301,7 @@
             </li>
             <li class="stock__item">
               <div class="stock__item-box">
-                <a class="stock__item-link" href="#">
+                <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
                 <img class="stock__item-img" src="../img/cable.png" width="157" height="103" alt="Изображение кабеля">
@@ -555,7 +555,12 @@
               <label for="footer-form__mail" class="visually-hidden">Почта</label>
               <input type="text" id="footer-form__mail" placeholder="Email" required>
 
-              <button type="button">Загрузить файл</button>
+
+              <div class="footer-form__upload">
+                <label class="footer-form__upload-btn" for="footer-form-file-upload">Загрузить файл</label>
+                <span class="footer-form__upload-files"></span>
+                <input type="file" id="footer-form-file-upload" class="visually-hidden" value="Загрузить файл">
+              </div>
             </fieldset>
 
             <fieldset class="footer-form__textarea">
@@ -582,8 +587,33 @@
           <p class="footer-info__company">© 2019 Новакабель</p>
         </div>
       </div>
-
     </footer>
+
+    <section class="order-modal hidden">
+      <div class="order-modal__wrapper">
+        <h2 class="order-modal__title">Отправить заявку</h2>
+        <form action="#">
+          <label class="visually-hidden" for="mail">Email</label>
+          <input type="text" id="mail" placeholder="Email" required>
+
+          <div class="order-modal__upload">
+            <label class="order-modal__upload-btn" for="file-upload">Загрузить файл</label>
+            <span class="order-modal__upload-files"></span>
+            <input type="file" id="file-upload" class="visually-hidden" value="Загрузить файл">
+          </div>
+
+          <label class="visually-hidden" for="message">Ваше сообщение</label>
+          <textarea type="text" id="message" placeholder="Сообщение"></textarea>
+
+          <fieldset class="order-modal__submit">
+            <input type="checkbox" id="order-modal__accept-rules" required class="visually-hidden">
+            <label for="order-modal__accept-rules">Согласен на обработку персональных данных</label>
+
+            <button class="order-modal__submit-btn" type="submit">Отправить</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
 
     <script src="scripts/vendor.min.js"></script>
     <script src="scripts/main.min.js"></script>

@@ -39,4 +39,17 @@
   for (let i = 0; i < orderBtn.length; i++) {
     orderBtn[i].addEventListener('click', showByClick)
   }
+
+  const fileInput = document.getElementById('file-upload');
+  const fileName = document.querySelector('.order-modal__upload-files');
+
+  if (fileInput) {
+    fileInput.addEventListener('change', function(event) {
+      const input = event.target;
+
+      for (let i = 0; i < input.files.length; i++) {
+        fileName.textContent = input.files[i].name;
+      }
+    });
+  }
 })();

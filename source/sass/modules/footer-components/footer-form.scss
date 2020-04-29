@@ -41,8 +41,7 @@
 
     margin-right: 25px;
 
-    input,
-    button {
+    input {
       width: 220px;
       min-height: 26px;
       padding: 5px 10px;
@@ -50,12 +49,9 @@
       line-height: $prs*1.4;
       text-align: left;
       border: none;
+      margin-bottom: 10px;
       background-color: $form-grey;
       color: $white;
-    }
-
-    input {
-      margin-bottom: $prs;
 
       &::placeholder {
         font-size: $prs;
@@ -63,15 +59,32 @@
         color: $white;
       }
     }
+  }
 
-    button {
+  &__upload {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 26px;
+    text-align: left;
+    font-size: $prs;
+    line-height: $prs*1.4;
+    padding: 5px 10px;
+    background-color: $form-grey;
+    color: $white;
+
+    label {
+      width: 40%;
       cursor: pointer;
       @include hover($yellow, $form-grey);
+    }
+
+    span {
+      width: 60%;
     }
   }
 
   &__textarea {
-
     margin-right: 50px;
 
     textarea {
@@ -188,11 +201,14 @@
     }
 
     &__content {
-      & input,
-      button {
+      input {
         width: inherit;
         margin-bottom: 15px;
       }
+    }
+
+    &__upload {
+      margin-bottom: 15px;
     }
 
     &__textarea {

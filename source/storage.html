@@ -243,7 +243,12 @@
               <label for="footer-form__mail" class="visually-hidden">Почта</label>
               <input type="text" id="footer-form__mail" placeholder="Email" required>
 
-              <button type="button">Загрузить файл</button>
+
+              <div class="footer-form__upload">
+                <label class="footer-form__upload-btn" for="footer-form-file-upload">Загрузить файл</label>
+                <span class="footer-form__upload-files"></span>
+                <input type="file" id="footer-form-file-upload" class="visually-hidden" value="Загрузить файл">
+              </div>
             </fieldset>
 
             <fieldset class="footer-form__textarea">

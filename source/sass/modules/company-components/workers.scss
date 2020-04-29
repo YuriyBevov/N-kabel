@@ -10,6 +10,7 @@
     width: 100%;
     max-width: 1047px;
     margin: 0 auto;
+    transition: opacity 0.5s 0.1s;
 
     &--hidden {
       display: none;

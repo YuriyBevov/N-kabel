@@ -31,6 +31,8 @@
 
     fieldset {
       border: none;
+      padding: 0;
+      margin: 0;
     }
 
     input {
@@ -67,19 +69,33 @@
     }
   }
 
-  &__upload-btn {
-    width: 100%;
-    min-height: 49px;
+  &__upload {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     font-size: $prs;
     line-height: $prs*1.4;
-    border: 0;
-    padding: 10px 20px;
-    margin-bottom: 25px;
-    cursor: pointer;
+    min-height: 49px;
     text-align: left;
     background-color: $form-grey;
     color: $white;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+
+    label {
+      display: block;
+      width: 40%;
+      border: 0;
+      cursor: pointer;
+
+      @include hover($yellow)
+    }
+
+    span {
+      width: 60%;
+    }
   }
+
 
   &__submit {
     label {

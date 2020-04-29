@@ -20,3 +20,14 @@
     }
   }
 }
+
+@media (max-width: $tablet-width) {
+  .footer-social {
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    &__link {
+      width: 50%;
+    }
+  }
+}

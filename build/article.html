@@ -623,7 +623,7 @@
         <span class="article__path">Главная / Статьи / <span>Кабели для построения систем управления</span></span>
         <div class="article__wrapper">
           <span class="article__date">2019-10-10 15:05:42</span>
-          
+
           <h1 class="article__title">Кабели для построения систем управления</h1>
 
           <p class="article__description">
@@ -848,7 +848,12 @@
               <label for="footer-form__mail" class="visually-hidden">Почта</label>
               <input type="text" id="footer-form__mail" placeholder="Email" required="">
 
-              <button type="button">Загрузить файл</button>
+
+              <div class="footer-form__upload">
+                <label class="footer-form__upload-btn" for="footer-form-file-upload">Загрузить файл</label>
+                <span class="footer-form__upload-files"></span>
+                <input type="file" id="footer-form-file-upload" class="visually-hidden" value="Загрузить файл">
+              </div>
             </fieldset>
 
             <fieldset class="footer-form__textarea">
@@ -884,7 +889,11 @@
           <label class="visually-hidden" for="mail">Email</label>
           <input type="text" id="mail" placeholder="Email" required="">
 
-          <button class="order-modal__upload-btn" type="button">Загрузить файл</button>
+          <div class="order-modal__upload">
+            <label class="order-modal__upload-btn" for="file-upload">Загрузить файл</label>
+            <span class="order-modal__upload-files"></span>
+            <input type="file" id="file-upload" class="visually-hidden" value="Загрузить файл">
+          </div>
 
           <label class="visually-hidden" for="message">Ваше сообщение</label>
           <textarea type="text" id="message" placeholder="Сообщение"></textarea>
