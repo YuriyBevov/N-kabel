@@ -13,17 +13,16 @@
     width: 150px;
     font-size: $prs*1.6;
     line-height: $prs*2.8;
-    min-height: 40px;
+    text-align: center;
     border: none;
     padding: 0 10px;
     margin-bottom: 10px;
     cursor: pointer;
     border-radius: 5px;
-
     background-color: $white;
     color: $black;
 
-    @include hover($yellow, $black);
+    @include hover($yellow);
   }
 
   &__box {

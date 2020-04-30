@@ -124,7 +124,15 @@
     }
 
     input:checked + label::before {
-      background-color: red; // попросить иконку
+      width: 15px;
+      height: 15px;
+      content: "";
+      border: none;
+      background-color: transparent;
+      background-image: url("../img/checked.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
     }
 
     &-btn {
