@@ -409,15 +409,21 @@
     <section class="order-modal hidden">
       <div class="order-modal__wrapper">
         <h2 class="order-modal__title">Отправить заявку</h2>
-        <form action="#">
-          <label class="visually-hidden" for="mail">Email</label>
-          <input type="text" id="mail" placeholder="Email" required>
+        <form action="#" method="POST">
+          <div class="order-modal__mail">
+            <label class="visually-hidden" for="mail">Email</label>
+            <input type="text" id="mail" placeholder="Email" required>
+            <span class="order-modal__mail-error">Введите корректный адрес почты</span>
+          </div>
 
           <div class="order-modal__upload">
             <label class="order-modal__upload-btn" for="file-upload">Загрузить файл</label>
             <span class="order-modal__upload-files"></span>
             <input type="file" id="file-upload" class="visually-hidden">
           </div>
+
+          <label class="visually-hidden" for="count">Введите количество</label>
+          <input class="order-modal__count" type="text" id="count" placeholder="Введите количество">
 
           <label class="visually-hidden" for="message">Ваше сообщение</label>
           <textarea id="message" placeholder="Сообщение"></textarea>

@@ -23,9 +23,9 @@
     box-sizing: border-box;
     border-radius: 5px;
     margin-right: 56px;
-    padding-left: 30px;
+    padding: 11px 0 11px 30px;
 
-    &::placeholder { // change it
+    &::placeholder {
       font-size: 12px;
       line-height: 16px;
       padding: 0;
