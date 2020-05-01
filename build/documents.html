@@ -661,12 +661,12 @@
           <img class="nav__toggle" src="img/toggle.svg" alt="Кнопка показа меню" width="25" height="25">
 
           <ul class="nav__list">
-            <li class="nav__item nav__item--catalog"><a class="nav__link active" href="#">каталог</a></li>
+            <li class="nav__item nav__item--catalog"><a class="nav__link" href="catalog.html">каталог</a></li>
             <li class="nav__item"><a class="nav__link" href="articles.html">Статьи</a></li>
             <li class="nav__item"><a class="nav__link" href="production.html">Производство</a></li>
             <li class="nav__item"><a class="nav__link" href="standarts.html">Стандарты</a></li>
             <li class="nav__item"><a class="nav__link" href="urgent.html">Срочное производство</a></li>
-            <li class="nav__item nav__item--company"><a class="nav__link nav__link--company" href="#">О компании</a>
+            <li class="nav__item nav__item--company"><a class="nav__link nav__link--company active" href="#">О компании</a>
               <ul>
                 <li><a class="nav__link" href="company.html">О компании</a></li>
                 <li><a class="nav__link" href="storage.html">Склад</a></li>
@@ -683,166 +683,135 @@
     </header>
 
     <main>
-      <section class="catalog">
-        <span class="catalog__path">Главная / <span>Каталог</span></span>
-        <div class="catalog__wrapper">
+      <section class="documents">
+        <span class="documents__path">Главная / О компании / <span>Документы и реквизиты</span></span>
+        <div class="documents__wrapper">
+          <h1 class="documents__title">Документы и&nbsp;реквизиты</h1>
 
-          <h1 class="catalog__title">Каталог</h1>
-
-          <div class="catalog__search-box">
-            <div class="catalog-search">
-              <label class="visually-hidden" for="catalog-search">Поиск по категориям</label>
-              <input id="catalog-search" type="search" placeholder="Поиск по категориям">
-              <button type="submit" class="catalog-search__btn" aria-label="Кнопка поиска">
-                <svg class="catalog-search-icon" width="16" height="16">
-                  <use xlink:href="#icon-catalog-search"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <ul class="catalog__list">
-            <li class="catalog__item">
-              <div class="cable-card">
-                <img src="img/catalog-cable1.png" width="164" height="164" alt="Изображение кабеля">
-
-                <div class="cable-card__box">
-                  <h2 class="cable-card__title">Силовой кабель</h2>
-                  <ul class="cable-card__list">
-                    <li class="cable-card__item"><a class="cable-card__link" href="pvc.html">Кабели силовые с ПВХ изоляцией</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с ПВХ изоляцией бронированный</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с изоляцией из СПЭ</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с бумажной изоляцией</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабель гибкий силовой в резиновой изоляции</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабель с изоляцией и оболочкой из полимерных композиций</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Медный силовой кабель</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабель силовой алюминиевый</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <a class="catalog__link" href="power-cable.html">Посмотреть все</a>
-            </li>
-
-            <li class="catalog__item">
-              <div class="cable-card">
-                <img src="img/catalog-cable2.png" width="195" height="195" alt="Изображение кабеля">
-
-                <div class="cable-card__box">
-                  <h2 class="cable-card__title">Провода</h2>
-                  <ul class="cable-card__list">
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода соединительные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода выводные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода для подвижного состава</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода автомобильные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода авиационные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода установочные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода связи</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода изолированные для воздушных линий</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода неизолированные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода для геофизических работ</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода обмоточные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провод термостойкий</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <a class="catalog__link" href="#">Посмотреть все</a>
-            </li>
-
-            <li class="catalog__item">
-              <div class="cable-card">
-                <img src="img/catalog-cable3.png" width="172" height="97" alt="Изображение кабеля">
-
-                <div class="cable-card__box">
-                  <h2 class="cable-card__title">Кабель судовой</h2>
-                </div>
-              </div>
-
-              <a class="catalog__link" href="#">Посмотреть все</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="pagination">
-          <div class="pagination__wrapper">
-
-            <a href="#" class="pagination__show-btn">Показать еще</a>
-
-            <div class="pagination__box">
-
-              <a class="pagination__btn-prev" href="#" aria-label="Назад">
-                <svg width="12" height="12">
-                  <use xlink:href="#icon-pagination-l"></use>
-                </svg>
-              </a>
-              <a class="pagination__btn" href="#">1</a>
-              <a class="pagination__btn active" href="#">2</a>
-              <a class="pagination__btn" href="#">3</a>
-              <a class="pagination__btn" href="#">4</a>
-              <a class="pagination__btn" href="#">5</a>
-              <a class="pagination__btn" href="#">...</a>
-              <a class="pagination__btn" href="#">60</a>
-              <a class="pagination__btn-next" href="#" aria-label="Вперед">
-                <svg width="12" height="12">
-                  <use xlink:href="#icon-pagination-r"></use>
-                </svg>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-
-        <article class="catalog-article">
-          <div class="catalog-article__wrapper">
-            <h3 class="catalog-article__title">Где купить силовой кабель?</h3>
-
-            <p class="catalog-article__text">
-              Силовой кабель – это жильный провод, который передает электроэнергию от главного распределительного щитка непосредственно к ее потребителям.
-              Купить силовой кабель необходимо промышленным предприятиям, коммунальным учреждениям, транспортным объектам и т.п.
-              Он, как правило, рассчитан на напряжение 35 Вольт и имеет бумажную изоляцию, пропитанную специальным средством.
-              В качестве материала для изготовления может использоваться никель или медь.
-            </p>
-
-            <picture>
-              <source type="image/webp" srcset="img/catalog-image1x.webp 1x, img/catalog-image2x.webp 2x">
-
-              <img src="img/catalog-image1x.png" srcset="img/catalog-image2x.png 2x" alt="Изображение жильного провода">
-            </picture>
-
-            <strong>Конструкционные особенности</strong>
-            <p class="catalog-article__text">
-              Вне зависимости от сферы применения силового кабеля, его конструкция в обязательном порядке включает в себя следующие элементы:
-            </p>
-
-            <ul>
-              <li>
-                &mdash; жила, чья функция заключается в поставке тока;
+          <div class="documents__container">
+            <ul class="documents__list">
+              <li class="documents__item">
+                <img src="img/pdf-icon.png" width="24" height="27" alt="Документ в формате .pdf">
+                <p class="documents__item-name">Устав ООО&nbsp;“Новакабель”</p>
+                <a href="#" download=""> <!--файл для скачивания-->
+                  <svg class="documents__download-icon" width="16" height="16">
+                    <use xlink:href="#icon-download"></use>
+                  </svg>
+                </a>
               </li>
-              <li>
-                &mdash; изоляция, которая призвана обеспечить высокий уровень защиты токопроводящей жилы (например, резиновая);
+              <li class="documents__item">
+                <img src="img/pdf-icon.png" width="24" height="27" alt="Документ в формате .pdf">
+                <p class="documents__item-name">Уведомление о смене юр. адреса</p>
+                <a href="#" download=""><!--файл для скачивания-->
+                  <svg class="documents__download-icon" width="16" height="16">
+                    <use xlink:href="#icon-download"></use>
+                  </svg>
+                </a>
               </li>
-              <li>
-                &mdash; оболочка, которая защищает силовой кабель целиком от воздействия неблагоприятных факторов, к примеру дождя.
+              <li class="documents__item">
+                <img src="img/doc-icon.png" width="37" height="39" alt="Документ в формате .doc">
+                <p class="documents__item-name">Договор поставки</p>
+                <a href="#" download=""><!--файл для скачивания-->
+                  <svg class="documents__download-icon" width="16" height="16">
+                    <use xlink:href="#icon-download"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="documents__item">
+                <img src="img/doc-icon.png" width="37" height="39" alt="Документ в формате .doc">
+                <p class="documents__item-name">Полный пакет документов</p>
+                <a href="#" download=""><!--файл для скачивания-->
+                  <svg class="documents__download-icon" width="16" height="16">
+                    <use xlink:href="#icon-download"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
+            <div class="requisites">
+              <h2 class="requisites__title">УЧЕТНАЯ&nbsp;КАРТОЧКА ООО&nbsp;«Новакабель»</h2>
+              <ul class="requisites__list">
+                <li class="requisites__item">
+                  <p class="requisites__name">Наименование организации</p>
+                  <p class="requisites__description">Общество с ограниченной ответственностью «Новакабель»</p>
+                </li>
+                <li class="requisites__item">
+                  <p class="requisites__name">Сокращенное наименование</p>
+                  <p class="requisites__description">ООО&nbsp;«Новакабель»</p>
+                </li>
+                <li class="requisites__item">
+                  <ul>
+                    <li>
+                      <p class="requisites__name">ИНН</p>
+                      <p class="requisites__description">7805687445</p>
+                    </li>
+                    <li>
+                      <p class="requisites__name">КПП</p>
+                      <p class="requisites__description">780501001</p>
+                    </li>
+                    <li>
+                      <p class="requisites__name">ОКПО</p>
+                      <p class="requisites__description">05486645</p>
+                    </li>
+                    <li>
+                      <p class="requisites__name">ОГРН</p>
+                      <p class="requisites__description">1167847431641</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="requisites__item">
+                  <p class="requisites__name">Юридический адрес</p>
+                  <p class="requisites__description">198216, г.&nbsp;Санкт&nbsp;-&nbsp;Петербург, Трамвайный&nbsp;пр&nbsp;-&nbsp;кт,&nbsp;д.&nbsp;32&nbsp;офис&nbsp;110</p>
+                </li>
+                <li class="requisites__item">
+                  <p class="requisites__name">Фактический адрес</p>
+                  <p class="requisites__description">Российская Федерация, 198216, г.&nbsp;Санкт&nbsp;-&nbsp;Петербург, Трамвайный&nbsp;пр&nbsp;-&nbsp;кт,&nbsp;д.&nbsp;32</p>
+                </li>
+                <li class="requisites__item">
+                  <p class="requisites__name">Почтовый адрес</p>
+                  <p class="requisites__description">198216, г.&nbsp;Санкт&nbsp;-&nbsp;Петербург, Трамвайный&nbsp;пр&nbsp;-&nbsp;кт,&nbsp;д.&nbsp;32&nbsp;офис&nbsp;110</p>
+                </li>
+                <li class="requisites__item">
+                  <ul>
+                    <li>
+                      <p class="requisites__name">Расчетный счет</p>
+                      <p class="requisites__description">40702810402890026107</p>
+                    </li>
+                    <li>
+                      <p class="requisites__name">Корреспондентский счет</p>
+                      <p class="requisites__description">30101810000000000201</p>
+                    </li>
+                    <li>
+                      <p class="requisites__name">БИК</p>
+                      <p class="requisites__description">044525201</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="requisites__item">
+                  <p class="requisites__name">Банк</p>
+                  <p class="requisites__description">ПАО АКБ “АВАНГАРД” г.&nbsp;Санкт&nbsp;-&nbsp;Петербург</p>
+                </li>
+                <li class="requisites__item">
+                  <p class="requisites__name">Генеральный директор</p>
+                  <p class="requisites__description">Салахутдинов Ильсур Ильдусович действует на основании Устава</p>
+                </li>
+                <li class="requisites__item">
+                  <ul class="requisites__item-contacts-list">
+                    <li class="requisites__item-phone">
+                      <p class="requisites__name">Телефон/факс</p>
+                      <p class="requisites__description">8 (800) 700-41-71</p>
+                    </li>
+                    <li class="requisites__item-mail">
+                      <p class="requisites__name">E-mail</p>
+                      <p class="requisites__description">info@n-kabel.ru</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
 
-            <p class="catalog-article__text">
-              Помимо вышеописанных элементов конструкция кабеля может дополнительно включать в себя экран, броню, подушку изоляции и т.п.
-              Ее особенности напрямую зависят от того, в каких условиях будет применяться кабель и какие задачи перед ним ставятся.
-            </p>
-
-            <strong>Где силовой кабель купить оптом?</strong>
-            <p class="catalog-article__text">
-              Если вам нужно купить силовой кабель, то обращайтесь в наш интернет-магазин.
-              У нас представлены различные модификации кабеля, поэтому вы сможете подобрать наиболее оптимальный вариант для себя.
-              Нашим клиентам мы гарантируем высокое качество товаров и доступные цены на них. У нас вы также можете купить силовой кабель оптом.
-              Это очень выгодное предложение, которое позволит существенно сэкономить.
-              Для оформления заказа заполните форму на сайте или свяжитесь с нами по контактному телефону.
-            </p>
+              <button class="requisites__btn" type="button">Распечатать</button>
+            </div>
           </div>
-        </article>
+        </div>
       </section>
     </main>
 
@@ -898,8 +867,8 @@
               </li>
               <li class="footer-contacts__item footer-contacts__item--working-mode">
                 <p>Режим работы:</p>
-                <p>пн-пт:<span> 9:00-20:00</span></p>
-                <p>сб-вс:<span> 10:00-15:00</span></p>
+                <span>пн-пт 9:00-20:00</span>
+                <span>сб-вс: 10:00-15:00</span>
               </li>
             </ul>
           </div>
@@ -993,6 +962,7 @@
           <p class="footer-info__company">© 2019 Новакабель</p>
         </div>
       </div>
+
     </footer>
 
     <script src="scripts/vendor.min.js"></script>

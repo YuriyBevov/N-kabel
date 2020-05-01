@@ -661,16 +661,16 @@
           <img class="nav__toggle" src="img/toggle.svg" alt="Кнопка показа меню" width="25" height="25">
 
           <ul class="nav__list">
-            <li class="nav__item nav__item--catalog"><a class="nav__link active" href="#">каталог</a></li>
+            <li class="nav__item nav__item--catalog"><a class="nav__link" href="catalog.html">каталог</a></li>
             <li class="nav__item"><a class="nav__link" href="articles.html">Статьи</a></li>
             <li class="nav__item"><a class="nav__link" href="production.html">Производство</a></li>
             <li class="nav__item"><a class="nav__link" href="standarts.html">Стандарты</a></li>
             <li class="nav__item"><a class="nav__link" href="urgent.html">Срочное производство</a></li>
-            <li class="nav__item nav__item--company"><a class="nav__link nav__link--company" href="#">О компании</a>
+            <li class="nav__item nav__item--company"><a class="nav__link nav__link--company active" href="#">О компании</a>
               <ul>
-                <li><a class="nav__link" href="company.html">О компании</a></li>
+                <li><a class="nav__link" href="#">О компании</a></li>
                 <li><a class="nav__link" href="storage.html">Склад</a></li>
-                <li><a class="nav__link" href="#">Документы и реквизиты</a></li>
+                <li><a class="nav__link" href="documents.html">Документы и реквизиты</a></li>
                 <li><a class="nav__link" href="certificates.html">Сертификаты и паспорта</a></li>
                 <li><a class="nav__link" href="partnership.html">Партнерство&nbsp;и&nbsp;сотрудничество</a></li>
               </ul>
@@ -683,166 +683,325 @@
     </header>
 
     <main>
-      <section class="catalog">
-        <span class="catalog__path">Главная / <span>Каталог</span></span>
-        <div class="catalog__wrapper">
+      <section class="company">
+        <span class="company__path">Главная / <span>О компании</span></span>
+        <div class="company__wrapper">
+          <h1 class="company__title">О компании N-Kabel</h1>
+          <p class="company__description">
+            ООО «НОВАКАБЕЛЬ» - компания, занимающаяся оптовыми продажами электротехнической продукции широкого назначения.
+            На протяжении многих лет мы развиваем логистику и расширяем ассортимент.
+            Результат кропотливой работы нашей слаженной команды – достижение главной&nbsp;цели:
+            <span>обеспечение бесперебойных и оперативных поставок вне зависимости от расстояний и объема.</span>
+          </p>
 
-          <h1 class="catalog__title">Каталог</h1>
-
-          <div class="catalog__search-box">
-            <div class="catalog-search">
-              <label class="visually-hidden" for="catalog-search">Поиск по категориям</label>
-              <input id="catalog-search" type="search" placeholder="Поиск по категориям">
-              <button type="submit" class="catalog-search__btn" aria-label="Кнопка поиска">
-                <svg class="catalog-search-icon" width="16" height="16">
-                  <use xlink:href="#icon-catalog-search"></use>
-                </svg>
-              </button>
+          <div class="advantages">
+            <div class="advantages__wrapper">
+              <h2 class="advantages__title">Воспользуйтесь следующими преимуществами сотрудничества с ООО&nbsp;«НОВАКАБЕЛЬ»:</h2>
+              <ul class="advantages__list">
+                <li class="advantages__item">
+                  <svg class="advantages__item-icon" width="55" height="55">
+                    <use xlink:href="#icon-reaction"></use>
+                  </svg>
+                  <p class="advantages__description">
+                    Оперативное реагирование на запросы клиентов. Специалисты компании свяжутся с вами не позднее 15 минут после поступления заявки
+                  </p>
+                </li>
+                <li class="advantages__item">
+                  <svg class="advantages__item-icon" width="66" height="66">
+                    <use xlink:href="#icon-delivery"></use>
+                  </svg>
+                  <p class="advantages__description">
+                    Осуществляем доставку в любой населенный пункт России
+                  </p>
+                </li>
+                <li class="advantages__item">
+                  <svg class="advantages__item-icon" width="60" height="54">
+                    <use xlink:href="#icon-store"></use>
+                  </svg>
+                  <p class="advantages__description">
+                    Располагаем семью складскими комплексами на территории РФ,
+                    что позволяет существенно снизить сроки доставки и накладные транспортные расходы
+                  </p>
+                </li>
+                <li class="advantages__item">
+                  <svg class="advantages__item-icon" width="59" height="59">
+                    <use xlink:href="#icon-variety"></use>
+                  </svg>
+                  <p class="advantages__description">
+                    Ассортимент, предлагаемой к реализации продукции, превышает тридцать тысяч наименований и постоянно пополняется новыми позициями
+                  </p>
+                </li>
+                <li class="advantages__item">
+                  <svg class="advantages__item-icon" width="62" height="62">
+                    <use xlink:href="#icon-pattern"></use>
+                  </svg>
+                  <p class="advantages__description">
+                    Отработанные схемы логистики для всех направлений поставок. Это гарантирует минимальные потери времени на транспортировку.
+                  </p>
+                  <p class="advantages__description">
+                    Без преувеличений можно утверждать, что наши специалисты учитывают каждую минуту, чтобы сэкономить дни
+                  </p>
+                </li>
+                <li class="advantages__item">
+                  <svg class="advantages__item-icon" width="53" height="53">
+                    <use xlink:href="#icon-experience"></use>
+                  </svg>
+                  <p class="advantages__description">
+                    ООО «НОВАКАБЕЛЬ» имеет большой опыт участия в различных тендерах и торгах, благодаря чему мы можем предложить очень доступные
+                    цены на электротехническую продукцию
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <ul class="catalog__list">
-            <li class="catalog__item">
-              <div class="cable-card">
-                <img src="img/catalog-cable1.png" width="164" height="164" alt="Изображение кабеля">
+          <p class="company__description">
+            Кроме того, мы всегда держим в наличии особо дефицитные виды кабеля, которые изготовляются по спецзаказу.
+            Поэтому, если вы не смогли найти необходимую номенклатуру, обязательно обратитесь в нашу компанию.
+            Вы будете приятно удивлены, насколько простым может оказаться решение задач по комплектации вашего предприятия кабельной продукцией,
+            имеющей узкоспециализированное применение.
+            <span>Также, наши специалисты помогут подобрать аналоги проводниковой продукции без ухудшения технических характеристик.</span>
+          </p>
 
-                <div class="cable-card__box">
-                  <h2 class="cable-card__title">Силовой кабель</h2>
-                  <ul class="cable-card__list">
-                    <li class="cable-card__item"><a class="cable-card__link" href="pvc.html">Кабели силовые с ПВХ изоляцией</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с ПВХ изоляцией бронированный</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с изоляцией из СПЭ</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с бумажной изоляцией</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабель гибкий силовой в резиновой изоляции</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабель с изоляцией и оболочкой из полимерных композиций</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Медный силовой кабель</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабель силовой алюминиевый</a></li>
-                  </ul>
-                </div>
+          <div class="workers">
+            <div class="workers__wrapper">
+              <div class="workers__toggle-box">
+                <input type="radio" name="workers-type" id="manager" checked="">
+                <label for="manager" class="workers__toggle-label" id="0" tabindex="0">Наши менеджеры</label>
+
+                <input type="radio" name="workers-type" id="IT">
+                <label for="IT" class="workers__toggle-label" id="1" tabindex="0">IT отдел</label>
+
+                <input type="radio" name="workers-type" id="director">
+                <label for="director" class="workers__toggle-label workers__toggle-label--direction" id="2" tabindex="0">Руководство компании</label>
               </div>
 
-              <a class="catalog__link" href="power-cable.html">Посмотреть все</a>
-            </li>
-
-            <li class="catalog__item">
-              <div class="cable-card">
-                <img src="img/catalog-cable2.png" width="195" height="195" alt="Изображение кабеля">
-
-                <div class="cable-card__box">
-                  <h2 class="cable-card__title">Провода</h2>
-                  <ul class="cable-card__list">
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода соединительные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода выводные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода для подвижного состава</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода автомобильные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода авиационные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода установочные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода связи</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода изолированные для воздушных линий</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода неизолированные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода для геофизических работ</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода обмоточные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провод термостойкий</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <a class="catalog__link" href="#">Посмотреть все</a>
-            </li>
-
-            <li class="catalog__item">
-              <div class="cable-card">
-                <img src="img/catalog-cable3.png" width="172" height="97" alt="Изображение кабеля">
-
-                <div class="cable-card__box">
-                  <h2 class="cable-card__title">Кабель судовой</h2>
-                </div>
-              </div>
-
-              <a class="catalog__link" href="#">Посмотреть все</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="pagination">
-          <div class="pagination__wrapper">
-
-            <a href="#" class="pagination__show-btn">Показать еще</a>
-
-            <div class="pagination__box">
-
-              <a class="pagination__btn-prev" href="#" aria-label="Назад">
-                <svg width="12" height="12">
-                  <use xlink:href="#icon-pagination-l"></use>
-                </svg>
-              </a>
-              <a class="pagination__btn" href="#">1</a>
-              <a class="pagination__btn active" href="#">2</a>
-              <a class="pagination__btn" href="#">3</a>
-              <a class="pagination__btn" href="#">4</a>
-              <a class="pagination__btn" href="#">5</a>
-              <a class="pagination__btn" href="#">...</a>
-              <a class="pagination__btn" href="#">60</a>
-              <a class="pagination__btn-next" href="#" aria-label="Вперед">
-                <svg width="12" height="12">
-                  <use xlink:href="#icon-pagination-r"></use>
-                </svg>
-              </a>
+              <ul class="workers__list">
+                <li class="workers__item">
+                  <div class="workers__item-container">
+                    <picture>
+                      <img src="img/anna1x.png" srcset="img/anna2x.png 2x" width="148" height="148" alt="Фотография работника">
+                    </picture>
+                    <div class="workers__item-btn-box">
+                      <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
+                        <svg class="workers__item-icon" width="10.87" height="11.87">
+                          <use xlink:href="#icon-post"></use>
+                        </svg>
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Добавочный телефон:">
+                        508
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Оставить отзыв">
+                        <svg class="workers__item-icon" width="12" height="12">
+                          <use xlink:href="#icon-feedback"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="workers__name">Анна</p>
+                  <p class="workers__description">Специалист отдела продаж</p>
+                </li>
+                <li class="workers__item">
+                  <div class="workers__item-container">
+                    <picture>
+                      <img src="img/vladimir1x.png" srcset="img/vladimir2x.png 2x" width="148" height="148" alt="Фотография работника">
+                    </picture>
+                    <div class="workers__item-btn-box">
+                      <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
+                        <svg class="workers__item-icon" width="10.87" height="11.87">
+                          <use xlink:href="#icon-post"></use>
+                        </svg>
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Добавочный телефон:">
+                        508
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Оставить отзыв">
+                        <svg class="workers__item-icon" width="12" height="12">
+                          <use xlink:href="#icon-feedback"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="workers__name">Владимир</p>
+                  <p class="workers__description">Начальник отдела продаж</p>
+                </li>
+                <li class="workers__item">
+                  <div class="workers__item-container">
+                    <picture>
+                      <img src="img/ksenia1x.png" srcset="img/ksenia2x.png 2x" width="148" height="148" alt="Фотография работника">
+                    </picture>
+                    <div class="workers__item-btn-box">
+                      <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
+                        <svg class="workers__item-icon" width="10.87" height="11.87">
+                          <use xlink:href="#icon-post"></use>
+                        </svg>
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Добавочный телефон:">
+                        508
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Оставить отзыв">
+                        <svg class="workers__item-icon" width="12" height="12">
+                          <use xlink:href="#icon-feedback"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="workers__name">Ксения</p>
+                  <p class="workers__description">Специалист отдела продаж</p>
+                </li>
+                <li class="workers__item">
+                  <div class="workers__item-container">
+                    <picture>
+                      <img src="img/yulia1x.png" srcset="img/yulia2x.png 2x" width="148" height="148" alt="Фотография работника">
+                    </picture>
+                    <div class="workers__item-btn-box">
+                      <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
+                        <svg class="workers__item-icon" width="10.87" height="11.87">
+                          <use xlink:href="#icon-post"></use>
+                        </svg>
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Добавочный телефон:">
+                        508
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Оставить отзыв">
+                        <svg class="workers__item-icon" width="12" height="12">
+                          <use xlink:href="#icon-feedback"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="workers__name">Юлия</p>
+                  <p class="workers__description">Специалист отдела продаж</p>
+                </li>
+                <li class="workers__item">
+                  <div class="workers__item-container">
+                    <picture>
+                      <img src="img/ilia1x.png" srcset="img/ilia2x.png 2x" width="148" height="148" alt="Фотография работника">
+                    </picture>
+                    <div class="workers__item-btn-box">
+                      <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
+                        <svg class="workers__item-icon" width="10.87" height="11.87">
+                          <use xlink:href="#icon-post"></use>
+                        </svg>
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Добавочный телефон:">
+                        508
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Оставить отзыв">
+                        <svg class="workers__item-icon" width="12" height="12">
+                          <use xlink:href="#icon-feedback"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="workers__name">Илья</p>
+                  <p class="workers__description">Специалист отдела продаж</p>
+                </li>
+              </ul>
+              <ul class="workers__list workers__list--hidden">
+                <li class="workers__item">
+                  <div class="workers__item-container">
+                    <picture>
+                      <img src="img/anna1x.png" srcset="img/anna2x.png 2x" width="148" height="148" alt="Фотография работника">
+                    </picture>
+                    <div class="workers__item-btn-box">
+                      <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
+                        <svg class="workers__item-icon" width="10.87" height="11.87">
+                          <use xlink:href="#icon-post"></use>
+                        </svg>
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Добавочный телефон:">
+                        508
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Оставить отзыв">
+                        <svg class="workers__item-icon" width="12" height="12">
+                          <use xlink:href="#icon-feedback"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="workers__name">Анна</p>
+                  <p class="workers__description">Специалист отдела продаж</p>
+                </li>
+                <li class="workers__item">
+                  <div class="workers__item-container">
+                    <picture>
+                      <img src="img/vladimir1x.png" srcset="img/vladimir2x.png 2x" width="148" height="148" alt="Фотография работника">
+                    </picture>
+                    <div class="workers__item-btn-box">
+                      <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
+                        <svg class="workers__item-icon" width="10.87" height="11.87">
+                          <use xlink:href="#icon-post"></use>
+                        </svg>
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Добавочный телефон:">
+                        508
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Оставить отзыв">
+                        <svg class="workers__item-icon" width="12" height="12">
+                          <use xlink:href="#icon-feedback"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="workers__name">Владимир</p>
+                  <p class="workers__description">Начальник отдела продаж</p>
+                </li>
+                <li class="workers__item">
+                  <div class="workers__item-container">
+                    <picture>
+                      <img src="img/ksenia1x.png" srcset="img/ksenia2x.png 2x" width="148" height="148" alt="Фотография работника">
+                    </picture>
+                    <div class="workers__item-btn-box">
+                      <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
+                        <svg class="workers__item-icon" width="10.87" height="11.87">
+                          <use xlink:href="#icon-post"></use>
+                        </svg>
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Добавочный телефон:">
+                        508
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Оставить отзыв">
+                        <svg class="workers__item-icon" width="12" height="12">
+                          <use xlink:href="#icon-feedback"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="workers__name">Ксения</p>
+                  <p class="workers__description">Специалист отдела продаж</p>
+                </li>
+              </ul>
+              <ul class="workers__list workers__list--hidden">
+                <li class="workers__item">
+                  <div class="workers__item-container">
+                    <picture>
+                      <img src="img/vladimir1x.png" srcset="img/vladimir2x.png 2x" width="148" height="148" alt="Фотография работника">
+                    </picture>
+                    <div class="workers__item-btn-box">
+                      <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
+                        <svg class="workers__item-icon" width="10.87" height="11.87">
+                          <use xlink:href="#icon-post"></use>
+                        </svg>
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Добавочный телефон:">
+                        508
+                      </a>
+                      <a class="workers__link" href="#" data-tooltip="Оставить отзыв">
+                        <svg class="workers__item-icon" width="12" height="12">
+                          <use xlink:href="#icon-feedback"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="workers__name">Владимир</p>
+                  <p class="workers__description">Начальник отдела продаж</p>
+                </li>
+              </ul>
             </div>
-
           </div>
+
         </div>
-
-
-        <article class="catalog-article">
-          <div class="catalog-article__wrapper">
-            <h3 class="catalog-article__title">Где купить силовой кабель?</h3>
-
-            <p class="catalog-article__text">
-              Силовой кабель – это жильный провод, который передает электроэнергию от главного распределительного щитка непосредственно к ее потребителям.
-              Купить силовой кабель необходимо промышленным предприятиям, коммунальным учреждениям, транспортным объектам и т.п.
-              Он, как правило, рассчитан на напряжение 35 Вольт и имеет бумажную изоляцию, пропитанную специальным средством.
-              В качестве материала для изготовления может использоваться никель или медь.
-            </p>
-
-            <picture>
-              <source type="image/webp" srcset="img/catalog-image1x.webp 1x, img/catalog-image2x.webp 2x">
-
-              <img src="img/catalog-image1x.png" srcset="img/catalog-image2x.png 2x" alt="Изображение жильного провода">
-            </picture>
-
-            <strong>Конструкционные особенности</strong>
-            <p class="catalog-article__text">
-              Вне зависимости от сферы применения силового кабеля, его конструкция в обязательном порядке включает в себя следующие элементы:
-            </p>
-
-            <ul>
-              <li>
-                &mdash; жила, чья функция заключается в поставке тока;
-              </li>
-              <li>
-                &mdash; изоляция, которая призвана обеспечить высокий уровень защиты токопроводящей жилы (например, резиновая);
-              </li>
-              <li>
-                &mdash; оболочка, которая защищает силовой кабель целиком от воздействия неблагоприятных факторов, к примеру дождя.
-              </li>
-            </ul>
-
-            <p class="catalog-article__text">
-              Помимо вышеописанных элементов конструкция кабеля может дополнительно включать в себя экран, броню, подушку изоляции и т.п.
-              Ее особенности напрямую зависят от того, в каких условиях будет применяться кабель и какие задачи перед ним ставятся.
-            </p>
-
-            <strong>Где силовой кабель купить оптом?</strong>
-            <p class="catalog-article__text">
-              Если вам нужно купить силовой кабель, то обращайтесь в наш интернет-магазин.
-              У нас представлены различные модификации кабеля, поэтому вы сможете подобрать наиболее оптимальный вариант для себя.
-              Нашим клиентам мы гарантируем высокое качество товаров и доступные цены на них. У нас вы также можете купить силовой кабель оптом.
-              Это очень выгодное предложение, которое позволит существенно сэкономить.
-              Для оформления заказа заполните форму на сайте или свяжитесь с нами по контактному телефону.
-            </p>
-          </div>
-        </article>
       </section>
     </main>
 
@@ -898,8 +1057,8 @@
               </li>
               <li class="footer-contacts__item footer-contacts__item--working-mode">
                 <p>Режим работы:</p>
-                <p>пн-пт:<span> 9:00-20:00</span></p>
-                <p>сб-вс:<span> 10:00-15:00</span></p>
+                <span>пн-пт 9:00-20:00</span>
+                <span>сб-вс: 10:00-15:00</span>
               </li>
             </ul>
           </div>
@@ -993,6 +1152,7 @@
           <p class="footer-info__company">© 2019 Новакабель</p>
         </div>
       </div>
+
     </footer>
 
     <script src="scripts/vendor.min.js"></script>

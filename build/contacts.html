@@ -661,7 +661,7 @@
           <img class="nav__toggle" src="img/toggle.svg" alt="Кнопка показа меню" width="25" height="25">
 
           <ul class="nav__list">
-            <li class="nav__item nav__item--catalog"><a class="nav__link active" href="#">каталог</a></li>
+            <li class="nav__item nav__item--catalog"><a class="nav__link" href="catalog.html">Каталог</a></li>
             <li class="nav__item"><a class="nav__link" href="articles.html">Статьи</a></li>
             <li class="nav__item"><a class="nav__link" href="production.html">Производство</a></li>
             <li class="nav__item"><a class="nav__link" href="standarts.html">Стандарты</a></li>
@@ -675,7 +675,7 @@
                 <li><a class="nav__link" href="partnership.html">Партнерство&nbsp;и&nbsp;сотрудничество</a></li>
               </ul>
             </li>
-            <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+            <li class="nav__item"><a class="nav__link active" href="#">Контакты</a></li>
           </ul>
         </div>
       </nav>
@@ -683,166 +683,352 @@
     </header>
 
     <main>
-      <section class="catalog">
-        <span class="catalog__path">Главная / <span>Каталог</span></span>
-        <div class="catalog__wrapper">
+      <section class="contacts">
+        <span class="contacts__path">Главная / <span>Контакты</span></span>
+        <div class="contacts__wrapper">
+          <h1 class="contacts__title">Контакты</h1>
 
-          <h1 class="catalog__title">Каталог</h1>
-
-          <div class="catalog__search-box">
-            <div class="catalog-search">
-              <label class="visually-hidden" for="catalog-search">Поиск по категориям</label>
-              <input id="catalog-search" type="search" placeholder="Поиск по категориям">
-              <button type="submit" class="catalog-search__btn" aria-label="Кнопка поиска">
-                <svg class="catalog-search-icon" width="16" height="16">
-                  <use xlink:href="#icon-catalog-search"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <ul class="catalog__list">
-            <li class="catalog__item">
-              <div class="cable-card">
-                <img src="img/catalog-cable1.png" width="164" height="164" alt="Изображение кабеля">
-
-                <div class="cable-card__box">
-                  <h2 class="cable-card__title">Силовой кабель</h2>
-                  <ul class="cable-card__list">
-                    <li class="cable-card__item"><a class="cable-card__link" href="pvc.html">Кабели силовые с ПВХ изоляцией</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с ПВХ изоляцией бронированный</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с изоляцией из СПЭ</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабели силовые с бумажной изоляцией</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабель гибкий силовой в резиновой изоляции</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабель с изоляцией и оболочкой из полимерных композиций</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Медный силовой кабель</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Кабель силовой алюминиевый</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <a class="catalog__link" href="power-cable.html">Посмотреть все</a>
-            </li>
-
-            <li class="catalog__item">
-              <div class="cable-card">
-                <img src="img/catalog-cable2.png" width="195" height="195" alt="Изображение кабеля">
-
-                <div class="cable-card__box">
-                  <h2 class="cable-card__title">Провода</h2>
-                  <ul class="cable-card__list">
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода соединительные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода выводные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода для подвижного состава</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода автомобильные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода авиационные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода установочные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода связи</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода изолированные для воздушных линий</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода неизолированные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода для геофизических работ</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провода обмоточные</a></li>
-                    <li class="cable-card__item"><a class="cable-card__link" href="#">Провод термостойкий</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <a class="catalog__link" href="#">Посмотреть все</a>
-            </li>
-
-            <li class="catalog__item">
-              <div class="cable-card">
-                <img src="img/catalog-cable3.png" width="172" height="97" alt="Изображение кабеля">
-
-                <div class="cable-card__box">
-                  <h2 class="cable-card__title">Кабель судовой</h2>
-                </div>
-              </div>
-
-              <a class="catalog__link" href="#">Посмотреть все</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="pagination">
-          <div class="pagination__wrapper">
-
-            <a href="#" class="pagination__show-btn">Показать еще</a>
-
-            <div class="pagination__box">
-
-              <a class="pagination__btn-prev" href="#" aria-label="Назад">
-                <svg width="12" height="12">
-                  <use xlink:href="#icon-pagination-l"></use>
-                </svg>
-              </a>
-              <a class="pagination__btn" href="#">1</a>
-              <a class="pagination__btn active" href="#">2</a>
-              <a class="pagination__btn" href="#">3</a>
-              <a class="pagination__btn" href="#">4</a>
-              <a class="pagination__btn" href="#">5</a>
-              <a class="pagination__btn" href="#">...</a>
-              <a class="pagination__btn" href="#">60</a>
-              <a class="pagination__btn-next" href="#" aria-label="Вперед">
-                <svg width="12" height="12">
-                  <use xlink:href="#icon-pagination-r"></use>
-                </svg>
-              </a>
+          <div class="contacts__header">
+            <div class="contacts__header-select">
+              <label for="city">Выберите город</label>
+              <select class="contacts__select" id="city">
+                <option id="0" selected="">Санкт-петербург</option>
+                <option id="1">Казань</option>
+                <option id="2">Москва</option>
+                <option id="3">Екатеринбург</option>
+                <option id="4">Нижний Новгород</option>
+                <option id="5">Новосибирск</option>
+                <option id="6">Пермь</option>
+              </select>
             </div>
 
+            <ul class="contacts__header-list">
+              <li class="contacts__header-item contacts__header-item--working-mode">
+                <p>Режим работы:</p>
+                <p>пн-пт:<span> 9:00-20:00</span></p>
+                <p>сб-вс:<span> 10:00-15:00</span></p>
+              </li>
+              <li class="contacts__header-item contacts__header-item--head-office">
+                <p>ГОЛОВНОЙ ОФИС:</p>
+                <address>г.&nbsp;Санкт-Петербург<br> 198216, Трамвайный пр&nbsp;-&nbsp;кт&nbsp;,&nbsp;д.&nbsp;32 офис&nbsp;110</address>
+              </li>
+            </ul>
           </div>
-        </div>
 
-
-        <article class="catalog-article">
-          <div class="catalog-article__wrapper">
-            <h3 class="catalog-article__title">Где купить силовой кабель?</h3>
-
-            <p class="catalog-article__text">
-              Силовой кабель – это жильный провод, который передает электроэнергию от главного распределительного щитка непосредственно к ее потребителям.
-              Купить силовой кабель необходимо промышленным предприятиям, коммунальным учреждениям, транспортным объектам и т.п.
-              Он, как правило, рассчитан на напряжение 35 Вольт и имеет бумажную изоляцию, пропитанную специальным средством.
-              В качестве материала для изготовления может использоваться никель или медь.
-            </p>
-
-            <picture>
-              <source type="image/webp" srcset="img/catalog-image1x.webp 1x, img/catalog-image2x.webp 2x">
-
-              <img src="img/catalog-image1x.png" srcset="img/catalog-image2x.png 2x" alt="Изображение жильного провода">
-            </picture>
-
-            <strong>Конструкционные особенности</strong>
-            <p class="catalog-article__text">
-              Вне зависимости от сферы применения силового кабеля, его конструкция в обязательном порядке включает в себя следующие элементы:
-            </p>
-
-            <ul>
-              <li>
-                &mdash; жила, чья функция заключается в поставке тока;
+          <div class="contacts__content">
+            <ul class="contacts__content-list">
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-phone-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>+7(800) <span>700-41-71</span></p>
+                  <p>+7(812) <span>642-94-11</span></p>
+                </div>
               </li>
-              <li>
-                &mdash; изоляция, которая призвана обеспечить высокий уровень защиты токопроводящей жилы (например, резиновая);
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-pin-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <address>
+                    198216, г. Санкт-Петербург,<br> пр-кт&nbsp;Трамвайный,&nbsp;д.&nbsp;32 офис&nbsp;110
+                  </address>
+                </div>
               </li>
-              <li>
-                &mdash; оболочка, которая защищает силовой кабель целиком от воздействия неблагоприятных факторов, к примеру дождя.
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-post-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>Почта для заявок</p>
+                  <span>info@n-kabel.ru</span>
+                </div>
               </li>
             </ul>
 
-            <p class="catalog-article__text">
-              Помимо вышеописанных элементов конструкция кабеля может дополнительно включать в себя экран, броню, подушку изоляции и т.п.
-              Ее особенности напрямую зависят от того, в каких условиях будет применяться кабель и какие задачи перед ним ставятся.
-            </p>
-
-            <strong>Где силовой кабель купить оптом?</strong>
-            <p class="catalog-article__text">
-              Если вам нужно купить силовой кабель, то обращайтесь в наш интернет-магазин.
-              У нас представлены различные модификации кабеля, поэтому вы сможете подобрать наиболее оптимальный вариант для себя.
-              Нашим клиентам мы гарантируем высокое качество товаров и доступные цены на них. У нас вы также можете купить силовой кабель оптом.
-              Это очень выгодное предложение, которое позволит существенно сэкономить.
-              Для оформления заказа заполните форму на сайте или свяжитесь с нами по контактному телефону.
-            </p>
+            <div class="contacts__content-map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A55236b387b6c38922ad1e0105f464babe6e04900fb5ff1b2d4cea26b2bbe6f38&amp;source=constructor">
+              </iframe>
+            </div>
           </div>
-        </article>
+
+          <div class="contacts__content contacts__content--hidden">
+            <ul class="contacts__content-list">
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-phone-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>+7(843) <span>240-67-70</span></p>
+                </div>
+              </li>
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-pin-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <address>
+                    420073, г. Казань,<br> ул.Аделя Кутуя 151
+                  </address>
+                </div>
+              </li>
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-post-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>Почта для заявок</p>
+                  <span>info@n-kabel.ru</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contacts__content-map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8eca09508b2279c343f2b0c29b8498d1cedeed12384e955cc7ca10baf3cf9f76&amp;source=constructor">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="contacts__content contacts__content--hidden">
+            <ul class="contacts__content-list">
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-phone-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>+7(499) <span>130-74-21</span></p>
+                </div>
+              </li>
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-pin-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <address>
+                    109316, г. Москва, <br> Волгоградский Проспект, 42 корп.23
+                  </address>
+                </div>
+              </li>
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-post-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>Почта для заявок</p>
+                  <span>info@n-kabel.ru</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contacts__content-map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A823bfef081892316e98595b09755bc685d6a759529ce2306f692a63677ef9299&amp;source=constructor">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="contacts__content contacts__content--hidden">
+            <ul class="contacts__content-list">
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-phone-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>+7(342) <span>344-89-91</span></p>
+                </div>
+              </li>
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-pin-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <address>
+                    620057, г. Екатеринбург, <br>Таганская улица 60
+                  </address>
+                </div>
+              </li>
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-post-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>Почта для заявок</p>
+                  <span>info@n-kabel.ru</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contacts__content-map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac789beaeffa3d26f42d6f25269a3e3b5e39d2b0ef3329fa5f40d94847f5bd2ee&amp;source=constructor">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="contacts__content contacts__content--hidden">
+            <ul class="contacts__content-list">
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-phone-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>+7(831) <span> 416-93-30</span></p>
+                </div>
+              </li>
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-pin-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <address>
+                    603116, г. Нижний Новгород,<br> Московское шоссе 52
+                  </address>
+                </div>
+              </li>
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-post-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>Почта для заявок</p>
+                  <span>info@n-kabel.ru</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contacts__content-map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A14601d95a89c6022c6625e1508c33ec1fecf1a3e90448b7c1373de9e31a43df3&amp;source=constructor">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="contacts__content contacts__content--hidden">
+            <ul class="contacts__content-list">
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-phone-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>+7(843) <span> 258-99-97</span></p>
+                </div>
+              </li>
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-pin-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <address>
+                    630064, г. Новосибирск,<br> им. Карла Маркса 7
+                  </address>
+                </div>
+              </li>
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-post-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>Почта для заявок</p>
+                  <span>info@n-kabel.ru</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contacts__content-map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae3d88f39fecf99182add79b54db5881ccc5874306bb8264200565ae293d01908&amp;source=constructor">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="contacts__content contacts__content--hidden">
+            <ul class="contacts__content-list">
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-phone-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>+7(342) <span>259-18-55</span></p>
+                </div>
+              </li>
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-pin-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <address>
+                    614095, г. Пермь,<br> Танкистов, 50. Балатово, Индустриальный район
+                  </address>
+                </div>
+              </li>
+              <li class="contacts__content-item">
+                <svg width="60" height="60">
+                  <use xlink:href="#icon-post-contacts"></use>
+                </svg>
+                <div class="contacts__content-item-info">
+                  <p>Почта для заявок</p>
+                  <span>info@n-kabel.ru</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contacts__content-map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac7618849c38b1eb0f543eb5e2e642a59d422680a7f55357a5306da8314ae0ecc&amp;source=constructor"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts__footer">
+          <div class="contacts__footer-wrapper">
+            <b>Не нашли, что искали?</b>
+            <h2 class="contacts__footer-title">Рассчитаем Вашу заявку и составим коммерческое предложение за 15 минут!</h2>
+            <p class="contacts__footer-description">Отправьте ваш запрос</p>
+
+            <ul class="contacts__footer-list">
+              <li class="contacts__footer-item">
+                <a href="mailto:info@n-kabel.ru">
+                  <div class="contacts__footer-icon">
+                    <svg width="15" height="15">
+                      <use xlink:href="#icon-post"></use>
+                    </svg>
+                  </div>
+                  на почту <span>info@n-kabel.ru</span>
+                </a>
+              </li>
+              <li class="contacts__footer-item">
+                <a href="">
+                  <div class="contacts__footer-icon">
+                    <svg width="16.68" height="16.68">
+                      <use xlink:href="#icon-icq"></use>
+                    </svg>
+                  </div>
+                  на ICQ <span>719-292-322</span>
+                </a>
+              </li>
+              <li class="contacts__footer-item">
+                <ul class="contacts__footer-social">
+                  <li>
+                    <a href="#" aria-label="Вконтакте">
+                      <img src="img/fb.png" width="44" height="44">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="Вконтакте">
+                      <img src="img/tg.png" width="44" height="44">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="Facebook">
+                      <img src="img/vk.png" width="44" height="44">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="Telegramm">
+                      <img src="img/tw.png" width="44" height="44">
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -993,6 +1179,7 @@
           <p class="footer-info__company">© 2019 Новакабель</p>
         </div>
       </div>
+
     </footer>
 
     <script src="scripts/vendor.min.js"></script>
