@@ -10,6 +10,7 @@
   <script>
     document.createElement( "picture" );
   </script>
+  <script src="scripts/polyfills/lazysizes.min.js" async=""></script>
   <script src="scripts/polyfills/picturefill.min.js" async=""></script>
   <script src="scripts/polyfills/svgxuse.min.js" async=""></script>
 </head>
@@ -628,7 +629,7 @@
       <div class="header__wrapper">
 
         <a href="index.html" class="header__logo logo">
-          <img src="img/logo.svg" alt="Логотип компании" width="210" height="58">
+          <img data-src="img/logo.svg" class="lazyload" alt="Логотип компании" width="210" height="58">
         </a>
 
         <div class="header__search-box">
@@ -767,19 +768,19 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img src="img/1.png" width="240" height="350" alt="Завод-1">
+                  <img data-src="img/1.png" class="lazyload" width="240" height="350" alt="Завод-1">
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/2.png" width="240" height="350" alt="Завод-2">
+                  <img data-src="img/2.png" class="lazyload" width="240" height="350" alt="Завод-2">
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/3.png" width="240" height="350" alt="Завод-3">
+                  <img data-src="img/3.png" class="lazyload" width="240" height="350" alt="Завод-3">
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/2.png" width="240" height="350" alt="Завод-2">
+                  <img data-src="img/2.png" class="lazyload" width="240" height="350" alt="Завод-2">
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/3.png" width="240" height="350" alt="Завод-3">
+                  <img data-src="img/3.png" class="lazyload" width="240" height="350" alt="Завод-3">
                 </div>
             </div>
 
@@ -805,7 +806,7 @@
                 <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
-                <img class="stock__item-img" src="img/cable.png" alt="Изображение кабеля">
+                <img class="stock__item-img lazyload" data-src="img/cable.png" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
                 <p class="stock__item-price">от <span>29.59</span> руб/м</p>
@@ -818,7 +819,7 @@
                 <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
-                <img class="stock__item-img" src="img/cable.png" alt="Изображение кабеля">
+                <img class="stock__item-img lazyload" data-src="img/cable.png" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
                 <p class="stock__item-price">от <span>29.59</span> руб/м</p>
@@ -831,7 +832,7 @@
                 <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
-                <img class="stock__item-img" src="img/cable.png" alt="Изображение кабеля">
+                <img class="stock__item-img lazyload" data-src="img/cable.png" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
                 <p class="stock__item-price">от <span>29.59</span> руб/м</p>
@@ -844,7 +845,7 @@
                 <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
-                <img class="stock__item-img" src="img/cable.png" alt="Изображение кабеля">
+                <img class="stock__item-img lazyload" data-src="img/cable.png" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
                 <p class="stock__item-price">от <span>29.59</span> руб/м</p>
@@ -857,7 +858,7 @@
                 <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
-                <img class="stock__item-img" src="img/cable.png" alt="Изображение кабеля">
+                <img class="stock__item-img lazyload" data-src="img/cable.png" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
                 <p class="stock__item-price">от <span>29.59</span> руб/м</p>
@@ -870,7 +871,7 @@
                 <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
-                <img class="stock__item-img" src="img/cable.png" alt="Изображение кабеля">
+                <img class="stock__item-img lazyload" data-src="img/cable.png" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
                 <p class="stock__item-price">от <span>29.59</span> руб/м</p>
@@ -883,7 +884,7 @@
                 <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
-                <img class="stock__item-img" src="img/cable.png" alt="Изображение кабеля">
+                <img class="stock__item-img lazyload" data-src="img/cable.png" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
                 <p class="stock__item-price">от <span>29.59</span> руб/м</p>
@@ -896,7 +897,7 @@
                 <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
-                <img class="stock__item-img" src="img/cable.png" alt="Изображение кабеля">
+                <img class="stock__item-img lazyload" data-src="img/cable.png" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
                 <p class="stock__item-price">от <span>29.59</span> руб/м</p>
@@ -909,7 +910,7 @@
                 <a class="stock__item-link order-btn" href="#">
                 <p class="stock__item-mark">Хит</p>
 
-                <img class="stock__item-img" src="img/cable.png" alt="Изображение кабеля">
+                <img class="stock__item-img lazyload" data-src="img/cable.png" alt="Изображение кабеля">
                 <h3 class="stock__item-title">МКЭШВнг-HF</h3>
                 <p class="stock__item-availability">в наличии на складах</p>
                 <p class="stock__item-price">от <span>29.59</span> руб/м</p>
@@ -1048,7 +1049,7 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__container">
-          <img class="footer__logo logo" src="img/footer-logo.svg" alt="Логотип компании" width="195" height="54">
+          <img data-src="img/footer-logo.svg" class="footer__logo logo lazyload" alt="Логотип компании" width="195" height="54">
           <div class="footer-contacts">
             <ul class="footer-contacts__list">
               <li class="footer-contacts__item footer-contacts__item--kazan">
