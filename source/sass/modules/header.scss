@@ -131,7 +131,7 @@
     }
   }
 
-  &__nav-toggle {
+  &__nav-btn {
     display: none;
   }
 }
@@ -139,7 +139,17 @@
 @media (max-width: $desktop-width) {
   .header {
     &__wrapper {
+      position: relative;
       padding-top: 20px;
+    }
+
+    &__nav {
+      //display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 418px;
+      z-index: 100;
     }
 
     &__logo {
@@ -169,7 +179,7 @@
       }
     }
 
-    &__nav-toggle {
+    &__nav-btn {
       width: 56px;
       height: 46px;
       background-color: black;
@@ -193,6 +203,7 @@
 
     &__box {
       margin-bottom: 30px;
+
       &--phone {
         margin-left: 0;
         margin-right: auto;
@@ -200,7 +211,10 @@
     }
 
     &__nav {
-      &-toggle {
+      left: 0;
+      min-width: 100%;
+
+      &-btn {
         position: absolute;
         top: 30px;
         right: 15px;

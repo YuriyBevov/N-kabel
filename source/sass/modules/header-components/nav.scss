@@ -10,18 +10,17 @@
     min-height: 62px;
   }
 
-  &__toggle {
+  &__btn {
     cursor: pointer;
-    margin-right: 35px;
     background: transparent;
 
-    display: none; // временно
+    display: none;
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
-    width: 100%; // если нет бургера
+    width: 100%;
   }
 
   &__item {
@@ -74,7 +73,6 @@
 
     ul {
       position: absolute;
-      display: none;
       width: 260px;
       top: 62px;
       left: 0;
@@ -97,12 +95,9 @@
         letter-spacing: 0.05em;
         text-transform: inherit;
       }
-    }
 
-    &:hover,
-    &:focus {
-      & ul {
-        display: block;
+      &.closed {
+        display: none;
       }
     }
   }
@@ -110,32 +105,76 @@
 
 @media (max-width: $desktop-width) {
   .nav {
-    &__toggle {
+    width: 50%;
+    flex-direction: column;
+    padding-top: 25px;
+    box-shadow: 0 0px 20px rgb(0, 0, 0);
+
+    &.closed {
       display: none;
+    }
+
+    &.opened {
+      display: flex;
     }
 
     &__wrapper {
-      display: none;
+      width: 100%;
     }
 
+    &__btn {
+      display: block;
+      position: absolute;
+      top: 38px;
+      right: 30px;
+    }
 
-    // ??????????????
     &__list {
-      //flex-direction: column;
+      flex-direction: column;
     }
 
-    /*&__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    &__item {
+      padding-left: 30px;
+      margin-right: 0;
+      border-bottom: 1px solid $brd-lightgrey;
 
-      & a {
-        margin-left: auto;
-      }
+      &--company {
+        padding-right: 15px;
 
-      &--company ul {
-        position: static;
+        ul {
+          position: static;
+          width: 100%;
+          background: #4d4c4c;
+          padding: 0;
+
+          li {
+            padding-left: 20px;
+
+            &:last-child {
+              margin-bottom: 25px;
+            }
+          }
+        }
       }
-    }*/
+    }
+
+    &__link {
+      width: fit-content;
+      min-height: inherit;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .nav {
+    width: 100%;
+
+    &__btn {
+      top: 41px;
+    }
+
+    &__item {
+      padding-left: 0;
+    }
   }
 }
