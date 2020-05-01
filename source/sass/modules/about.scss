@@ -76,10 +76,18 @@
 
   .webp &__banner {
     background-image: url("../img/banner-man.webp");
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/banner-man2x.webp");
+    }
   }
 
   .no-webp &__banner{
     background-image: url("../img/banner-man.png");
+
+    @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+      background-image: url("../img/banner-man2x.png");
+    }
   }
 
   &__mark {
@@ -215,8 +223,20 @@
       position: relative;
     }
 
-    &__banner {
+    .webp &__banner {
+      background-image: url("../img/banner-man-tablet.webp");
+
+      @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+        background-image: url("../img/banner-man-tablet2x.webp");
+      }
+    }
+
+    .no-webp &__banner{
       background-image: url("../img/banner-man-tablet.png");
+
+      @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+        background-image: url("../img/banner-man-tablet2x.png");
+      }
     }
 
     &__form-container {
@@ -263,7 +283,22 @@
       align-items: center;
       padding-top: 90px;
       padding-bottom: 35px;
+    }
+
+    .webp &__banner {
+      background-image: url("../img/banner-man-mobile.webp");
+
+      @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+        background-image: url("../img/banner-man-mobile2x.webp");
+      }
+    }
+
+    .no-webp &__banner{
       background-image: url("../img/banner-man-mobile.png");
+
+      @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+        background-image: url("../img/banner-man-mobile2x.png");
+      }
     }
 
     &__title {

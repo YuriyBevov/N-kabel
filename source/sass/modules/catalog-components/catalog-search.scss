@@ -4,7 +4,6 @@
   min-height: inherit;
 
   input {
-    position: relative;
     width: inherit;
     min-height: inherit;
     border: 1px solid $brd-grey;
@@ -17,18 +16,6 @@
       line-height: $scs*2;
 
       color: $brd-black;
-    }
-
-    &::after {
-      position: absolute;
-      top: 50%;
-      right: 15px;
-      width: 16px;
-      height: 16px;
-      content: "";
-      background-image: url("../img/catalog-search-icon.svg");
-      background-repeat: no-repeat;
-      background-size: 16px;
     }
 
     &::-webkit-search-decoration,
