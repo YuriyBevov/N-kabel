@@ -25,7 +25,6 @@
 
   &__item {
     margin-right: 24px;
-    min-height: 62px;
 
     &:last-child {
       margin-right: 0;
@@ -42,10 +41,12 @@
     font-weight: 700;
     text-transform: uppercase;
     height: 100%;
+    padding-top: 22px;
+    padding-bottom: 21px;
     padding-right: 15px;
     color: $white;
 
-    @include hover($color: $blue);
+    @include hover($yellow);
 
     &.active {
       color: $blue;
@@ -94,6 +95,7 @@
         font-weight: 400;
         letter-spacing: 0.05em;
         text-transform: inherit;
+        padding: 0;
       }
 
       &.closed {
@@ -109,13 +111,10 @@
     flex-direction: column;
     padding-top: 25px;
     box-shadow: 0 0px 20px rgb(0, 0, 0);
+    animation: menu-animation 0.3s ease-out;
 
     &.closed {
       display: none;
-    }
-
-    &.opened {
-      display: flex;
     }
 
     &__wrapper {
@@ -130,7 +129,7 @@
     }
 
     &__list {
-      flex-direction: column;
+      display: block;
     }
 
     &__item {
@@ -154,6 +153,8 @@
               margin-bottom: 25px;
             }
           }
+
+          animation: menu-animation 0.3s ease-out;
         }
       }
     }
@@ -176,5 +177,17 @@
     &__item {
       padding-left: 0;
     }
+  }
+}
+
+@keyframes menu-animation {
+  0% {
+    transform: translateX(200%);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
