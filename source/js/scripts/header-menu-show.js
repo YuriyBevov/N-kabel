@@ -2,6 +2,7 @@
 
 (function () {
   const ESC_KEYCODE = 27;
+
   const openBtn = document.getElementById("menu-show-btn");
   const closeBtn = document.getElementById("menu-close-btn");
   const nav = document.querySelector(".nav");
