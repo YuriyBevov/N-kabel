@@ -10,6 +10,7 @@
   <script>
     document.createElement( "picture" );
   </script>
+  <script src="scripts/polyfills/lazysizes.min.js" async=""></script>
   <script src="scripts/polyfills/picturefill.min.js" async=""></script>
   <script src="scripts/polyfills/svgxuse.min.js" defer=""></script>
 </head>
@@ -629,7 +630,7 @@
       <div class="header__wrapper">
 
         <a href="index.html" class="header__logo logo">
-          <img src="img/logo.svg" alt="Логотип компании" width="210" height="58">
+          <img class="lazyload" data-src="img/logo.svg" alt="Логотип компании" width="210" height="58">
         </a>
 
         <div class="header__search-box">
@@ -690,7 +691,7 @@
 
           <div class="NYMнг__card">
             <div class="item-card-lg">
-              <img src="img/nymнг-lg.png" alt="Изображение кабеля" width="344" height="158">
+              <img class="lazyload" data-src="img/nymнг-lg.png" alt="Изображение кабеля" width="344" height="158">
 
               <div class="item-card-lg__content">
                 <p class="item-card-lg__price">Цена: от <span>21.99 </span>руб</p>
@@ -711,7 +712,7 @@
           <ul class="NYMнг__core-list">
             <li class="NYMнг__core-item">
               <div class="item-card-sm">
-                <img src="img/nymнг-sm.png" alt="Изображение кабеля" width="60" height="60">
+                <img class="lazyload" data-src="img/nymнг-sm.png" alt="Изображение кабеля" width="60" height="60">
 
                 <div class="item-card-sm__title-box">
                   <h2 class="item-card-sm__title">NYMнг 2х1,5</h2>
@@ -726,7 +727,7 @@
             </li>
             <li class="NYMнг__core-item">
               <div class="item-card-sm">
-                <img src="img/nymнг-sm.png" alt="Изображение кабеля" width="60" height="60">
+                <img class="lazyload" data-src="img/nymнг-sm.png" alt="Изображение кабеля" width="60" height="60">
 
                 <div class="item-card-sm__title-box">
                   <h2 class="item-card-sm__title">NYMнг 2х1,5</h2>
@@ -741,7 +742,7 @@
             </li>
             <li class="NYMнг__core-item">
               <div class="item-card-sm">
-                <img src="img/nymнг-sm.png" alt="Изображение кабеля" width="60" height="60">
+                <img class="lazyload" data-src="img/nymнг-sm.png" alt="Изображение кабеля" width="60" height="60">
 
                 <div class="item-card-sm__title-box">
                   <h2 class="item-card-sm__title">NYMнг 2х1,5</h2>
@@ -863,7 +864,7 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__container">
-          <img class="footer__logo logo" src="img/footer-logo.svg" alt="Логотип компании" width="195" height="54">
+          <img class="footer__logo logo lazyload" src="img/footer-logo.svg" alt="Логотип компании" width="195" height="54">
           <div class="footer-contacts">
             <ul class="footer-contacts__list">
               <li class="footer-contacts__item footer-contacts__item--kazan">

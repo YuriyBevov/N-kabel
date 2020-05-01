@@ -10,6 +10,7 @@
   <script>
     document.createElement( "picture" );
   </script>
+  <script src="scripts/polyfills/lazysizes.min.js" async=""></script>
   <script src="scripts/polyfills/picturefill.min.js" async></script>
   <script src="scripts/polyfills/svgxuse.min.js" defer></script>
 </head>
@@ -27,7 +28,7 @@
       <div class="header__wrapper">
 
         <a href="index.html" class="header__logo logo">
-          <img src="img/logo.svg" alt="Логотип компании" width="210" height="58">
+          <img class="lazyload" data-src="img/logo.svg" alt="Логотип компании" width="210" height="58">
         </a>
 
         <div class="header__search-box">
@@ -179,7 +180,7 @@
                 <li class="workers__item">
                   <div class="workers__item-container">
                     <picture>
-                      <img src="img/anna1x.png" srcset="img/anna2x.png 2x" width="148" height="148" alt="Фотография работника">
+                      <img class="lazyload" data-src="img/anna1x.png" srcset="img/anna2x.png 2x" width="148" height="148" alt="Фотография работника">
                     </picture>
                     <div class="workers__item-btn-box">
                       <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
@@ -203,7 +204,7 @@
                 <li class="workers__item">
                   <div class="workers__item-container">
                     <picture>
-                      <img src="img/vladimir1x.png" srcset="img/vladimir2x.png 2x" width="148" height="148" alt="Фотография работника">
+                      <img class="lazyload" data-src="img/vladimir1x.png" srcset="img/vladimir2x.png 2x" width="148" height="148" alt="Фотография работника">
                     </picture>
                     <div class="workers__item-btn-box">
                       <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
@@ -227,7 +228,7 @@
                 <li class="workers__item">
                   <div class="workers__item-container">
                     <picture>
-                      <img src="img/ksenia1x.png" srcset="img/ksenia2x.png 2x" width="148" height="148" alt="Фотография работника">
+                      <img class="lazyload" data-src="img/ksenia1x.png" srcset="img/ksenia2x.png 2x" width="148" height="148" alt="Фотография работника">
                     </picture>
                     <div class="workers__item-btn-box">
                       <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
@@ -251,7 +252,7 @@
                 <li class="workers__item">
                   <div class="workers__item-container">
                     <picture>
-                      <img src="img/yulia1x.png" srcset="img/yulia2x.png 2x" width="148" height="148" alt="Фотография работника">
+                      <img class="lazyload" data-src="img/yulia1x.png" srcset="img/yulia2x.png 2x" width="148" height="148" alt="Фотография работника">
                     </picture>
                     <div class="workers__item-btn-box">
                       <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
@@ -275,7 +276,7 @@
                 <li class="workers__item">
                   <div class="workers__item-container">
                     <picture>
-                      <img src="img/ilia1x.png" srcset="img/ilia2x.png 2x" width="148" height="148" alt="Фотография работника">
+                      <img class="lazyload" data-src="img/ilia1x.png" srcset="img/ilia2x.png 2x" width="148" height="148" alt="Фотография работника">
                     </picture>
                     <div class="workers__item-btn-box">
                       <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
@@ -301,7 +302,7 @@
                 <li class="workers__item">
                   <div class="workers__item-container">
                     <picture>
-                      <img src="img/anna1x.png" srcset="img/anna2x.png 2x" width="148" height="148" alt="Фотография работника">
+                      <img class="lazyload" data-src="img/anna1x.png" srcset="img/anna2x.png 2x" width="148" height="148" alt="Фотография работника">
                     </picture>
                     <div class="workers__item-btn-box">
                       <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
@@ -325,7 +326,7 @@
                 <li class="workers__item">
                   <div class="workers__item-container">
                     <picture>
-                      <img src="img/vladimir1x.png" srcset="img/vladimir2x.png 2x" width="148" height="148" alt="Фотография работника">
+                      <img class="lazyload" data-src="img/vladimir1x.png" srcset="img/vladimir2x.png 2x" width="148" height="148" alt="Фотография работника">
                     </picture>
                     <div class="workers__item-btn-box">
                       <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
@@ -349,7 +350,7 @@
                 <li class="workers__item">
                   <div class="workers__item-container">
                     <picture>
-                      <img src="img/ksenia1x.png" srcset="img/ksenia2x.png 2x" width="148" height="148" alt="Фотография работника">
+                      <img class="lazyload" data-src="img/ksenia1x.png" srcset="img/ksenia2x.png 2x" width="148" height="148" alt="Фотография работника">
                     </picture>
                     <div class="workers__item-btn-box">
                       <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
@@ -375,7 +376,7 @@
                 <li class="workers__item">
                   <div class="workers__item-container">
                     <picture>
-                      <img src="img/vladimir1x.png" srcset="img/vladimir2x.png 2x" width="148" height="148" alt="Фотография работника">
+                      <img class="lazyload" data-src="img/vladimir1x.png" srcset="img/vladimir2x.png 2x" width="148" height="148" alt="Фотография работника">
                     </picture>
                     <div class="workers__item-btn-box">
                       <a class="workers__link" href="#" data-tooltip="Email: 508@n-kabel.ru Отправить сообщение">
@@ -407,7 +408,7 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__container">
-          <img  class="footer__logo logo" src="img/footer-logo.svg" alt="Логотип компании" width="195" height="54">
+          <img class="footer__logo logo lazyload" data-src="img/footer-logo.svg" alt="Логотип компании" width="195" height="54">
           <div class="footer-contacts">
             <ul class="footer-contacts__list">
               <li class="footer-contacts__item footer-contacts__item--kazan">

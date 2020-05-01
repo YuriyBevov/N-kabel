@@ -10,6 +10,7 @@
   <script>
     document.createElement( "picture" );
   </script>
+  <script src="scripts/polyfills/lazysizes.min.js" async=""></script>
   <script src="scripts/polyfills/picturefill.min.js" async></script>
   <script src="scripts/polyfills/svgxuse.min.js" defer></script>
 </head>
@@ -27,7 +28,7 @@
       <div class="header__wrapper">
 
         <a href="index.html" class="header__logo logo">
-          <img src="img/logo.svg" alt="Логотип компании" width="210" height="58">
+          <img class="lazyload" data-src="img/logo.svg" alt="Логотип компании" width="210" height="58">
         </a>
 
         <div class="header__search-box">
@@ -217,7 +218,7 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__container">
-          <img  class="footer__logo logo" src="img/footer-logo.svg" alt="Логотип компании" width="195" height="54">
+          <img class="footer__logo logo lazyload" data-src="img/footer-logo.svg" alt="Логотип компании" width="195" height="54">
           <div class="footer-contacts">
             <ul class="footer-contacts__list">
               <li class="footer-contacts__item footer-contacts__item--kazan">
