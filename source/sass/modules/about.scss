@@ -68,10 +68,18 @@
     padding: 60px 80px;
     margin-bottom: 30px;
     background-color: $lightgrey;
-    background-image: url("../img/banner-man.png");
+
     background-position: center right;
     background-repeat: no-repeat;
     background-size: auto 100%;
+  }
+
+  .webp &__banner {
+    background-image: url("../img/banner-man.webp");
+  }
+
+  .no-webp &__banner{
+    background-image: url("../img/banner-man.png");
   }
 
   &__mark {
