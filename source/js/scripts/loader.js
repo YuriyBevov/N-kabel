@@ -4,7 +4,11 @@
   const loader = document.querySelector('.loader');
 
   const hideLoader = function () {
-    loader.style.display = 'none';
+    setTimeout(endLoading, 500)
+    function endLoading () {
+      loader.style.display = 'none';
+      clearTimeout(hideLoader);
+    }
   };
 
   document.addEventListener("DOMContentLoaded", hideLoader);
