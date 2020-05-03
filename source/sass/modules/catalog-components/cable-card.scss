@@ -1,62 +1,106 @@
 .cable-card {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 100%;
-
-  img {
-    align-self: center;
-    margin-right: 10px;
-  }
-
-
-  &__box {
-    width: 70%;
-    max-width: 300px;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-  }
+  max-width: 270px;
+  padding: 30px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: $white;
 
   &__title {
-    font-family: $bold;
-    font-size: $prs*1.4;
-    line-height: $prs*1.9;
-    margin: auto 0;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    margin-bottom: 10px;
 
     color: $black;
   }
 
-  &__list {
-    flex-grow: 1;
-    padding-top: 15px;
+  &__rating {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &-feedback-count {
+      font-size: $scs*1.5;
+      line-height: $scs*2;
+      margin-left: 5px;
+      color: $one-more-grey;
+
+      span {
+        color: $black;
+      }
+    }
   }
 
-  &__item {
-    padding-right: 10px;
+  &__price {
+    font-family: $bold;
+    font-size: $prs*2.4;
+    line-height: $prs*3.3;
+    margin-bottom: 20px;
+
+    color: $black;
   }
 
-  &__link {
+  &__ask-link {
     display: block;
-    font-size: $prs*0.9;
-    line-height: $prs*1.6;
-    text-decoration-line: underline;
+    font-family: $bold;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 40px;
+    color: $boldblue;
 
-    color: $card-grey;
-
-    @include hover($lightblue);
+    @include hover($yellow);
   }
-}
 
-@media (max-width: $desktop-width) {
-  .cable-card {
-    img {
-      width: 30%;
-      object-fit: contain;
+  &__btn-box {
+    margin-bottom: 40px;
+  }
+
+  &__order-link {
+    display: block;
+    width: 230px;
+    padding: 14px 10px;
+    font-size: $prs*1.6;
+    line-height: $prs*2.2;
+    border-radius: 5px;
+    text-align: center;
+
+    &--availability {
+      margin-bottom: 25px;
+      color: $black;
+      background-color: $yellow;
+
+      @include hover($blue, $yellow);
     }
 
-    &__box {
-      width: 60%;
+    &--fabrication {
+      border: 1px solid $blue;
+      color: $blue;
+      background-color: transparent;
+
+      @include hover($white, $blue);
+    }
+  }
+
+  &__post-link {
+    font-size: $prs*1.4;
+    line-height: $prs*1.9;
+    text-align: center;
+
+    color: $black;
+
+    a {
+      display: block;
+      font-size: $prs*1.6;
+      line-height: $prs*2.2;
+      text-decoration-line: underline;
+      color: $blue;
+
+      @include hover($yellow);
     }
   }
 }

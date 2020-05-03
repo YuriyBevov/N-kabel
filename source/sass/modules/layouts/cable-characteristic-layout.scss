@@ -7,18 +7,27 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px 0;
+      padding-right: 15px;
       width: 100%;
       border-bottom: 1px solid $lightgrey;
 
       p {
         width: 80%;
         max-width: 500px;
+        font-size: $prs*1.2;
+        line-height: $prs*2.1;
+
+        color: $black;
       }
 
       span {
         width: 20%;
         text-align: right;
         padding-left: 10px;
+        font-size: $prs*1.2;
+        line-height: $prs*2.1;
+
+        color: $black;
       }
     }
   }

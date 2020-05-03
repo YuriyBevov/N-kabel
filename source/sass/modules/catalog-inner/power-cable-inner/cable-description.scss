@@ -1,5 +1,5 @@
 .cable-description {
-  background-color: #e5e5e5;
+  background-color: $bcg-grey;
 
   &__wrapper {
     @include container();
@@ -8,6 +8,75 @@
   &__path {
     @include container();
     @include path();
+  }
+
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 55px;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
+
+    &-box {
+      order: 3;
+    }
+
+    &-slider {
+      width: 410px;
+      min-height: 543px;
+      outline: 1px solid red;
+      margin-right: 30px;
+      order: 1;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      margin-right: 30px;
+      order: 2;
+
+      &-geo {
+        width: 360px;
+        min-height: 155px;
+
+        padding: 25px;
+        margin-bottom: 25px;
+        background-color: $white;
+
+        strong {
+          display: block;
+          font-size: $prs*1.6;
+          line-height: $prs*2.2;
+          margin-bottom: 20px;
+          color: $black;
+        }
+      }
+
+      &-characteristics {
+        strong {
+          display: block;
+          font-family: $bold;
+          font-size: $scs*1.5;
+          line-height: $scs*2;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid $black;
+
+          color: $black;
+        }
+
+        a {
+          font-family: $bold;
+          font-size: $scs*1.5;
+          line-height: $scs*2;
+          text-decoration-line: underline;
+
+          color: $black;
+
+          @include hover($blue);
+        }
+      }
+    }
   }
 
   &__description {
@@ -25,7 +94,9 @@
     &-item {
       padding-top: 30px;
 
-      h2 {
+      h2,
+      strong {
+        display: block;
         width: 100%;
         font-weight: bold;
         font-size: $prs*2.4;
@@ -40,15 +111,7 @@
           width: calc(100% - 165px);
         }
       }
-
-      &>.stock {
-        padding-top: 0;
-        border-bottom: 0;
-      }
-
-      &>.stock>.stock__list>.stock__item:nth-child(6n) {
-        margin-right: 25px;  // разобраться с маргинами !!!!!!!
-      }
+      animation: fadeIn 0.5s ease-in;
     }
   }
 
@@ -89,13 +152,7 @@
     }
     &__description {
       &-item {
-        &>.stock>.stock__list>.stock__item {
-          margin-right: 25px;
-        }
 
-        &>.stock>.stock__list>.stock__item:nth-child(4n) {
-          margin-right: 25px;
-        }
       }
     }
   }
@@ -104,5 +161,15 @@
 @media (max-width: $tablet-width) {
   .cable-description {
 
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.7;
+  }
+
+  to {
+    opacity: 1;
   }
 }

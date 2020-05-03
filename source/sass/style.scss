@@ -18,6 +18,7 @@
 @import "modules/global-components/loader";
 @import "modules/global-components/pagination";
 @import "modules/global-components/stars";
+@import "modules/global-components/geo-position";
 
 @import "modules/layouts/article-layout";
 @import "modules/layouts/cable-mark-description-layout";
@@ -34,10 +35,13 @@
 @import "modules/catalog";
 @import "modules/catalog-components/catalog-search";
 @import "modules/catalog-components/catalog-article";
-@import "modules/catalog-components/cable-card";
+@import "modules/catalog-components/cable-type-card";
 @import "modules/catalog-components/cable-mark-card";
-@import "modules/catalog-components/item-card-lg";
-@import "modules/catalog-components/item-card-sm";
+@import "modules/catalog-components/cable-card";
+
+@import "modules/catalog-components/item-card-lg"; // NYMнг.html
+@import "modules/catalog-components/item-card-sm"; // NYMнг.html
+
 @import "modules/catalog-components/feedback";
 @import "modules/catalog-components/analogs";
 
