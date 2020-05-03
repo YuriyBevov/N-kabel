@@ -58,7 +58,6 @@
 @media (max-width: $desktop-width) {
   .NYMнг {
     &__wrapper {
-      @include container();
       padding-top: 45px;
     }
   }

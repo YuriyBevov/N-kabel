@@ -1,0 +1,26 @@
+.characteristic-layout {
+  ul {
+    padding-left: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      width: 100%;
+      border-bottom: 1px solid $lightgrey;
+
+      p {
+        width: 80%;
+        max-width: 500px;
+      }
+
+      span {
+        width: 20%;
+        text-align: right;
+        padding-left: 10px;
+        outline: 1px solid red;
+      }
+    }
+  }
+}

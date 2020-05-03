@@ -16,6 +16,13 @@
 // modules
 
 @import "modules/loader";
+@import "modules/layouts/characteristic-layout";
+@import "modules/layouts/article-layout";
+@import "modules/layouts/cable-mark-description-layout";
+@import "modules/layouts/cable-mark-certificates-layout";
+
+@import "modules/global-components/pagination";
+@import "modules/global-components/stars";
 
 @import "modules/about";
 @import "modules/about-components/about-form";
@@ -31,11 +38,16 @@
 @import "modules/catalog-components/cable-mark-card";
 @import "modules/catalog-components/item-card-lg";
 @import "modules/catalog-components/item-card-sm";
-@import "modules/catalog-components/pagination";
+@import "modules/catalog-components/feedbacks";
+@import "modules/catalog-components/feedbacks-components/feedback";  
+
 @import "modules/catalog-inner/power-cable";
 @import "modules/catalog-inner/power-cable-inner/pvc";
 @import "modules/catalog-inner/power-cable-inner/pvc-copper";
 @import "modules/catalog-inner/power-cable-inner/NYMнг";
+
+@import "modules/catalog-inner/power-cable-inner/NYMнг-2";
+
 
 @import "modules/articles";
 @import "modules/articles-components/article-card";
@@ -43,7 +55,6 @@
 @import "modules/articles-components/articles-swiper-slider-styles";
 @import "modules/articles-inner/articles-list";
 @import "modules/articles-inner/article";
-@import "modules/articles-inner/article-components/article-layout";
 
 @import "modules/production";
 @import "modules/production-inner/custom";
