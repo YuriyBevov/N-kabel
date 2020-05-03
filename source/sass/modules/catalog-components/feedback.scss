@@ -1,0 +1,95 @@
+.feedback {
+  position: relative;
+
+  &__btn {
+    display: block;
+    position: absolute;
+    top: -62px;
+    right: 0;
+    font-size: $prs*1.6;
+    line-height: $prs*2.2;
+    width: 155px;
+    padding: 14px 10px;
+    text-align: center;
+
+    border-radius: 5px;
+    background: $yellow;
+    color: $black;
+
+    @include hover($white, $yellow);
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    padding-left: 0;
+    border-bottom: 1px solid $one-more-grey;
+
+    &:last-child {
+      border: 0;
+    }
+
+    &-author {
+      display: flex;
+      flex-wrap: wrap;
+      width: 30%;
+      max-width: 250px;
+      margin-right: auto;
+
+      img {
+        display: block;
+        width: 58px;
+        height: 58px;
+        overflow: hidden;
+        margin-right: 20px;
+        border-radius: 50%;
+        background-color: $feedback-grey;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-name {
+      font-size: $prs*1.6;
+      line-height: $prs*2.8;
+      padding-top: 5px;
+
+      color: $black;
+    }
+
+    &-city {
+      font-size: $prs*1.4;
+      line-height: $prs*2.4;
+
+      color: $feedback-grey;
+    }
+
+    &-content {
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(70% - 15px);
+      max-width: 480px;
+      margin-left: 15px;
+    }
+
+    &-date {
+      font-size: $prs*1.4;
+      line-height: $prs*1.6;
+      margin-left: auto;
+
+      color: $feedback-grey;
+    }
+
+    &-text {
+      font-size: $prs*1.4;
+      line-height: $prs*2.4;
+      padding-top: 10px;
+
+      color: $black;
+    }
+  }
+}

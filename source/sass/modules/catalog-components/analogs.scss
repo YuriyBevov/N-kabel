@@ -1,0 +1,132 @@
+.analogs {
+  padding-bottom: 150px;
+  border-bottom: 0.5px solid $company-grey;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    width: 169px;
+    min-height: 253px;
+    font-family: $bold;
+    margin-bottom: 25px;
+    margin-right: 25px;
+
+    &-box {
+      position: absolute;
+      padding: 17px 10px 0 10px;
+      padding-right: 0;
+      border: 1px solid $lightgrey;
+      background-color: $white;
+    }
+
+    &-order-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $prs*1.4;
+      line-height: $prs*1.9;
+      width: 0;
+      height: 0;
+      border: 0;
+      padding: 0;
+      overflow: hidden;
+      border-radius: 5px;
+      color: $black;
+      background-color: $yellow;
+      transition: all 0.3s 0.1s;
+    }
+
+    &:hover {
+      .analogs__item-box {
+        z-index: 10;
+        top: 0;
+        left: 0;
+        border: 1px solid $lightgrey;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      .analogs__item-order-btn {
+        position: relative;
+        width: 134px;
+        min-height: 33px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-mark {
+      display: flex;
+      justify-content: center;
+      font-size: $prs;
+      line-height: $prs*1.4;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      width: 51px;
+      min-height: 17px;
+      border-radius: 100px;
+      margin-bottom: 10px;
+      padding-top: 1.5px;
+      color: $white;
+      background-color: $lightblue;
+    }
+
+    &-img {
+      width: 100%;
+      height: 103px;
+      margin-bottom: $scs;
+    }
+
+    &-title {
+      font-size: $prs*1.4;
+      line-height: $prs*1.9;
+      text-transform: uppercase;
+      padding-right: 10px;
+      text-align: center;
+
+      color: $black;
+    }
+
+    &-availability {
+      position: relative;
+      font-size: $prs;
+      line-height: $prs*1.4;
+      letter-spacing: 0.05em;
+      text-transform: lowercase;
+      margin-bottom: 25px;
+      padding-right: 10px;
+      padding-left: 15px;
+
+      color: $brd-black;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        content: "";
+        transform: translateY(-25%);
+        background-image: url("../img/icon-check.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &-price {
+      display: block;
+      font-family: $bold;
+      font-size: $prs*1.4;
+      line-height: $prs*1.9;
+      letter-spacing: 0.05em;
+      padding-right: 10px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 15px;
+
+      color: $black;
+    }
+  }
+}

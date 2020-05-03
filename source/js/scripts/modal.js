@@ -4,27 +4,31 @@
   const ESC_KEYCODE = 27;
 
   const orderBtn = document.querySelectorAll('.order-btn');
-  const modal = document.querySelector(".order-modal");
-  const overflow = document.querySelector('.order-modal');
+  const orderModal = document.querySelector(".order-modal");
+
+  const feedbackBtn = document.querySelectorAll('.feedback__btn');
+  const feedbackModal = document.querySelector(".feedback-modal");
+
+  let modal = null;
 
   const removeEventListeners = function () {
     document.removeEventListener('click', hideByClick);
     document.removeEventListener('keydown', hideByEsc);
   }
 
-  const showByClick = function (event) {
-    event.preventDefault();
-    modal.classList.remove('hidden')
+  const showByClick = function (el) {
+    el.classList.remove('hidden')
 
     document.addEventListener('click', hideByClick);
     document.addEventListener('keydown', hideByEsc);
   }
 
   const hideByClick = function (evt) {
-    if(evt.target === overflow) {
+    if(evt.target === modal) {
       modal.classList.add('hidden');
 
       removeEventListeners();
+      modal = null;
     }
   }
 
@@ -33,18 +37,31 @@
       modal.classList.add('hidden');
 
       removeEventListeners();
+      modal = null;
     }
   };
 
   for (let i = 0; i < orderBtn.length; i++) {
-    orderBtn[i].addEventListener('click', showByClick)
+    orderBtn[i].addEventListener('click', function (evt) {
+      evt.preventDefault();
+      modal = orderModal;
+      showByClick(modal);
+    })
   }
 
-  const fileInput = document.getElementById('file-upload');
-  const fileName = document.querySelector('.order-modal__upload-files');
+  for (let i = 0; i < feedbackBtn.length; i++) {
+    feedbackBtn[i].addEventListener('click', function (evt) {
+      evt.preventDefault();
+      modal = feedbackModal;
+      showByClick(modal);
+    })
+  }
 
-  if (fileInput) {
-    fileInput.addEventListener('change', function(event) {
+  const fileUpload = document.querySelector('.modal__group--upload input');
+  const fileName = document.querySelector('.modal__group--upload p');
+
+  if (fileUpload) {
+    fileUpload.addEventListener('change', function(event) {
       const input = event.target;
 
       for (let i = 0; i < input.files.length; i++) {
@@ -52,6 +69,8 @@
       }
     });
   }
+})();
+
 
   /*const countInput = document.getElementById('count');
 
@@ -101,4 +120,3 @@
       return regexp.test(String(email).toLowerCase());
     }
   }*/
-})();

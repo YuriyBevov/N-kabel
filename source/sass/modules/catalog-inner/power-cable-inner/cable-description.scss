@@ -1,4 +1,4 @@
-.NYMнг-2 {
+.cable-description {
   background-color: #e5e5e5;
 
   &__wrapper {
@@ -11,10 +11,14 @@
   }
 
   &__description {
+    display: flex;
+    flex-wrap: wrap;
+
     &-list {
-      width: 100%;
+      width: calc(75% - 10px);
       max-width: 836px;
       padding: 0 30px;
+      margin-left: 10px;
       background-color: $white;
     }
 
@@ -22,6 +26,7 @@
       padding-top: 30px;
 
       h2 {
+        width: 100%;
         font-weight: bold;
         font-size: $prs*2.4;
         line-height: $prs*3.3;
@@ -30,19 +35,55 @@
         color: $black;
       }
 
+      &--feedback {
+        h2 {
+          width: calc(100% - 165px);
+        }
+      }
+
       &>.stock {
         padding-top: 0;
+        border-bottom: 0;
       }
 
       &>.stock>.stock__list>.stock__item:nth-child(6n) {
-        margin-right: 25px;  /// разобраться с маргинами !!!!!!!
+        margin-right: 25px;  // разобраться с маргинами !!!!!!!
       }
     }
+  }
+
+  &__pick-list {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    max-width: 275px;
+    margin-right: auto;
+
+    input {
+      display: none;
+    }
+  }
+
+  &__pick-item {
+    font-size: $prs*1.6;
+    line-height: $prs*2.2;
+    cursor: pointer;
+    padding: 14px 10px;
+    padding-left: 0;
+    border-bottom: 1px solid $one-more-grey;
+
+    color: #535353;
+
+    @include hover($blue)
+  }
+
+  input[type="radio"]:checked + label {
+    color: $black;
   }
 }
 
 @media (max-width: $desktop-width) {
-  .NYMнг-2 {
+  .cable-description {
     &__wrapper {
       padding-top: 45px;
     }
@@ -61,7 +102,7 @@
 }
 
 @media (max-width: $tablet-width) {
-  .NYMнг-2 {
+  .cable-description {
 
   }
 }
