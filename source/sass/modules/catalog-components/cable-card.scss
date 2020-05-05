@@ -1,12 +1,18 @@
 .cable-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
   width: 100%;
   max-width: 270px;
   padding: 30px 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   background-color: $white;
+
+  &__info-container,
+  &__order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 
   &__title {
     font-weight: bold;
@@ -101,6 +107,38 @@
       color: $blue;
 
       @include hover($yellow);
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .cable-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    margin-bottom: 20px;
+
+    &__info-container,
+    &__order-container {
+      width: calc(50% - 5px);
+    }
+
+    &__info-container {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 565px) {
+  .cable-card {
+    display: flex;
+    flex-direction: column;
+
+    &__info-container,
+    &__order-container {
+      width: 100%;
     }
   }
 }

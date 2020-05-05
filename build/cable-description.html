@@ -88,63 +88,84 @@
 
             <div class="cable-description__card-box">
               <div class="cable-card">
-                <h1 class="cable-card__title">NYMнг 2х1,5</h1>
-                <div class="cable-card__rating">
-                  <div class="stars">
-                    <div class="stars__wrapper">
-                      <svg width="16" height="16">
-                        <use xlink:href="#icon-star-yellow"></use>
-                      </svg>
-                      <svg width="16" height="16">
-                        <use xlink:href="#icon-star-yellow"></use>
-                      </svg>
-                      <svg width="16" height="16">
-                        <use xlink:href="#icon-star-yellow"></use>
-                      </svg>
-                      <svg width="16" height="16">
-                        <use xlink:href="#icon-star-yellow"></use>
-                      </svg>
-                      <svg width="16" height="16">
-                        <use xlink:href="#icon-star-yellow"></use>
-                      </svg>
-                      <svg width="16" height="16">
-                        <use xlink:href="#icon-star-white"></use>
-                      </svg>
-                      <svg width="16" height="16">
-                        <use xlink:href="#icon-star-white"></use>
-                      </svg>
-                      <svg width="16" height="16">
-                        <use xlink:href="#icon-star-white"></use>
-                      </svg>
-                      <svg width="16" height="16">
-                        <use xlink:href="#icon-star-white"></use>
-                      </svg>
-                      <svg width="16" height="16">
-                        <use xlink:href="#icon-star-white"></use>
-                      </svg>
+                <div class="cable-card__info-container">
+                  <h1 class="cable-card__title">NYMнг 2х1,5</h1>
+                  <div class="cable-card__rating">
+                    <div class="stars">
+                      <div class="stars__wrapper">
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-star-yellow"></use>
+                        </svg>
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-star-yellow"></use>
+                        </svg>
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-star-yellow"></use>
+                        </svg>
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-star-yellow"></use>
+                        </svg>
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-star-yellow"></use>
+                        </svg>
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-star-white"></use>
+                        </svg>
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-star-white"></use>
+                        </svg>
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-star-white"></use>
+                        </svg>
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-star-white"></use>
+                        </svg>
+                        <svg width="16" height="16">
+                          <use xlink:href="#icon-star-white"></use>
+                        </svg>
+                      </div>
                     </div>
+                    <p class="cable-card__rating-feedback-count">Отзывы <span>2</span></p>
                   </div>
-                  <p class="cable-card__rating-feedback-count">Отзывы <span>2</span></p>
-                </div>
-                <p class="cable-card__price">
-                  от <span>21.99</span> руб
-                </p>
-                <a class="cable-card__ask-link" href="#">Нашли дешевле?</a>
-
-                <div class="cable-card__btn-box">
-                  <a class="cable-card__order-link cable-card__order-link--availability" href="#">Заказать из наличия</a>
-                  <a class="cable-card__order-link cable-card__order-link--fabrication" href="#">Заказать под производство</a>
+                  <p class="cable-card__price">
+                    от <span>21.99</span> руб
+                  </p>
+                  <a class="cable-card__ask-link" href="#">Нашли дешевле?</a>
                 </div>
 
-                <p class="cable-card__post-link">
-                  пришлите заявку на почту<br>
-                  <a href="mailto:info@n-kabel.ru">info@n-kabel.ru</a>
-                </p>
+                <div class="cable-card__order-container">
+                  <div class="cable-card__btn-box">
+                    <a class="cable-card__order-link cable-card__order-link--availability order-btn" href="#">Заказать из наличия</a>
+                    <a class="cable-card__order-link cable-card__order-link--fabrication" href="#">Заказать под производство</a>
+                  </div>
+
+                  <p class="cable-card__post-link">
+                    пришлите заявку на почту<br>
+                    <a href="mailto:info@n-kabel.ru">info@n-kabel.ru</a>
+                  </p>
+                </div>
               </div>
             </div>
 
             <div class="cable-description__card-slider">
-              <p>slider-place</p>
+              <div class="cable-description-swiper-container">
+
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <img class="lazyload" data-src="img/cable-description-img1x.png" width="383" height="176" alt="Кабель NYMнг">
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="lazyload" data-src="img/cable-description-img1x.png" width="383" height="176" alt="Кабель NYMнг">
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="lazyload" data-src="img/cable-description-img1x.png" width="383" height="176" alt="Кабель NYMнг">
+                  </div>
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+              </div>
             </div>
 
             <div class="cable-description__card-info">
@@ -158,7 +179,7 @@
                         <use xlink:href="#icon-position"></use>
                       </svg>
                       <p class="geo-position__item-place">Москва - <span>2550м</span></p>
-                      <button class="geo-position__item-extra-btn">
+                      <button class="geo-position__item-extra-btn" aria-label="Открыть">
                         <svg width="6" height="16">
                           <use xlink:href="#icon-arrow-geo"></use>
                         </svg>
@@ -169,11 +190,21 @@
                         <li class="geo-position__item"><p class="geo-position__item-place">Москва - <span>24550м</span></p></li>
                       </ul>
                     </li>
-                    <li class="geo-position__item">
+                    <li class="geo-position__item geo-position__item--extra">
                       <svg width="16" height="16">
                         <use xlink:href="#icon-position"></use>
                       </svg>
                       <p class="geo-position__item-place">Санкт-Петербург - <span>50</span>м</p>
+                      <button class="geo-position__item-extra-btn" aria-label="Открыть">
+                        <svg width="6" height="16">
+                          <use xlink:href="#icon-arrow-geo"></use>
+                        </svg>
+                      </button>
+                      <ul class="geo-position__item--extra-list hidden">
+                        <li class="geo-position__item"><p class="geo-position__item-place">Санкт-Петербург - <span>550м</span></p></li>
+                        <li class="geo-position__item"><p class="geo-position__item-place">Санкт-Петербург - <span>1250м</span></p></li>
+                        <li class="geo-position__item"><p class="geo-position__item-place">Санкт-Петербург - <span>24550м</span></p></li>
+                      </ul>
                     </li>
                     <li class="geo-position__item">
                       <svg width="16" height="16">
@@ -504,7 +535,7 @@
                 </div>
               </li>
               <li class="cable-description__description-item">
-                <strong>Аналоги и сопуствующие товары</strong>
+                <strong>Аналоги и сопуствующие&nbsp;товары</strong>
 
                 <div class="analogs">
                   <ul class="analogs__list">
@@ -579,6 +610,34 @@
                       </div>
                     </li>
                   </ul>
+                  <div class="pagination">
+                    <div class="pagination__wrapper">
+
+                      <a href="#" class="pagination__show-btn">Показать еще</a>
+
+                      <div class="pagination__box">
+
+                        <a class="pagination__btn-prev" href="#" aria-label="Назад">
+                          <svg width="12" height="12">
+                            <use xlink:href="#icon-pagination-l"></use>
+                          </svg>
+                        </a>
+                        <a class="pagination__btn" href="#">1</a>
+                        <a class="pagination__btn active" href="#">2</a>
+                        <a class="pagination__btn" href="#">3</a>
+                        <a class="pagination__btn" href="#">4</a>
+                        <a class="pagination__btn" href="#">5</a>
+                        <a class="pagination__btn" href="#">...</a>
+                        <a class="pagination__btn" href="#">60</a>
+                        <a class="pagination__btn-next" href="#" aria-label="Вперед">
+                          <svg width="12" height="12">
+                            <use xlink:href="#icon-pagination-r"></use>
+                          </svg>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
               </li>
               <li class="cable-description__description-item">

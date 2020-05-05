@@ -1,0 +1,20 @@
+.cable-description-swiper-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 543px;
+  background-color: $white;
+
+  .swiper-container {
+   width: 100%;
+   height: 100%;
+ }
+
+ .swiper-slide {
+   text-align: center;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+}

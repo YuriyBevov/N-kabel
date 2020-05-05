@@ -109,4 +109,17 @@
       },
     });
   }
+
+  const isCableDescriptionSlider = document.querySelector('.cable-description-swiper-container');
+
+  if (isCableDescriptionSlider) {
+    const articlePageSwiper = new Swiper (isCableDescriptionSlider, {
+      grabCursor: true,
+
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+      },
+    });
+  }
 })();

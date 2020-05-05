@@ -5,7 +5,6 @@
 
   const orderBtn = document.querySelectorAll('.order-btn');
   const orderModal = document.querySelector(".order-modal");
-
   const feedbackBtn = document.querySelectorAll('.feedback__btn');
   const feedbackModal = document.querySelector(".feedback-modal");
 

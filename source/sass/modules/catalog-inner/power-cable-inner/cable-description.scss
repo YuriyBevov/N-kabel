@@ -24,7 +24,8 @@
     &-slider {
       width: 410px;
       min-height: 543px;
-      outline: 1px solid red;
+      overflow: hidden;
+      position: relative;
       margin-right: 30px;
       order: 1;
     }
@@ -155,12 +156,87 @@
 
       }
     }
+
+
+    &__card {
+      padding-top: 20px;
+      align-items: flex-start;
+
+      &-box {
+        order: 1;
+        margin-right: 30px;
+      }
+
+      &-info {
+        width: calc(100% - 400px);
+        order: 2;
+      }
+
+      &-slider {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0;
+        order: 3;
+      }
+    }
   }
 }
 
 @media (max-width: $tablet-width) {
   .cable-description {
+    &__pick-list {
+      width: 100%;
+      min-width: 100%;
+      margin-right: 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
 
+    &__pick-item {
+      width: calc(50% - 5px);
+      margin-right: auto;
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+
+    &__description {
+      &-list {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+      }
+    }
+
+    &__card {
+      padding-top: 0;
+      
+      &-box {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      &-slider {
+        margin-bottom: 20px;
+      }
+
+      &-info {
+        width: 100%;
+        margin-right: 0;
+        order: 3;
+
+        &-geo {
+          width: 100%;
+          margin-bottom: 0;
+        }
+
+        &-characteristics {
+          display: none;
+        }
+      }
+    }
   }
 }
 
