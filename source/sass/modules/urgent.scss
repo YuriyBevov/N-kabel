@@ -93,6 +93,10 @@
     &__wrapper {
       padding-top: 40px;
     }
+
+    b {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -106,10 +110,6 @@
 
     &__description:last-of-type {
       margin-bottom: 60px;
-    }
-
-    b {
-      margin-bottom: 65px;
     }
   }
 }

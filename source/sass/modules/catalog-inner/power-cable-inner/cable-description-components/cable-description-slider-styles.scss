@@ -17,4 +17,27 @@
    justify-content: center;
    align-items: center;
  }
+
+ .swiper-button-next,
+ .swiper-button-prev {
+   top: 100%;
+   transform: translateY(-40px);
+   width: 31px;
+   height: 31px;
+   background-size: 31px;
+
+   &::after {
+     display: none;
+   }
+ }
+
+  .swiper-button-next{
+    right: 20%;
+    background-image: url("../img/cab-descr-ar.svg");
+  }
+
+  .swiper-button-prev {
+    left: 20%;
+    background-image: url("../img/cable-descr-al.svg");
+  }
 }
