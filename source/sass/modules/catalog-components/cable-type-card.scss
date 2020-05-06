@@ -11,7 +11,7 @@
 
 
   &__box {
-    width: 70%;
+    width: calc(70% - 10px);
     max-width: 300px;
     margin-left: auto;
     display: flex;
@@ -49,7 +49,7 @@
 }
 
 @media (max-width: $desktop-width) {
-  .cable-card {
+  .cable-type-card {
     img {
       width: 30%;
       object-fit: contain;
