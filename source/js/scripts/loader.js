@@ -8,6 +8,7 @@
     function endLoading () {
       loader.style.display = 'none';
       clearTimeout(hideLoader);
+      document.removeEventListener('DOMContentLoaded', hideLoader);
     }
   };
 
