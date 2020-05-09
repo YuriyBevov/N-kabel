@@ -41,11 +41,11 @@
 
       select {
         width: 310px;
-        height: 66px;
+        height: 56px;
         font-family: $bold;
         font-size: $prs*2;
         line-height: $prs*2.7;
-        padding: 19px 50px;
+        padding: 14px 50px;
         appearance: none;
         cursor: pointer;
         border: none;
@@ -216,7 +216,6 @@
       max-width: 1000px;
     }
 
-
     &-item {
       display: flex;
       flex-wrap: wrap;
@@ -225,7 +224,7 @@
       max-width: 300px;
 
       &>a {
-        position: relative; //
+        position: relative;
         display: block;
         padding-left: 40px;
         margin-right: 10px;
@@ -312,13 +311,11 @@
       line-height: $prs*3.3;
     }
 
-
     &__header {
       flex-direction: column;
       border-bottom: none;
 
       &-select {
-        margin-bottom: 70px;
         order: 2;
       }
 
@@ -341,6 +338,8 @@
 
     &__content {
       flex-direction: column;
+      padding-top: 0;
+
       &-list {
         width: 100%;
       }

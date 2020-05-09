@@ -1,17 +1,44 @@
 .cable-mark-certificates-layout {
-
   ul {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
 
     li {
-      width: 200px; // temp
-      min-height: 200px; // temp
-      margin-right: 50px;
+      width: calc(35% - 5%);
+      height: 280px;
+      margin-right: 5%;
       margin-bottom: 30px;
+      background: transparent;
 
-      background: #c4c4c4;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .cable-mark-certificates-layout {
+    ul {
+      li {
+        width: calc(50% - 30px);
+        margin-right: auto;
+
+        &:nth-child(3n) {
+          margin-right: auto;
+        }
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+      }
     }
   }
 }

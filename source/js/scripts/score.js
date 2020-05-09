@@ -19,5 +19,7 @@
     starsPosition.style.transform = 'translateX(-' + (STARS_BOX_WIDTH - (starsCount * STAR_WIDTH)) +'px)'; // передвигаю блок со звездами в видимую часть блока контейнера
   }
 
-  starsBox.addEventListener('click', getCoords);
+  if(starsBox) {
+    starsBox.addEventListener('click', getCoords);
+  }
 })();
