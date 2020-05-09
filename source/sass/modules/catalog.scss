@@ -2,7 +2,7 @@
   &__wrapper {
     @include container();
     position: relative;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
 
   &__path {
@@ -78,7 +78,6 @@
   .catalog {
     &__wrapper {
       padding-top: 45px;
-      padding-bottom: 30px;
     }
 
     &__title {
@@ -104,9 +103,6 @@
 
 @media (max-width: $tablet-width) {
   .catalog {
-    &__wrapper {
-      padding-bottom: 0;
-    }
 
     &__title {
       font-size: $prs*2.4;

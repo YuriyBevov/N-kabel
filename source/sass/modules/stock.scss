@@ -1,6 +1,6 @@
 .stock {
   padding-top: 110px;
-  padding-bottom: 200px;
+  padding-bottom: 50px;
   border-bottom: 0.5px solid $company-grey;
 
   &__wrapper {
@@ -188,7 +188,6 @@
 
 @media (max-width: $desktop-width) {
   .stock {
-    padding-bottom: 80px;
 
     &__wrapper {
       width: 100%;

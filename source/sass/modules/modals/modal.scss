@@ -110,7 +110,6 @@
         margin: 0 auto;
         margin-bottom: 60px;
         cursor: pointer;
-
         color: $easyblack;
 
         &::before {
@@ -151,6 +150,28 @@
         color: $yellow;
 
         @include hover($white);
+      }
+    }
+
+    &-score-box {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+      min-height: 50px;
+      font-size: $prs;
+      line-height: $prs*1.4;
+      padding: 10px 20px;
+      border: 0;
+      background-color: $form-grey;
+      color: $white;
+
+      p {
+        margin-right: 15px;
+      }
+
+      & .stars {
+        cursor: pointer;
       }
     }
   }
