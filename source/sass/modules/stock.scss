@@ -119,7 +119,9 @@
       line-height: $prs*1.4;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      width: 51px;
+      padding: 0 7px;
+      width: fit-content;
+      max-width: 85%;
       min-height: 17px;
       border-radius: 100px;
       margin-bottom: 10px;
