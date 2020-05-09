@@ -15,7 +15,7 @@
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 55px;
-    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.05);
 
     &-box {
       order: 3;
@@ -139,7 +139,7 @@
 
     color: #535353;
 
-    @include hover($blue)
+    @include hover($blue);
   }
 
   input[type="radio"]:checked + label {

@@ -16,7 +16,6 @@
       min-width: 165px;
       min-height: 55px;
       border: 0;
-      padding: 0;
       border-radius: 5px;
       font-size: $prs*1.8;
       line-height: $prs*2.5;
@@ -188,7 +187,6 @@
 
 @media (max-width: $desktop-width) {
   .stock {
-
     &__wrapper {
       width: 100%;
       max-width: 780px;
@@ -213,7 +211,6 @@
     }
 
     &__filter-box {
-
       &-title {
         order: 1;
         width: 100%;
@@ -234,7 +231,6 @@
 
 @media (max-width: $tablet-width) {
   .stock {
-
     &__item {
       width: 45%;
       margin-right: 10%;

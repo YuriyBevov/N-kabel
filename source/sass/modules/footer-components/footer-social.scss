@@ -51,6 +51,7 @@
 
     &--mail {
       font-family: $reg;
+
       @include hover($white);
 
       span {

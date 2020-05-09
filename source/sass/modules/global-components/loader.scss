@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.9);;
+  background-color: rgba(0, 0, 0, 0.9);
 
   z-index: 10000000;
 }
@@ -25,7 +25,7 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #fff;
+  background: $white;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 
@@ -53,6 +53,7 @@
   0% {
     transform: scale(0);
   }
+
   100% {
     transform: scale(1);
   }
@@ -62,6 +63,7 @@
   0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(0);
   }
@@ -71,6 +73,7 @@
   0% {
     transform: translate(0, 0);
   }
+
   100% {
     transform: translate(24px, 0);
   }

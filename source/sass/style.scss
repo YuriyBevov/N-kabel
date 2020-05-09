@@ -19,61 +19,49 @@
 @import "modules/global-components/pagination";
 @import "modules/global-components/stars";
 @import "modules/global-components/geo-position";
-
 @import "modules/layouts/article-layout";
 @import "modules/layouts/cable-mark-description-layout";
 @import "modules/layouts/cable-mark-certificates-layout";
 @import "modules/layouts/cable-characteristic-layout";
-
 @import "modules/about";
 @import "modules/about-components/about-form";
 @import "modules/dealership";
 @import "modules/dealership-components/dealership-swiper-slider-styles";
 @import "modules/stock";
 @import "modules/description";
-
 @import "modules/catalog";
 @import "modules/catalog-components/catalog-search";
 @import "modules/catalog-components/catalog-article";
 @import "modules/catalog-components/cable-type-card";
 @import "modules/catalog-components/cable-mark-card";
 @import "modules/catalog-components/cable-card";
-
 @import "modules/catalog-components/item-card-lg"; // NYMнг.html
 @import "modules/catalog-components/item-card-sm"; // NYMнг.html
-
 @import "modules/catalog-components/feedback";
 @import "modules/catalog-components/analogs";
-
 @import "modules/catalog-inner/power-cable";
 @import "modules/catalog-inner/power-cable-inner/pvc";
 @import "modules/catalog-inner/power-cable-inner/pvc-copper";
-
 @import "modules/catalog-inner/power-cable-inner/NYMнг";
 @import "modules/catalog-inner/power-cable-inner/cable-description";
 @import "modules/catalog-inner/power-cable-inner/cable-description-components/cable-description-slider-styles";
-
 @import "modules/articles";
 @import "modules/articles-components/article-card";
 @import "modules/articles-components/article-categories";
 @import "modules/articles-components/articles-swiper-slider-styles";
 @import "modules/articles-inner/articles-list";
 @import "modules/articles-inner/article";
-
 @import "modules/production";
 @import "modules/production-inner/custom";
 @import "modules/production-inner/engineering";
-
 @import "modules/standarts";
 @import "modules/standarts-components/test";
-
 @import "modules/urgent";
 @import "modules/urgent-components/power-line";
 @import "modules/urgent-components/remote";
 @import "modules/urgent-components/subway";
 @import "modules/urgent-components/urgent-repair";
 @import "modules/urgent-components/urgent-swiper-slider-styles";
-
 @import "modules/company";
 @import "modules/company-components/advantages";
 @import "modules/company-components/workers";
@@ -88,9 +76,7 @@
 @import "modules/company-inner/certificates-components/quality.scss";
 @import "modules/company-inner/certificates-components/certificate-swiper-slider-styles.scss";
 @import "modules/company-inner/partnership";
-
 @import "modules/contacts";
-
 @import "modules/modals/modal";
 
 // footer

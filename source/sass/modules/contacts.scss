@@ -145,6 +145,7 @@
 
           color: $black;
         }
+
         span {
           font-family: $bold;
         }
@@ -162,7 +163,7 @@
     &-map {
       width: 60%;
       height: 362px;
-      background-color: rgba(228, 241 , 219, 0.5);
+      background-color: rgba(228, 241, 219, 0.5);
 
       iframe {
         width: 100%;
@@ -223,7 +224,7 @@
       width: 33%;
       max-width: 300px;
 
-      &>a {
+      & > a {
         position: relative;
         display: block;
         padding-left: 40px;

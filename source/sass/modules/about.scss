@@ -82,7 +82,7 @@
     }
   }
 
-  .no-webp &__banner{
+  .no-webp &__banner {
     background-image: url("../img/banner-man.png");
 
     @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
@@ -231,7 +231,7 @@
       }
     }
 
-    .no-webp &__banner{
+    .no-webp &__banner {
       background-image: url("../img/banner-man-tablet.png");
 
       @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
@@ -293,7 +293,7 @@
       }
     }
 
-    .no-webp &__banner{
+    .no-webp &__banner {
       background-image: url("../img/banner-man-mobile.png");
 
       @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {

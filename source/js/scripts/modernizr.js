@@ -1,6 +1,8 @@
 "use strict";
 
-(function () {
-    Modernizr.on('webp', function() {
+(function() {
+
+  Modernizr.on('webp', function() {
   });
+
 })();

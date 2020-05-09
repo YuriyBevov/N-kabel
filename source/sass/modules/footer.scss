@@ -17,7 +17,7 @@
 
   &__logo {
     position: absolute;
-    top: 0;
+    top: -10px;
     left: 0;
   }
 
@@ -48,6 +48,7 @@
       line-height: $scs*2;
 
       color: $white;
+
       @include hover($yellow);
     }
   }
