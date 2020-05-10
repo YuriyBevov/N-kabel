@@ -43,6 +43,8 @@
 
   &__btn-prev,
   &__btn-next,
+  &__btn-before,
+  &__btn-after,
   &__btn {
     display: flex;
     align-items: center;
@@ -72,6 +74,10 @@
         cursor: default;
         border: none;
       }
+    }
+
+    &.hidden {
+      display: none;
     }
   }
 
