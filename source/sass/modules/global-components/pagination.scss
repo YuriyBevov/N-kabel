@@ -17,12 +17,19 @@
     border: none;
     padding: 0 10px;
     margin-bottom: 10px;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
     background-color: transparent;
     color: $black;
 
     @include hover($yellow);
+
+    &:disabled {
+      cursor: default;
+      color: grey;
+
+      @include hover(grey);
+    }
   }
 
   &__box {
@@ -45,18 +52,31 @@
     font-family: $bold;
     font-size: $prs*1.2;
     line-height: $prs*2.1;
+    cursor: pointer;
     color: $black;
     transition: border 0.3s;
     border: none;
+    background-color: transparent;
+    transition: background-color 0.3s;
 
     &:hover,
     &:focus {
-      border: 1px solid #c4c4c4;
+      border: 1px solid $one-more-grey;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+
+      &:hover,
+      &:focus {
+        cursor: default;
+        border: none;
+      }
     }
   }
 
   &__btn.active {
-    background-color: #c4c4c4;
+    background-color: $one-more-grey;
   }
 }
 

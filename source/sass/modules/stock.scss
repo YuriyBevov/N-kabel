@@ -63,7 +63,7 @@
     min-height: 253px;
     font-family: $bold;
     margin-bottom: 25px;
-    margin-right: 25px;
+    margin-right: 20px;
 
     &-box {
       position: absolute;
@@ -106,10 +106,6 @@
         margin-top: 20px;
         margin-bottom: 10px;
       }
-    }
-
-    &:nth-child(6n) {
-      margin-right: 0;
     }
 
     &-mark {
@@ -201,15 +197,6 @@
 
     &__item {
       width: 165px;
-      margin-right: 30px;
-    }
-
-    &__item:nth-child(6n) {
-      margin-right: 30px;
-    }
-
-    &__item:nth-child(4n) {
-      margin-right: 0;
     }
 
     &__filter-box {
@@ -234,12 +221,7 @@
 @media (max-width: $tablet-width) {
   .stock {
     &__item {
-      width: 45%;
-      margin-right: 10%;
-
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
+      margin-right: 5px;
 
       &-box {
         width: 100%;
