@@ -19,7 +19,6 @@
 
     let itemsToShowFrom = 0;
     let itemsToShow = 10;
-
     let currentBtnId = 0;
     const step = 10;
 
@@ -127,6 +126,7 @@
 
       showItems();
     }
+
     // функция клика на кнопку назад
     const onBtnPrevClickHandler = function (evt) {
       evt.preventDefault();
@@ -149,6 +149,7 @@
 
       showItems();
     }
+
     // функция клика на кнопку вперед
     const onBtnNextClickHandler = function (evt) {
       evt.preventDefault();
