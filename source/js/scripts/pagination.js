@@ -1,4 +1,4 @@
-"use strict";
+/*"use strict";
 
 (function () {
   const pagination = document.querySelector(".pagination");
@@ -127,6 +127,8 @@
       showItems();
     }
 
+    let btnCheck = step;
+
     // функция клика на кнопку назад
     const onBtnPrevClickHandler = function (evt) {
       evt.preventDefault();
@@ -165,6 +167,14 @@
         itemsToShow = itemsToShowFrom + step;
       }
 
+      if(btnCheck - (currentBtnId + 1) === 1 ) {
+        btnCheck += step;
+        console.log(currentBtnId)
+        console.log(btnCheck)
+        onAfterBtnClickHandler();
+      }
+
+
       if (currentBtnId === paginationBtnCount) {
         btnNext.setAttribute("disabled", "disabled");
         showMoreBtn.setAttribute("disabled", "disabled");
@@ -181,8 +191,7 @@
 
     let rowId = 0;
 
-    const onBeforeBtnClickHandler = function (evt) {
-      evt.preventDefault();
+    const onBeforeBtnClickHandler = function () {
 
       console.log('клик по кнопке before' );
 
@@ -236,8 +245,7 @@
       showItems();
     }
 
-    const onAfterBtnClickHandler = function (evt) {
-      evt.preventDefault();
+    const onAfterBtnClickHandler = function () {
 
       if(btnPrev.hasAttribute("disabled")) {
         btnPrev.removeAttribute("disabled");
@@ -307,4 +315,4 @@
       btn[i].addEventListener("click", onClickShowItemsHandler);
     }
   }
-})();
+})();*/
