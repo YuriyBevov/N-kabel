@@ -81,6 +81,11 @@
     }
   }
 
+  &__btn-after {
+    width: 51px;
+    justify-content: center;
+  }
+
   &__btn.active {
     background-color: $one-more-grey;
   }
