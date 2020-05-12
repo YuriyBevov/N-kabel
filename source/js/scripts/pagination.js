@@ -14,12 +14,12 @@
     // количество элементов в списке над пагинацией
     const item = pagination.previousElementSibling.children;
 
-    let itemCountToDraw = 12; // количество показываемых элементов на странице
+    let itemCountToDraw = 4; // количество показываемых элементов на странице (можно менять)
     let itemsToShowFrom = 0;
     let itemsToShowTo = itemsToShowFrom + itemCountToDraw;
     let curBtnId = 0;
     let storage = null; // рабочая переменная
-    const btnCountStep = 10; // количество показываемых кнопок на странице
+    const btnCountStep = 10; // количество показываемых кнопок на странице (менять нельзя)
     let btnCount = btnCountStep - 1;
 
     // вычисляю сколько должно быть страниц(кнопок) в пагинации
@@ -69,11 +69,6 @@
         btnAfter.classList.add("hidden");
       }
     };
-
-    console.log(itemCountToDraw);
-    console.log(paginationBtn.length);
-    console.log(btnCount)
-    console.log("item.length = " +  item.length)
 
     // функции фильтрации
     const updateItemsToDraw = function (from, to) {
@@ -140,10 +135,11 @@
 
     // ф-и фильтрации рядов кнопок
 
-    function nextBtnRow() {
+    function nextBtnRow() {  // проверить ( возможно есть неочевидные баги )
       // ф-я скрытия предыдущего ряда
       let startBtnToHide = 0;
       let lastBtnToHide = btnCount
+      console.log(curBtnId)
 
       if( btnCount - btnCountStep > 0 ) {
         startBtnToHide = btnCount - btnCountStep;
@@ -163,20 +159,17 @@
       if (paginationBtn.length - lastBtnToDraw < 0 ) {
         lastBtnToDraw = paginationBtn.length;
         hideElem(btnAfter);
-        setInactive(showMoreBtn);
         drawFunc(startBtnToDraw, lastBtnToDraw, paginationBtn);
       } else {
         drawFunc(startBtnToDraw, lastBtnToDraw, paginationBtn);
       }
     }
 
-    function prevBtnRow() {
+    function prevBtnRow() { // проверить ( возможно есть неочевидные баги )
       let startBtnToHide = btnCount - btnCountStep;
       let lastBtnToHide = btnCount;
 
-console.log(paginationBtn.length - btnCount + "itog")
-      if( paginationBtn.length - btnCount <= 0 ) { // изменил
-        console.log(paginationBtn.length)
+      if( paginationBtn.length - btnCount < 0 ) {
         lastBtnToHide = paginationBtn.length;
         setActive(showMoreBtn);
         showElem(btnAfter);
@@ -194,6 +187,9 @@ console.log(paginationBtn.length - btnCount + "itog")
         btnCount = btnCountStep - 1;
       }
 
+      /*console.log("startBtnToDraw =" + startBtnToDraw); // проверить логику
+      console.log("lastBtnToDraw =" + lastBtnToDraw)*/
+
       drawFunc(startBtnToDraw, lastBtnToDraw, paginationBtn);
     }
 
@@ -204,9 +200,16 @@ console.log(paginationBtn.length - btnCount + "itog")
     const onShowMoreBtnClickHandler = function () {
        // показывает + itemCountToDraw  эл-в на стр
 
+       console.log("onShowMoreBtnClickHandler =" + itemsToShowFrom)
+
        let startItemToDraw = itemsToShowFrom;
        showMoreBtnClicked = true;
        curBtnId++;
+
+       if(curBtnId === paginationBtn.length - 1) {
+         setInactive(showMoreBtn);
+         setInactive(btnNext);
+       }
 
        setActivePaginationBtn(curBtnId);
        setActive(btnPrev);
@@ -222,7 +225,7 @@ console.log(paginationBtn.length - btnCount + "itog")
          itemsToShowTo = item.length;
          storage = item.length - itemCountToDraw;
 
-         setInactive(showMoreBtn);
+         //setInactive(showMoreBtn);
        }
 
        updateItemsToDraw(startItemToDraw, itemsToShowTo);
@@ -279,7 +282,6 @@ console.log(paginationBtn.length - btnCount + "itog")
 
       if(curBtnId === 0) {
         setInactive(btnPrev);
-        setInactive(showMoreBtn);
       }
 
       setActive(btnNext);
@@ -297,6 +299,8 @@ console.log(paginationBtn.length - btnCount + "itog")
       itemsToShowFrom -= itemCountToDraw;
       itemsToShowTo -= itemCountToDraw;
 
+      console.log("itemsToShowFrom =" + itemsToShowFrom);
+console.log("itemsToShowTo =" + itemsToShowTo);
       updateItemsToDraw(itemsToShowFrom, itemsToShowTo);
     }
 
@@ -334,6 +338,10 @@ console.log(paginationBtn.length - btnCount + "itog")
       evt.preventDefault();
       // листает на выбранную стр
 
+      if (showMoreBtnClicked) {
+        showMoreBtnClicked = false;
+      }
+
       curBtnId = this.getAttribute("data-id");
       setActivePaginationBtn(curBtnId);
 
@@ -343,8 +351,7 @@ console.log(paginationBtn.length - btnCount + "itog")
         setActive(btnPrev);
       }
 
-      if (this.getAttribute("data-id") == paginationBtn.length - 1) {
-        setInactive(showMoreBtn);
+      if (curBtnId === paginationBtn.length - 1) {
         setInactive(btnNext);
       } else {
         setActive(showMoreBtn);
