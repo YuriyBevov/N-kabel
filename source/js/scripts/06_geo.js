@@ -1,6 +1,8 @@
 "use strict";
 
 (function () {
+  const checkToAddClass = window.util.checkToAddClass;
+
   const btn =  document.querySelectorAll('.geo-position__item-extra-btn');
 
   const closeGeoList = function () {
@@ -13,9 +15,7 @@
 
   const openGeoList = function () {
     for (let i = 0; i < btn.length; i++) {
-      if(!(btn[i].nextElementSibling.classList.contains('hidden'))) {
-        btn[i].nextElementSibling.classList.add('hidden');
-      }
+      checkToAddClass(btn[i].nextElementSibling, 'hidden');
     };
 
     this.removeEventListener('click', openGeoList);

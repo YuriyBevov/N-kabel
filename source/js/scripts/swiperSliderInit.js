@@ -126,4 +126,18 @@
       },
     });
   }
+
+  const isFeedbackSlider = document.querySelector('.feedback-swiper-container');
+
+  if (isFeedbackSlider) {
+    const feedbackPageSwiper = new Swiper(isFeedbackSlider, {
+      direction: 'vertical',
+      slidesPerView: 'auto',
+      freeMode: true,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      mousewheel: true,
+    });
+  }
 })();

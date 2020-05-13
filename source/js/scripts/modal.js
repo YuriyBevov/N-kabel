@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-  const ESC_KEYCODE = 27;
+  const ESC_KEYCODE = window.util.ESC_KEYCODE;
 
   const orderBtn = document.querySelectorAll('.order-btn');
   const orderModal = document.querySelector(".order-modal");

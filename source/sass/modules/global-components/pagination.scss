@@ -1,6 +1,7 @@
 .pagination {
   min-width: 345px;
   border-top: 1px solid $catalog-brd;
+  order: 100;
 
   &__wrapper {
     display: flex;

@@ -1,6 +1,7 @@
 "use strict";
 
 (function () {
+
   const picker = document.querySelectorAll(".cable-description__pick-list input");
   const descriptionItem = document.querySelectorAll(".cable-description__description-item");
 

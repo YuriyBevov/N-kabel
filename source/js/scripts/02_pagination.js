@@ -3,18 +3,29 @@
 (function (){
   const pagination = document.querySelector(".pagination");
 
-  if (pagination) {
-    const showMoreBtn = pagination.querySelector(".pagination__show-btn");
-    const btnAfter = document.querySelector(".pagination__btn-after");
-    const btnPrev = document.querySelector(".pagination__btn-prev");
-    const btnNext = document.querySelector(".pagination__btn-next");
+  function paginationInit() {
 
-    pagination.classList.add("hidden");
+    const setActive = window.util.setActive;
+    const setInactive = window.util.setInactive;
+    const checkToAddClass = window.util.checkToAddClass;
+    const checkToRemoveClass = window.util.checkToRemoveClass;
 
     // количество элементов в списке над пагинацией
-    const item = pagination.previousElementSibling.children;
 
-    let itemCountToDraw = 4; // количество показываемых элементов на странице (можно менять)
+    const list = pagination.previousElementSibling.children;
+
+    const item = [];
+
+    for ( let i = 0; i < list.length; i++) {
+      checkToAddClass(list[i], 'hidden');
+
+      if ( list[i].hasAttribute('pagination-ready') ) {
+        list[i].classList.remove('hidden');
+        item.push(list[i]);
+      }
+    }
+
+    let itemCountToDraw = 12; // количество показываемых элементов на странице (можно менять)
     let itemsToShowFrom = 0;
     let itemsToShowTo = itemsToShowFrom + itemCountToDraw;
     let curBtnId = 0;
@@ -22,14 +33,13 @@
     const btnCountStep = 10; // количество показываемых кнопок на странице (менять нельзя)
     let btnCount = btnCountStep - 1;
 
-    // вычисляю сколько должно быть страниц(кнопок) в пагинации
+    // вычисляю сколько должно быть кнопок в пагинации
     const paginationBtnCount = Math.ceil(item.length / itemCountToDraw);
 
-    // скрытие лишних элементов списка, стартовое создание и отрисовка кнопок пагинации
+    // скрытие лишних элементов списка,
+
     const startDrawing = function () {
       if(item.length > itemCountToDraw) {
-        pagination.classList.remove("hidden");
-
         for (let i = 0; i < item.length; i++) {
           item[i].classList.add("hidden");
         }
@@ -37,6 +47,17 @@
         for (let i = 0; i < itemCountToDraw; i++) {
           item[i].classList.remove("hidden");
         }
+      }
+    }();
+
+//стартовое создание и отрисовка кнопок пагинации
+
+    function createPagination() {
+      const fragment = document.createDocumentFragment();
+      const template = document.getElementById('pagination-template');
+      const paginationContainer = template.content.cloneNode(true);
+
+      const paginationBtnsPlace = paginationContainer.querySelector('.pagination__btn-after');
 
         for (let i = 0; i < paginationBtnCount; i++) {
           const btn = document.createElement("a");
@@ -45,16 +66,31 @@
           btn.setAttribute("data-id", i);
           btn.className = "pagination__btn";
           btn.textContent = i + 1;
-          btnAfter.before(btn);
+          paginationBtnsPlace.before(btn);
         }
 
-        btnPrev.setAttribute("disabled", "disabled");
-      }
-    }();
+      fragment.appendChild(paginationContainer);
+      pagination.appendChild(fragment)
 
+      if (paginationBtnCount <= 1) { // меньше или равно одной , тк зачем показывать если всего одна кнопка
+        pagination.classList.add("hidden");
+      } else {
+        pagination.classList.remove("hidden");
+      }
+    }
+
+    createPagination();
+
+    const showMoreBtn = pagination.querySelector(".pagination__show-btn");
+    const btnAfter = document.querySelector(".pagination__btn-after");
+    const btnPrev = document.querySelector(".pagination__btn-prev");
+    const btnNext = document.querySelector(".pagination__btn-next");
     const paginationBtn = pagination.querySelectorAll(".pagination__btn");
 
+    // вешаю слушателей на созданные кнопки и показываю первый ряд кнопок
+
     const startDrawPagBtns =  function () {
+      btnPrev.setAttribute("disabled", "disabled");
       for (let i = 0; i < paginationBtn.length; i++) {
         paginationBtn[0].classList.add("active");
         paginationBtn[i].addEventListener("click", onPaginationBtnClickHandler);
@@ -64,13 +100,13 @@
         for (let i = btnCount; i < paginationBtn.length; i++) {
           paginationBtn[i].classList.add("hidden");
           btnAfter.textContent = '... ' + ( i + 1);
+          btnAfter.classList.remove("hidden");
         }
-      } else {
-        btnAfter.classList.add("hidden");
       }
     };
 
-    // функции фильтрации
+    // функции отрисовки нужного интервала
+
     const updateItemsToDraw = function (from, to) {
       for (let i = 0; i < item.length; i++) {
         if(!item[i].classList.contains("hidden")) {
@@ -99,36 +135,9 @@
       }
     }
 
-    // ф-и активности и отрисовки кнопок
-    function setActive(el) {
-      if(el.hasAttribute("disabled")) {
-        el.removeAttribute("disabled")
-      }
-    }
-
-    function setInactive(el) {
-      if(!el.hasAttribute("disabled")) {
-        el.setAttribute("disabled", "disabled")
-      }
-    }
-
-    function showElem(el) {
-      if(el.classList.contains("hidden")) {
-        el.classList.remove("hidden");
-      }
-    }
-
-    function hideElem(el) {
-      if(!el.classList.contains("hidden")) {
-        el.classList.add("hidden");
-      }
-    }
-
     function setActivePaginationBtn(id) {
       for(let i = 0; i < paginationBtn.length; i++) {
-        if(paginationBtn[i].classList.contains("active")) {
-          paginationBtn[i].classList.remove("active");
-        }
+        checkToRemoveClass(paginationBtn[i], "active");
       }
       paginationBtn[id].classList.add("active");
     }
@@ -139,7 +148,6 @@
       // ф-я скрытия предыдущего ряда
       let startBtnToHide = 0;
       let lastBtnToHide = btnCount
-      console.log(curBtnId)
 
       if( btnCount - btnCountStep > 0 ) {
         startBtnToHide = btnCount - btnCountStep;
@@ -158,7 +166,8 @@
 
       if (paginationBtn.length - lastBtnToDraw < 0 ) {
         lastBtnToDraw = paginationBtn.length;
-        hideElem(btnAfter);
+
+        checkToAddClass(btnAfter, "hidden");
         drawFunc(startBtnToDraw, lastBtnToDraw, paginationBtn);
       } else {
         drawFunc(startBtnToDraw, lastBtnToDraw, paginationBtn);
@@ -172,7 +181,7 @@
       if( paginationBtn.length - btnCount < 0 ) {
         lastBtnToHide = paginationBtn.length;
         setActive(showMoreBtn);
-        showElem(btnAfter);
+        checkToRemoveClass(btnAfter, "hidden");
       }
 
       hideFunc(startBtnToHide, lastBtnToHide, paginationBtn);
@@ -187,9 +196,6 @@
         btnCount = btnCountStep - 1;
       }
 
-      /*console.log("startBtnToDraw =" + startBtnToDraw); // проверить логику
-      console.log("lastBtnToDraw =" + lastBtnToDraw)*/
-
       drawFunc(startBtnToDraw, lastBtnToDraw, paginationBtn);
     }
 
@@ -199,8 +205,6 @@
 
     const onShowMoreBtnClickHandler = function () {
        // показывает + itemCountToDraw  эл-в на стр
-
-       console.log("onShowMoreBtnClickHandler =" + itemsToShowFrom)
 
        let startItemToDraw = itemsToShowFrom;
        showMoreBtnClicked = true;
@@ -224,8 +228,6 @@
        if(itemsToShowTo > item.length) {
          itemsToShowTo = item.length;
          storage = item.length - itemCountToDraw;
-
-         //setInactive(showMoreBtn);
        }
 
        updateItemsToDraw(startItemToDraw, itemsToShowTo);
@@ -248,7 +250,7 @@
       hideFunc(startBtnToHide, lastBtnToHide, paginationBtn);
       drawFunc(startBtnToDraw, lastBtnToDraw, paginationBtn);
 
-      hideElem(btnAfter);
+      checkToAddClass(btnAfter, "hidden");
       setInactive(btnNext);
       setInactive(showMoreBtn);
       setActive(btnPrev);
@@ -299,8 +301,6 @@
       itemsToShowFrom -= itemCountToDraw;
       itemsToShowTo -= itemCountToDraw;
 
-      console.log("itemsToShowFrom =" + itemsToShowFrom);
-console.log("itemsToShowTo =" + itemsToShowTo);
       updateItemsToDraw(itemsToShowFrom, itemsToShowTo);
     }
 
@@ -351,7 +351,8 @@ console.log("itemsToShowTo =" + itemsToShowTo);
         setActive(btnPrev);
       }
 
-      if (curBtnId === paginationBtn.length - 1) {
+      if (curBtnId == paginationBtn.length - 1) {
+        setInactive(showMoreBtn);
         setInactive(btnNext);
       } else {
         setActive(showMoreBtn);
@@ -370,5 +371,21 @@ console.log("itemsToShowTo =" + itemsToShowTo);
     btnNext.addEventListener('click', onNextBtnClickHandler);
 
     startDrawPagBtns();
+  }
+
+  if (pagination) {
+    paginationInit();
+  }
+
+
+  const paginationDestroy = function () {
+    const pagination = document.querySelector(".pagination__wrapper");
+
+    pagination.remove();
+  }
+
+  window.pagination = {
+    paginationInit,
+    paginationDestroy
   }
 })();

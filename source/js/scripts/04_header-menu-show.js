@@ -1,7 +1,8 @@
 "use strict";
 
 (function () {
-  const ESC_KEYCODE = 27;
+  const ESC_KEYCODE = window.util.ESC_KEYCODE;
+  const checkToAddClass = window.util.checkToAddClass;
 
   const openBtn = document.getElementById("menu-show-btn");
   const closeBtn = document.getElementById("menu-close-btn");
@@ -21,9 +22,7 @@
     document.removeEventListener('click', hideByClick);
     document.removeEventListener('keydown', hideByEsc);
 
-    if(!companyList.classList.contains('closed')) {
-      companyList.classList.add('closed');
-    }
+    checkToAddClass(companyList, 'closed');
     openBtn.addEventListener('click', openMenuByClick);
   }
 
@@ -43,14 +42,9 @@
 
   const closeMenuByClick = function () {
     nav.classList.add("closed");
-
-    if(!companyList.classList.contains('closed')) {
-      companyList.classList.add('closed');
-    }
-
     closeBtn.removeEventListener('click', closeMenuByClick);
+
     removeEventListeners();
-    openBtn.addEventListener('click', openMenuByClick);
   }
 
   //--- функции закрытия по клику и пустому месту
