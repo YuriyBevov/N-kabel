@@ -130,14 +130,22 @@
   const isFeedbackSlider = document.querySelector('.feedback-swiper-container');
 
   if (isFeedbackSlider) {
-    const feedbackPageSwiper = new Swiper(isFeedbackSlider, {
-      direction: 'vertical',
-      slidesPerView: 'auto',
-      freeMode: true,
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-      mousewheel: true,
-    });
+    const feedbackInit = document.getElementById('feedbacks');
+
+    const feedbackSliderInit = function () {
+      feedbackInit.removeEventListener('click', feedbackSliderInit);
+
+      const feedbackPageSwiper = new Swiper(isFeedbackSlider, {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: true,
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+        mousewheel: true,
+      });
+    }
+
+    feedbackInit.addEventListener('click', feedbackSliderInit)
   }
 })();
