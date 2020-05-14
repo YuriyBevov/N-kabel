@@ -28,9 +28,7 @@
   }
 
   function setInFocus (el) {
-
     el.focus();
-    console.log(el);
   }
 
   window.util = {
