@@ -54,9 +54,10 @@
 //стартовое создание и отрисовка кнопок пагинации
 
     function createPagination() {
+
       const fragment = document.createDocumentFragment();
       const template = document.getElementById('pagination-template');
-      const paginationContainer = template.content.cloneNode(true);
+      const paginationContainer = template.cloneNode(true);
 
       const paginationBtnsPlace = paginationContainer.querySelector('.pagination__btn-after');
 

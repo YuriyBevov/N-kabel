@@ -1,6 +1,7 @@
 "use strict";
 
 (function () {
+
   const esc_keycode = 27;
 
   function checkToRemoveClass(el, cls) {
