@@ -30,8 +30,8 @@
     let itemsToShowTo = itemsToShowFrom + itemCountToDraw;
     let curBtnId = 0;
     let storage = null; // рабочая переменная
-    const btnCountStep = 10; // количество показываемых кнопок на странице (менять нельзя)
-    let btnCount = btnCountStep - 1;
+    const btnCountStep = 10; // количество показываемых кнопок на странице (можно менять)
+    let btnCount = btnCountStep;
 
     // вычисляю сколько должно быть кнопок в пагинации
     const paginationBtnCount = Math.ceil(item.length / itemCountToDraw);
@@ -144,7 +144,7 @@
 
     // ф-и фильтрации рядов кнопок
 
-    function nextBtnRow() {  // проверить ( возможно есть неочевидные баги )
+    function nextBtnRow() {
       // ф-я скрытия предыдущего ряда
       let startBtnToHide = 0;
       let lastBtnToHide = btnCount
@@ -174,7 +174,7 @@
       }
     }
 
-    function prevBtnRow() { // проверить ( возможно есть неочевидные баги )
+    function prevBtnRow() {
       let startBtnToHide = btnCount - btnCountStep;
       let lastBtnToHide = btnCount;
 
@@ -209,11 +209,6 @@
        let startItemToDraw = itemsToShowFrom;
        showMoreBtnClicked = true;
        curBtnId++;
-
-       if(curBtnId === paginationBtn.length - 1) {
-         setInactive(showMoreBtn);
-         setInactive(btnNext);
-       }
 
        setActivePaginationBtn(curBtnId);
        setActive(btnPrev);
