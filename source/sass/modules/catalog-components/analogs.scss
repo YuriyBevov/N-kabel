@@ -18,6 +18,14 @@
       padding-right: 0;
       border: 1px solid $lightgrey;
       background-color: $white;
+
+      &.active {
+        z-index: 10;
+        top: 0;
+        left: 0;
+        border: 1px solid $lightgrey;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      }
     }
 
     &-order-btn {
@@ -35,9 +43,19 @@
       color: $black;
       background-color: $yellow;
       transition: all 0.3s 0.1s;
+
+      &:focus,
+      &:hover {
+        position: relative;
+        width: 134px;
+        min-height: 33px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       .analogs__item-box {
         z-index: 10;
         top: 0;

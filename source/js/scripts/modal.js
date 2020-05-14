@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-  const ESC_KEYCODE = window.util.ESC_KEYCODE;
+  const esc_keycode = window.util.esc_keycode;
 
   const orderBtn = document.querySelectorAll('.order-btn');
   const orderModal = document.querySelector(".order-modal");
@@ -32,7 +32,7 @@
   }
 
   const hideByEsc = function (evt) {
-    if (evt.keyCode === ESC_KEYCODE) {
+    if (evt.keyCode === esc_keycode) {
       modal.classList.add('hidden');
 
       removeEventListeners();

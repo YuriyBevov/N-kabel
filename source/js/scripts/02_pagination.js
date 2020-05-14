@@ -15,6 +15,7 @@
     // количество элементов в списке над пагинацией
 
     const list = pagination.previousElementSibling;
+    list.style.outline = "none";
     const listContent = list.children;
 
     const item = [];
@@ -218,6 +219,11 @@
 
        if (btnCount === curBtnId) { // проверка ряда
          nextBtnRow();
+       }
+
+       if(curBtnId === paginationBtn.length - 1) {
+         setInactive(btnNext);
+         setInactive(showMoreBtn);
        }
 
        storage = itemsToShowTo;
