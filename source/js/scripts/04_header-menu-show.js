@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-  const ESC_KEYCODE = window.util.ESC_KEYCODE;
+  const esc_keycode = window.util.esc_keycode;
   const checkToAddClass = window.util.checkToAddClass;
 
   const openBtn = document.getElementById("menu-show-btn");
@@ -60,7 +60,7 @@
   }
 
   const hideByEsc = function (evt) {
-    if (evt.keyCode === ESC_KEYCODE) {
+    if (evt.keyCode === esc_keycode) {
       nav.classList.add('closed');
 
       removeEventListeners();

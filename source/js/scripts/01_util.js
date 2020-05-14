@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-  const ESC_KEYCODE = 27;
+  const esc_keycode = 27;
 
   function checkToRemoveClass(el, cls) {
     if(el.classList.contains(cls)) {
@@ -27,11 +27,18 @@
     }
   }
 
+  function setInFocus (el) {
+
+    el.focus();
+    console.log(el);
+  }
+
   window.util = {
-    ESC_KEYCODE,
-    checkToRemoveClass,
-    checkToAddClass,
-    setActive,
-    setInactive
+    esc_keycode: esc_keycode,
+    checkToRemoveClass: checkToRemoveClass,
+    checkToAddClass: checkToAddClass,
+    setActive: setActive,
+    setInactive: setInactive,
+    setInFocus: setInFocus
   };
 })();

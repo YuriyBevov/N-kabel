@@ -1,6 +1,7 @@
 "use strict";
 
 (function (){
+
   const pagination = document.querySelector(".pagination");
 
   function paginationInit() {
@@ -9,19 +10,21 @@
     const setInactive = window.util.setInactive;
     const checkToAddClass = window.util.checkToAddClass;
     const checkToRemoveClass = window.util.checkToRemoveClass;
+    const setInFocus = window.util.setInFocus;
 
     // количество элементов в списке над пагинацией
 
-    const list = pagination.previousElementSibling.children;
+    const list = pagination.previousElementSibling;
+    const listContent = list.children;
 
     const item = [];
 
-    for ( let i = 0; i < list.length; i++) {
-      checkToAddClass(list[i], 'hidden');
+    for ( let i = 0; i < listContent.length; i++) {
+      checkToAddClass(listContent[i], 'hidden');
 
-      if ( list[i].hasAttribute('pagination-ready') ) {
-        list[i].classList.remove('hidden');
-        item.push(list[i]);
+      if ( listContent[i].hasAttribute('pagination-ready') ) {
+        listContent[i].classList.remove('hidden');
+        item.push(listContent[i]);
       }
     }
 
@@ -269,6 +272,7 @@
       }
 
       updateItemsToDraw(itemsToShowFrom, lastItemToShow);
+      setInFocus(list);
     }
 
     const onPrevBtnClickHandler = function () {
@@ -297,6 +301,7 @@
       itemsToShowTo -= itemCountToDraw;
 
       updateItemsToDraw(itemsToShowFrom, itemsToShowTo);
+      setInFocus(list);
     }
 
     const onNextBtnClickHandler = function () {
@@ -327,6 +332,8 @@
       itemsToShowTo += itemCountToDraw;
 
       updateItemsToDraw(itemsToShowFrom, itemsToShowTo);
+
+      setInFocus(list);
     }
 
     const onPaginationBtnClickHandler = function (evt) {
@@ -358,6 +365,7 @@
       itemsToShowFrom = curBtnId * itemCountToDraw;
 
       updateItemsToDraw(itemsToShowFrom, itemsToShowTo);
+      setInFocus(list);
     }
 
     showMoreBtn.addEventListener('click', onShowMoreBtnClickHandler);
@@ -380,7 +388,7 @@
   }
 
   window.pagination = {
-    paginationInit,
-    paginationDestroy
+    paginationInit: paginationInit,
+    paginationDestroy: paginationDestroy
   }
 })();
