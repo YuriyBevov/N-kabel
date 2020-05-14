@@ -302,6 +302,7 @@
     }
 
     &__title {
+      max-width: 340px;
       font-size: $prs*3;
       line-height: $prs*4.1;
       text-align: center;

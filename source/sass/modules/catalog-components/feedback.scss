@@ -23,6 +23,7 @@
   &__item {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     padding: 20px;
     padding-left: 0;
     border-bottom: 1px solid $one-more-grey;
@@ -95,6 +96,24 @@
 
     &.hidden {
       display: none;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .feedback {
+    &__item {
+      flex-direction: column;
+
+      &-author {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      &-content {
+        margin-left: 0;
+        width: 100%;
+      }
     }
   }
 }

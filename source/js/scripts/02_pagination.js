@@ -58,6 +58,7 @@
       const fragment = document.createDocumentFragment();
       const template = document.getElementById('pagination-template');
       const paginationContainer = template.cloneNode(true);
+      paginationContainer.style.display = "flex";
 
       const paginationBtnsPlace = paginationContainer.querySelector('.pagination__btn-after');
 
