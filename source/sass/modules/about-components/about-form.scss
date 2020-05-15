@@ -40,10 +40,10 @@
     width: 148px;
     min-height: 31px;
     padding: 0;
-    padding-top: 7px;
+    padding-top: 6px;
     cursor: pointer;
     border: 1px solid $lightblue;
-    color: $lightblue;
+    color: $black;
     background-color: transparent;
 
     @include hover($white, $lightblue);
@@ -90,7 +90,7 @@
       padding-left: 15px;
       cursor: pointer;
 
-      color: $easyblack;
+      color: $black;
 
       &::before {
         position: absolute;
