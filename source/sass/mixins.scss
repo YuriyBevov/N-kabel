@@ -40,7 +40,8 @@
   color: $black;
 
   & span {
-    color: $brd-grey;
+    color: $darkblue;
+    text-decoration: underline;
   }
 
   @media (max-width: $desktop-width) {

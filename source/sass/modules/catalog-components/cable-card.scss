@@ -1,5 +1,4 @@
 .cable-card {
-
   width: 100%;
   max-width: 270px;
   padding: 30px 20px;
@@ -34,10 +33,10 @@
       font-size: $scs*1.5;
       line-height: $scs*2;
       margin-left: 5px;
-      color: $one-more-grey;
+      color: $primBlack;
 
       span {
-        color: $black;
+        color: $primBlack;
       }
     }
   }
@@ -57,7 +56,7 @@
     font-size: 12px;
     line-height: 16px;
     margin-bottom: 40px;
-    color: $boldblue;
+    color: $blue;
 
     @include hover($yellow);
   }
@@ -80,15 +79,15 @@
       color: $black;
       background-color: $yellow;
 
-      @include hover($blue, $yellow);
+      @include hover($white, $yellow);
     }
 
     &--fabrication {
-      border: 1px solid $blue;
-      color: $blue;
+      border: 1px solid $darkblue;
+      color: $darkblue;
       background-color: transparent;
 
-      @include hover($white, $blue);
+      @include hover($white, $darkblue);
     }
   }
 

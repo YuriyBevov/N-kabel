@@ -1,11 +1,9 @@
 "use strict";
 
 (function (){
-
   const pagination = document.querySelector(".pagination");
 
   function paginationInit() {
-
     const setActive = window.util.setActive;
     const setInactive = window.util.setInactive;
     const checkToAddClass = window.util.checkToAddClass;
@@ -14,7 +12,6 @@
     // количество элементов в списке над пагинацией
 
     const list = pagination.previousElementSibling.children;
-
     const item = [];
 
     for ( let i = 0; i < list.length; i++) {
@@ -33,9 +30,7 @@
     let btnCount = btnCountStep;
     let itemToShowFrom = 0;
     let itemToShowTo = itemToShowFrom + itemCountToDraw;
-
     let storage = 0;
-
 
     // вычисляю сколько должно быть кнопок в пагинации
     const paginationBtnCount = Math.ceil(item.length / itemCountToDraw);
@@ -205,10 +200,6 @@
 
       drawFunc(startBtnToDraw, lastBtnToDraw, paginationBtn);
     }
-
-    // eventListeners
-
-    // let showMoreBtnClicked = false;
 
     const onShowMoreBtnClickHandler = function () {
        // показывает + itemCountToDraw  эл-в на стр

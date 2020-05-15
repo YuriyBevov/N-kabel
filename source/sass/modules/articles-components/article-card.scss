@@ -67,7 +67,7 @@
         line-height: $scs*2;
         margin-bottom: 5px;
 
-        color: $lightblue;
+        color: $darkblue;
 
         @include hover($yellow);
       }
@@ -139,7 +139,7 @@
     &-link {
       font-size: $scs;
       line-height: $prs*1.1;
-      color: $easygrey;
+      color: $white;
 
       @include hover($yellow);
     }

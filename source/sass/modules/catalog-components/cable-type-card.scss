@@ -38,11 +38,11 @@
 
   &__link {
     display: block;
-    font-size: $prs*0.9;
+    font-size: $prs*1.2;
     line-height: $prs*1.6;
     text-decoration-line: underline;
 
-    color: $card-grey;
+    color: $primBlack;
 
     @include hover($lightblue);
   }
