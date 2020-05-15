@@ -12,14 +12,11 @@
   </script>
   <script src="scripts/polyfills/lazysizes.min.js" async=""></script>
   <script src="scripts/polyfills/picturefill.min.js" async></script>
-  <script src="scripts/polyfills/svgxuse.min.js" defer></script>
 </head>
   <body>
     <div class="loader"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
-    <div class="visually-hidden">
-      <svg>
-        <use xlink:href="img/sprite_auto.svg"></use>
-      </svg>
+    <div style="display:none">
+      <include src="build/img/sprite_auto.svg"></include>
     </div>
     <header class="header">
       <div class="header__wrapper">
@@ -397,7 +394,7 @@
       </div>
 
     </footer>
-    
+
     <div class="pagination__wrapper" id="pagination-template" style="display:none">
       <button class="pagination__show-btn">Показать еще</button>
       <div class="pagination__box">
