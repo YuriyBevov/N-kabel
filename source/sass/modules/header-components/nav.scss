@@ -134,8 +134,14 @@
     &__btn {
       display: block;
       position: absolute;
-      top: 38px;
+      top: 45px;
       right: 30px;
+      transition: transform 0.3s 0.05s ease-in;
+
+      &:hover,
+      &:focus {
+        transform: rotate(180deg);
+      }
     }
 
     &__list {
