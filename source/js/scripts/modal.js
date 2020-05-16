@@ -72,7 +72,7 @@
   const input = document.querySelector('.modal__group--upload input');
   const fileName = document.querySelector(".modal__group--upload label");
 
-  if (fileUpload) {
+  if (input) {
     fileUpload(input, fileName);
   }
 })();
