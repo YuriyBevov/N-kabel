@@ -69,6 +69,11 @@
       transform: translateY(-50%);
       transition: transform 0.3s;
     }
+
+    &:focus,
+    &:hover {
+      color: $darkblue;
+    }
   }
 
 
