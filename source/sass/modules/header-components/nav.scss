@@ -79,6 +79,7 @@
       padding: 0 10px;
       background-color: $primBlack;
       z-index: 1000;
+      animation: menuShow 0.2s ease-in;
 
       & li {
         padding: 15px 0;
@@ -101,6 +102,16 @@
         display: none;
       }
     }
+  }
+}
+
+@keyframes menuShow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
