@@ -28,6 +28,14 @@
       position: relative;
       margin-right: 30px;
       order: 1;
+
+      img {
+        object-fit: contain;
+
+        &.cover {
+          object-fit: cover;
+        }
+      }
     }
 
     &-info {
