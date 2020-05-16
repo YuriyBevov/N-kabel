@@ -75,14 +75,10 @@
     color: $white;
 
     label {
-      width: 40%;
+      width: 100%;
       cursor: pointer;
 
       @include hover($yellow, $form-grey);
-    }
-
-    span {
-      width: 60%;
     }
   }
 

@@ -1,7 +1,7 @@
 "use strict";
 
 (function (){
-  const pagination = document.querySelector(".pagination");
+  const pagination = document.getElementById("pagination");
 
   function paginationInit() {
     const setActive = window.util.setActive;
@@ -56,7 +56,6 @@
       const fragment = document.createDocumentFragment();
       const template = document.getElementById('pagination-template');
       const templateClone = template.cloneNode(true);
-      templateClone.style.display = "flex";
       templateClone.removeAttribute("id");
 
       const paginationBtnsPlace = templateClone.querySelector('.pagination__btn-after');
@@ -75,9 +74,9 @@
       pagination.appendChild(fragment)
 
       if (paginationBtnCount <= 1) { // меньше или равно одной , тк зачем показывать если всего одна кнопка
-        pagination.classList.add("hidden");
+        checkToAddClass(pagination, "hidden")
       } else {
-        pagination.classList.remove("hidden");
+        checkToRemoveClass(pagination, "hidden")
       }
     }
 

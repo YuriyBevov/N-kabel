@@ -32,12 +32,21 @@
     el.focus();
   }
 
+  function fileUpload(el, textPLace) {
+    el.addEventListener('change', function(event) {
+    const input = event.target;
+
+    textPLace.textContent = input.files[0].name;
+    });
+  }
+
   window.util = {
     esc_keycode: esc_keycode,
     checkToRemoveClass: checkToRemoveClass,
     checkToAddClass: checkToAddClass,
     setActive: setActive,
     setInactive: setInactive,
-    setInFocus: setInFocus
+    setInFocus: setInFocus,
+    fileUpload: fileUpload
   };
 })();

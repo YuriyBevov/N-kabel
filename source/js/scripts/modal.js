@@ -2,6 +2,7 @@
 
 (function () {
   const esc_keycode = window.util.esc_keycode;
+  const fileUpload = window.util.fileUpload;
 
   const orderBtn = document.querySelectorAll('.order-btn');
   const orderModal = document.querySelector(".order-modal");
@@ -56,17 +57,10 @@
     })
   }
 
-  const fileUpload = document.querySelector('.modal__group--upload input');
-  //const fileName = document.querySelector('.modal__group--upload p');
+  const input = document.querySelector('.modal__group--upload input');
   const fileName = document.querySelector(".modal__group--upload label");
 
   if (fileUpload) {
-    fileUpload.addEventListener('change', function(event) {
-      const input = event.target;
-
-      for (let i = 0; i < input.files.length; i++) {
-        fileName.textContent = input.files[i].name;
-      }
-    });
+    fileUpload(input, fileName);
   }
 })();

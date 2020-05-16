@@ -303,8 +303,8 @@
               </div>
             </li>
           </ul>
-          <div class="pagination">
-            <!-- <template id="pagination-template"> -->
+          <div class="pagination" id="pagination">
+            <!-- place for pagination-template -->
           </div>
         </div>
       </section>
@@ -466,18 +466,16 @@
           <div class="modal__group modal__group--mail">
             <input type="text" id="order-modal-mail" placeholder="Email">
             <label for="order-modal-mail" class="visually-hidden">Email</label>
-            <span>Введите корректный адрес почты</span>
           </div>
 
           <div class="modal__group modal__group--upload">
             <input type="file" id="order-modal-upload" class="visually-hidden">
             <label for="order-modal-upload">Загрузить файл</label>
-            <p></p>
           </div>
 
           <div class="modal__group modal__group--count">
-            <label class="visually-hidden" for="order-modal-count">Введите количество</label>
             <input type="text" id="order-modal-count" placeholder="Введите количество">
+            <label class="visually-hidden" for="order-modal-count">Введите количество</label>
           </div>
 
           <div class="modal__group modal__group--message">
@@ -495,23 +493,25 @@
       </div>
     </section>
 
-    <div class="pagination__wrapper" id="pagination-template" style="display:none">
-      <button class="pagination__show-btn">Показать еще</button>
-      <div class="pagination__box">
-        <button class="pagination__btn-prev" aria-label="Назад">
-          <svg width="12" height="12">
-            <use xlink:href="#icon-pagination-l"></use>
-          </svg>
-        </button>
+    <section class="pagination" style="display:none">
+      <div class="pagination__wrapper" id="pagination-template">
+        <button class="pagination__show-btn">Показать еще</button>
+        <div class="pagination__box">
+          <button class="pagination__btn-prev" aria-label="Назад">
+            <svg width="12" height="12">
+              <use xlink:href="#icon-pagination-l"></use>
+            </svg>
+          </button>
 
-        <a href="#" class="pagination__btn-after hidden">...</a>
-        <button class="pagination__btn-next" aria-label="Вперед">
-          <svg width="12" height="12">
-            <use xlink:href="#icon-pagination-r"></use>
-          </svg>
-        </button>
+          <a href="#" class="pagination__btn-after hidden">...</a>
+          <button class="pagination__btn-next" aria-label="Вперед">
+            <svg width="12" height="12">
+              <use xlink:href="#icon-pagination-r"></use>
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
 
     <script src="scripts/vendor.min.js"></script>
     <script src="scripts/main.min.js"></script>

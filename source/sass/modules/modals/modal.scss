@@ -67,11 +67,6 @@
       }
     }
 
-    span {
-      display: none;
-      color: red;
-    }
-
     &--upload {
       display: flex;
       flex-wrap: wrap;
@@ -87,15 +82,11 @@
 
       label {
         display: block;
-        width: 40%;
+        width: 100%;
         border: 0;
         cursor: pointer;
 
         @include hover($yellow);
-      }
-
-      p {
-        width: 60%;
       }
     }
 
