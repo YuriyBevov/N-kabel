@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 (function () {
-  const isDealershipSlider = document.querySelector('.dealership-swiper-container');
+  const isDealershipSlider = document.querySelector(".dealership-swiper-container");
 
   if (isDealershipSlider) {
 
-    const indexPageSwiper = new Swiper ('.dealership-swiper-container', {
+    const indexPageSwiper = new Swiper (".dealership-swiper-container", {
       // Optional parameters
 
       slidesPerView: 2,
@@ -17,8 +17,8 @@
       // Navigation arrows
 
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
 
       breakpoints: {
@@ -34,15 +34,15 @@
     });
   }
 
-  const isUrgentSlider = document.querySelector('.urgent-swiper-container');
+  const isUrgentSlider = document.querySelector(".urgent-swiper-container");
 
   if (isUrgentSlider) {
-    const urgentPageSwiper = new Swiper ('.urgent-swiper-container', {
+    const urgentPageSwiper = new Swiper (".urgent-swiper-container", {
       slidesPerView: 1,
 
       navigation: {
-        nextEl: '.urgent-swiper-button-next',
-        prevEl: '.urgent-swiper-button-prev',
+        nextEl: ".urgent-swiper-button-next",
+        prevEl: ".urgent-swiper-button-prev",
       },
 
       breakpoints: {
@@ -58,10 +58,10 @@
     });
   }
 
-  const isCertificateSlider = document.querySelector('.certificate-swiper-container');
+  const isCertificateSlider = document.querySelector(".certificate-swiper-container");
 
   if (isCertificateSlider) {
-    const certificatePageSwiper = new Swiper ('.certificate-swiper-container', {
+    const certificatePageSwiper = new Swiper (".certificate-swiper-container", {
       slidesPerView: 2,
       initialSlide: 2,
       centeredSlides: true,
@@ -81,10 +81,10 @@
     });
   }
 
-  const isArticlesSlider = document.querySelector('.articles-swiper-container');
+  const isArticlesSlider = document.querySelector(".articles-swiper-container");
 
   if (isArticlesSlider) {
-    const articlePageSwiper = new Swiper ('.articles-swiper-container', {
+    const articlePageSwiper = new Swiper (".articles-swiper-container", {
       slidesPerView: 2,
       spaceBetween: 12,
       freeMode: true,
@@ -104,48 +104,48 @@
       },
 
       pagination: {
-        el: '.swiper-pagination',
-        type: 'progressbar',
+        el: ".swiper-pagination",
+        type: "progressbar",
       },
     });
   }
 
-  const isCableDescriptionSlider = document.querySelector('.cable-description-swiper-container');
+  const isCableDescriptionSlider = document.querySelector(".cable-description-swiper-container");
 
   if (isCableDescriptionSlider) {
     const articlePageSwiper = new Swiper (isCableDescriptionSlider, {
       grabCursor: true,
 
       pagination: {
-        el: '.swiper-pagination',
+        el: ".swiper-pagination",
         dynamicBullets: true,
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
     });
   }
 
-  const isFeedbackSlider = document.querySelector('.feedback-swiper-container');
+  const isFeedbackSlider = document.querySelector(".feedback-swiper-container");
 
   if (isFeedbackSlider) {
-    const feedbackInit = document.getElementById('feedbacks');
+    const feedbackInit = document.getElementById("feedbacks");
 
     const feedbackSliderInit = function () {
-      feedbackInit.removeEventListener('click', feedbackSliderInit);
+      feedbackInit.removeEventListener("click", feedbackSliderInit);
 
       const feedbackPageSwiper = new Swiper(isFeedbackSlider, {
-        direction: 'vertical',
-        slidesPerView: 'auto',
+        direction: "vertical",
+        slidesPerView: "auto",
         freeMode: true,
         scrollbar: {
-          el: '.swiper-scrollbar',
+          el: ".swiper-scrollbar",
         },
         mousewheel: true,
       });
     }
 
-    feedbackInit.addEventListener('click', feedbackSliderInit)
+    feedbackInit.addEventListener("click", feedbackSliderInit)
   }
 })();

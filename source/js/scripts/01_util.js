@@ -33,7 +33,7 @@
   }
 
   function fileUpload(el, textPLace) {
-    el.addEventListener('change', function(event) {
+    el.addEventListener("change", function(event) {
     const input = event.target;
 
     textPLace.textContent = input.files[0].name;

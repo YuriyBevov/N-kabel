@@ -15,10 +15,10 @@
     const item = [];
 
     for ( let i = 0; i < list.length; i++) {
-      checkToAddClass(list[i], 'hidden');
+      checkToAddClass(list[i], "hidden");
 
-      if ( list[i].hasAttribute('pagination-ready') ) {
-        list[i].classList.remove('hidden');
+      if ( list[i].hasAttribute("pagination-ready") ) {
+        list[i].classList.remove("hidden");
         item.push(list[i]);
       }
     }
@@ -54,11 +54,11 @@
     function createPagination() {
 
       const fragment = document.createDocumentFragment();
-      const template = document.getElementById('pagination-template');
+      const template = document.getElementById("pagination-template");
       const templateClone = template.cloneNode(true);
       templateClone.removeAttribute("id");
 
-      const paginationBtnsPlace = templateClone.querySelector('.pagination__btn-after');
+      const paginationBtnsPlace = templateClone.querySelector(".pagination__btn-after");
 
         for (let i = 0; i < paginationBtnCount; i++) {
           const btn = document.createElement("a");
@@ -100,7 +100,7 @@
       if (paginationBtn.length > btnCountStep) {
         for (let i = btnCount; i < paginationBtn.length; i++) {
           paginationBtn[i].classList.add("hidden");
-          btnAfter.textContent = '... ' + ( i + 1);
+          btnAfter.textContent = "... " + ( i + 1);
           btnAfter.classList.remove("hidden");
         }
       }
@@ -313,10 +313,10 @@
       updateItemsIntervalToDraw(curBtnId);
     }
 
-    showMoreBtn.addEventListener('click', onShowMoreBtnClickHandler);
-    btnAfter.addEventListener('click', onAfterBtnClickHandler);
-    btnPrev.addEventListener('click', onPrevBtnClickHandler);
-    btnNext.addEventListener('click', onNextBtnClickHandler);
+    showMoreBtn.addEventListener("click", onShowMoreBtnClickHandler);
+    btnAfter.addEventListener("click", onAfterBtnClickHandler);
+    btnPrev.addEventListener("click", onPrevBtnClickHandler);
+    btnNext.addEventListener("click", onNextBtnClickHandler);
 
     startDrawPagBtns();
   }

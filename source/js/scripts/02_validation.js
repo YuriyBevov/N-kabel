@@ -17,13 +17,13 @@
       el.style.color = "#f1b0b0";
       el.style.outline = "2px solid rgb(93, 16, 7)";
 
-      checkToAddClass(el, 'form-invalid');
-      setTimeout(checkToRemoveClass, 1000, el, 'form-invalid');
+      checkToAddClass(el, "form-invalid");
+      setTimeout(checkToRemoveClass, 1000, el, "form-invalid");
     } else {
       isValidMail = true;
       el.style.color = color;
       el.style.outline = "none";
-      checkToRemoveClass(el, 'form-invalid');
+      checkToRemoveClass(el, "form-invalid");
     }
   }
 
@@ -35,8 +35,8 @@
       label.style.color = "#f1b0b0";
       label.style.outline = "2px solid rgb(93, 16, 7)";
 
-      checkToAddClass(label, 'form-invalid');
-      setTimeout(checkToRemoveClass, 1000, label, 'form-invalid');
+      checkToAddClass(label, "form-invalid");
+      setTimeout(checkToRemoveClass, 1000, label, "form-invalid");
     }
 
     function removeInvalidColor() {
@@ -44,12 +44,12 @@
         isAcceptedRules = true;
         label.style.color = color;
         label.style.outline = "none";
-        checkToRemoveClass(label, 'form-invalid');
+        checkToRemoveClass(label, "form-invalid");
       }
-      el.removeEventListener('change', removeInvalidColor);
+      el.removeEventListener("change", removeInvalidColor);
     }
 
-    el.addEventListener('change', removeInvalidColor)
+    el.addEventListener("change", removeInvalidColor)
   }
 
   function checking(mail, check, color, form) {
