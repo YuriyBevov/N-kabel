@@ -9,7 +9,7 @@
   const feedbackBtn = document.querySelectorAll('.feedback__btn');
   const feedbackModal = document.querySelector(".feedback-modal");
 
-  let modal = null;
+  let modal = null; // тут будет активная модалка
 
   const removeEventListeners = function () {
     document.removeEventListener('click', hideByClick);
@@ -19,8 +19,12 @@
   const showByClick = function (el) {
     el.classList.remove('hidden')
 
+    const closeBtn = modal.querySelector('.modal__closeBtn');
+
     document.addEventListener('click', hideByClick);
     document.addEventListener('keydown', hideByEsc);
+
+    closeBtn.addEventListener('click', closeByBtnClick)
   }
 
   const hideByClick = function (evt) {
@@ -30,6 +34,14 @@
       removeEventListeners();
       modal = null;
     }
+  }
+
+  const closeByBtnClick = function () {
+    modal.classList.add("hidden");
+
+    removeEventListeners();
+    modal = null
+    this.removeEventListener("click", closeByBtnClick);
   }
 
   const hideByEsc = function (evt) {

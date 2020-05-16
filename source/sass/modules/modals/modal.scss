@@ -12,6 +12,7 @@
   animation: fadeIn 0.3s;
 
   &__wrapper {
+    position: relative;
     width: 100%;
     min-width: 375px;
     max-width: 555px;
@@ -20,6 +21,19 @@
     padding: 60px 70px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
     background: $footer-black;
+  }
+
+  &__closeBtn {
+    position: absolute;
+    top: 70px;
+    right: 70px;
+    cursor: pointer;
+    transition: transform 0.3s 0.05s ease-in;
+
+    &:hover,
+    &:focus {
+      transform: rotate(180deg)
+    }
   }
 
   &__title {

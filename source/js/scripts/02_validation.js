@@ -58,8 +58,6 @@
 
     if (isValidMail == true && isAcceptedRules ==  true) {
       form.submit();
-    } else {
-      console.log('wrong')
     }
   }
 
