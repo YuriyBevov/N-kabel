@@ -17,7 +17,7 @@
     for ( let i = 0; i < list.length; i++) {
       checkToAddClass(list[i], "hidden");
 
-      if ( list[i].hasAttribute("pagination-ready") ) {
+      if ( list[i].hasAttribute("data-pagination") ) {
         list[i].classList.remove("hidden");
         item.push(list[i]);
       }

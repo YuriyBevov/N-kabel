@@ -17,13 +17,16 @@
 
     for (let i = 0; i < stockItem.length; i++) {
       checkToAddClass(stockItem[i], "hidden");
-      if(stockItem[i].hasAttribute("pagination-ready")) {
-        stockItem[i].removeAttribute("pagination-ready")
+      if(stockItem[i].hasAttribute("data-pagination")) {
+        console.log("has")
+        stockItem[i].removeAttribute("data-pagination")
+      } else {
+        console.log("hasno")
       }
 
       if (stockItem[i].getAttribute("data-id") === type) {
         stockItem[i].classList.remove("hidden");
-        stockItem[i].setAttribute("pagination-ready", "pagination-ready");
+        stockItem[i].setAttribute("data-pagination", "ready");
       }
     }
 
