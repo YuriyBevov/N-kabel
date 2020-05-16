@@ -201,31 +201,31 @@
     }
 
     const onShowMoreBtnClickHandler = function () {
-       // показывает + itemCountToDraw  эл-в на стр
+      // показывает + itemCountToDraw  эл-в на стр
 
-       curBtnId++;
-       setActivePaginationBtn(curBtnId);
-       setActive(btnPrev);
+      curBtnId++;
+      setActivePaginationBtn(curBtnId);
+      setActive(btnPrev);
 
-       storage = curBtnId;
+      storage = curBtnId;
 
-       if (btnCount === curBtnId) { // проверка ряда
-         nextBtnRow();
-       }
+      if (btnCount === curBtnId) { // проверка ряда
+        nextBtnRow();
+      }
 
-       if(curBtnId === paginationBtn.length - 1) {
-         setInactive(btnNext);
-         setInactive(showMoreBtn);
-       }
+      if(curBtnId === paginationBtn.length - 1) {
+        setInactive(btnNext);
+        setInactive(showMoreBtn);
+      }
 
-       itemToShowFrom = storage * itemCountToDraw;
-       itemToShowTo = itemToShowFrom + itemCountToDraw;
+      itemToShowFrom = storage * itemCountToDraw;
+      itemToShowTo = itemToShowFrom + itemCountToDraw;
 
-       if (itemToShowTo > item.length) {
-         itemToShowTo = item.length;
-       }
+      if (itemToShowTo > item.length) {
+        itemToShowTo = item.length;
+      }
 
-       drawFunc(itemToShowFrom, itemToShowTo, item);
+      drawFunc(itemToShowFrom, itemToShowTo, item);
     }
 
     const onAfterBtnClickHandler = function (evt) {

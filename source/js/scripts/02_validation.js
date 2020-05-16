@@ -1,8 +1,8 @@
 "use strict";
 
 (function () {
-   const checkToRemoveClass = window.util.checkToRemoveClass;
-   const checkToAddClass = window.util.checkToAddClass;
+  const checkToRemoveClass = window.util.checkToRemoveClass;
+  const checkToAddClass = window.util.checkToAddClass;
 
   let isValidMail = false;
   let isAcceptedRules = true;
