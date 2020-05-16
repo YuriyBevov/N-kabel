@@ -677,35 +677,35 @@
                   <picture>
                     <source type="image/webp" class="lazyload" srcset="#" data-srcset="img/1.webp">
 
-                    <img class="lazyload" src="#" data-src="img/1.png" alt="Изображение жильного провода" width="240" height="350">
+                    <img class="lazyload" src="#" data-src="img/1.png" width="240" height="350" alt="Завод-1">
                   </picture>
                 </div>
                 <div class="swiper-slide">
                   <picture>
                     <source type="image/webp" class="lazyload" srcset="#" data-srcset="img/2.webp">
 
-                    <img class="lazyload" src="#" data-src="img/2.png" alt="Изображение жильного провода" width="240" height="350">
+                    <img class="lazyload" src="#" data-src="img/2.png" width="240" height="350" alt="Завод-2">
                   </picture>
                 </div>
                 <div class="swiper-slide">
                   <picture>
                     <source type="image/webp" class="lazyload" srcset="#" data-srcset="img/3.webp">
 
-                    <img class="lazyload" src="#" data-src="img/3.png" alt="Изображение жильного провода" width="240" height="350">
+                    <img class="lazyload" src="#" data-src="img/3.png" width="240" height="350" alt="Завод-3">
                   </picture>
                 </div>
                 <div class="swiper-slide">
                   <picture>
                     <source type="image/webp" class="lazyload" srcset="#" data-srcset="img/4.webp">
 
-                    <img class="lazyload" src="#" data-src="img/4.png" alt="Изображение жильного провода" width="240" height="350">
+                    <img class="lazyload" src="#" data-src="img/4.png" width="240" height="350" alt="Завод-4">
                   </picture>
                 </div>
                 <div class="swiper-slide">
                   <picture>
                     <source type="image/webp" class="lazyload" srcset="#" data-srcset="img/5.webp">
 
-                    <img class="lazyload" src="#" data-src="img/5.png" alt="Изображение жильного провода" width="240" height="350">
+                    <img class="lazyload" src="#" data-src="img/5.png" width="240" height="350" alt="Завод-5">
                   </picture>
                 </div>
             </div>
@@ -910,8 +910,25 @@
             </li>
           </ul>
 
-          <div class="pagination" id="pagination">
+          <div class="pagination">
             <!-- place for pagination-template -->
+            <div class="pagination__wrapper" id="pagination-template" style="display:none">
+              <button class="pagination__show-btn">Показать еще</button>
+              <div class="pagination__box">
+                <button class="pagination__btn-prev" aria-label="Назад">
+                  <svg width="12" height="12">
+                    <use xlink:href="#icon-pagination-l"></use>
+                  </svg>
+                </button>
+
+                <a href="#" class="pagination__btn-after hidden">...</a>
+                <button class="pagination__btn-next" aria-label="Вперед">
+                  <svg width="12" height="12">
+                    <use xlink:href="#icon-pagination-r"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1221,26 +1238,6 @@
             <button type="submit">Отправить</button>
           </div>
         </form>
-      </div>
-    </section>
-
-    <section class="pagination" style="display:none">
-      <div class="pagination__wrapper" id="pagination-template">
-        <button class="pagination__show-btn">Показать еще</button>
-        <div class="pagination__box">
-          <button class="pagination__btn-prev" aria-label="Назад">
-            <svg width="12" height="12">
-              <use xlink:href="#icon-pagination-l"></use>
-            </svg>
-          </button>
-
-          <a href="#" class="pagination__btn-after hidden">...</a>
-          <button class="pagination__btn-next" aria-label="Вперед">
-            <svg width="12" height="12">
-              <use xlink:href="#icon-pagination-r"></use>
-            </svg>
-          </button>
-        </div>
       </div>
     </section>
 

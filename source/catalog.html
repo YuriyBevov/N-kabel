@@ -155,8 +155,25 @@
               <a class="catalog__link" href="#">Посмотреть все</a>
             </li>
           </ul>
-          <div class="pagination" id="pagination">
+          <div class="pagination">
             <!-- place for pagination-template -->
+            <div class="pagination__wrapper" id="pagination-template" style="display:none">
+              <button class="pagination__show-btn">Показать еще</button>
+              <div class="pagination__box">
+                <button class="pagination__btn-prev" aria-label="Назад">
+                  <svg width="12" height="12">
+                    <use xlink:href="#icon-pagination-l"></use>
+                  </svg>
+                </button>
+
+                <a href="#" class="pagination__btn-after hidden">...</a>
+                <button class="pagination__btn-next" aria-label="Вперед">
+                  <svg width="12" height="12">
+                    <use xlink:href="#icon-pagination-r"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -360,26 +377,6 @@
         </div>
       </div>
     </footer>
-
-    <section class="pagination" style="display:none">
-      <div class="pagination__wrapper" id="pagination-template">
-        <button class="pagination__show-btn">Показать еще</button>
-        <div class="pagination__box">
-          <button class="pagination__btn-prev" aria-label="Назад">
-            <svg width="12" height="12">
-              <use xlink:href="#icon-pagination-l"></use>
-            </svg>
-          </button>
-
-          <a href="#" class="pagination__btn-after hidden">...</a>
-          <button class="pagination__btn-next" aria-label="Вперед">
-            <svg width="12" height="12">
-              <use xlink:href="#icon-pagination-r"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </section>
 
     <script src="scripts/vendor.min.js"></script>
     <script src="scripts/main.min.js"></script>

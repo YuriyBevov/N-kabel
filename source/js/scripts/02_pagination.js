@@ -1,7 +1,7 @@
 "use strict";
 
 (function (){
-  const pagination = document.getElementById("pagination");
+  const pagination = document.querySelector(".pagination");
 
   function paginationInit() {
     const setActive = window.util.setActive;
@@ -55,8 +55,11 @@
 
       const fragment = document.createDocumentFragment();
       const template = document.getElementById("pagination-template");
+
       const templateClone = template.cloneNode(true);
       templateClone.removeAttribute("id");
+      templateClone.setAttribute("id", "pagination");
+      templateClone.style.display ="flex";
 
       const paginationBtnsPlace = templateClone.querySelector(".pagination__btn-after");
 
@@ -71,7 +74,7 @@
         }
 
       fragment.appendChild(templateClone);
-      pagination.appendChild(fragment)
+      pagination.prepend(fragment)
 
       if (paginationBtnCount <= 1) { // меньше или равно одной , тк зачем показывать если всего одна кнопка
         checkToAddClass(pagination, "hidden")
@@ -326,7 +329,7 @@
   }
 
   const paginationDestroy = function () {
-    const pagination = document.querySelector(".pagination__wrapper");
+    const pagination = document.getElementById("pagination");
 
     pagination.remove();
   }
