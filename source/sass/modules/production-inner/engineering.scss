@@ -44,10 +44,6 @@
       }
     }
 
-    & button {
-      display: none;
-    }
-
     &-content {
       width: 50%;
       max-width: 580px;
@@ -199,22 +195,6 @@
 
       &-text {
         margin-bottom: 20px;
-      }
-
-      & button {
-        display: block;
-        width: 81px;
-        height: 19px;
-        border: 0;
-        padding: 0;
-        margin: 0;
-        font-size: $prs*1.2;
-        line-height: $prs*1.9;
-        cursor: pointer;
-
-        background-color: transparent;
-        color: $brd-grey;
-        order: 2;
       }
 
       &-content {
