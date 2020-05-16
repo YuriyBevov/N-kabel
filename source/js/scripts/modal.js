@@ -57,7 +57,8 @@
   }
 
   const fileUpload = document.querySelector('.modal__group--upload input');
-  const fileName = document.querySelector('.modal__group--upload p');
+  //const fileName = document.querySelector('.modal__group--upload p');
+  const fileName = document.querySelector(".modal__group--upload label");
 
   if (fileUpload) {
     fileUpload.addEventListener('change', function(event) {

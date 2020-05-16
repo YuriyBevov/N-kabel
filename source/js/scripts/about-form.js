@@ -1,8 +1,8 @@
 "use-strict";
 
 (function() {
-  const fileInput = document.getElementById('footer-form-file-upload');
-  const fileName = document.querySelector('.footer-form__upload-btn');
+  const fileInput = document.getElementById('about-form-file-upload');
+  const fileName = document.querySelector('.about-form__upload-btn');
 
   if (fileInput) {
     fileInput.addEventListener('change', function(event) {

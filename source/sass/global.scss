@@ -41,11 +41,11 @@ picture {
   height: 100%;
 }
 
-input.form-invalid {
-  animation: 0.5s tremor ease-in;
+.form-invalid {
+  animation: 0.3s invalid ease-in;
 }
 
-@-webkit-keyframes tremor {
+@-webkit-keyframes invalid {
   20% {
     transform: translateX(-5px);
   }
