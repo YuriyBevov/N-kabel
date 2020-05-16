@@ -18,10 +18,7 @@
     for (let i = 0; i < stockItem.length; i++) {
       checkToAddClass(stockItem[i], "hidden");
       if(stockItem[i].hasAttribute("data-pagination")) {
-        console.log("has")
         stockItem[i].removeAttribute("data-pagination")
-      } else {
-        console.log("hasno")
       }
 
       if (stockItem[i].getAttribute("data-id") === type) {
