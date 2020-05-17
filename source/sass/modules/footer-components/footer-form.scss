@@ -129,6 +129,17 @@
       }
     }
 
+    &-rules {
+      font-size: $prs*0.9;
+      line-height: $scs*1.5;
+      text-align: right;
+      width: 207px;
+
+      color: $white;
+
+      @include hover($darkblue);
+    }
+
     input:checked + label::before {
       width: 10px;
       height: 10px;

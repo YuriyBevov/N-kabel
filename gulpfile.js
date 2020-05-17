@@ -34,7 +34,7 @@ gulp.task("css", function () {
 gulp.task("js", function () {
   return gulp.src("source/js/scripts/*.js")
     .pipe(plumber())
-    //.pipe(jsmin())
+    .pipe(jsmin())
     .pipe(concat("main.min.js"))
     .pipe(gulp.dest("build/scripts"));
 });
@@ -42,7 +42,7 @@ gulp.task("js", function () {
 gulp.task("vendor", function () {
   return gulp.src("source/js/plugins/*.js")
     .pipe(plumber())
-    //.pipe(jsmin())
+    .pipe(jsmin())
     .pipe(concat("vendor.min.js"))
     .pipe(gulp.dest("build/scripts"));
 });

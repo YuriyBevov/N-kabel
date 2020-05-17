@@ -72,6 +72,16 @@
     border: none;
     margin-left: auto;
 
+    &-rules {
+      font-size: $prs*0.7;
+      line-height: $prs;
+      text-align: right;
+
+      color: $black;
+
+      @include hover($darkblue);
+    }
+
     input:focus + label {
       outline: 1px solid $lightblue;
     }
