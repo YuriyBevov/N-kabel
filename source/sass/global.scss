@@ -41,6 +41,10 @@ picture {
   height: 100%;
 }
 
+.cover-img {
+  object-fit: cover !important;
+}
+
 .form-invalid {
   animation: 0.3s invalid ease-in;
 }
