@@ -1,7 +1,7 @@
 "use strict";
 (function() {
-  console.log('ok')
   objectFitImages();
+  document.addEventListener("DOMContentLoaded", objectFitImages);
 })();
 
 (function() {
