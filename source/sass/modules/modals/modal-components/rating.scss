@@ -12,7 +12,7 @@
     position: relative;
     width: 80px;
     height: 16px;
-    background-image: url('../img/icon-star-white.svg');
+    background-image: url("../img/icon-star-white.svg");
     background-size: 16px 16px;
     background-repeat: repeat-x;
   }
@@ -20,9 +20,9 @@
   &__input:focus ~ .rating__focus {
     position: absolute;
     top: -2px;
-    right:  -2px;
-    bottom:  -2px;
-    left:  -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
     z-index: -1;
     outline: 2px solid $lightblue;
   }
@@ -41,11 +41,11 @@
 
   &__star:hover,
   &__input:checked + &__star {
-    background-image: url('../img/icon-star-yellow.svg');
+    background-image: url("../img/icon-star-yellow.svg");
   }
 
   &__star:hover ~ &__star {
-    background-image: url('../img/icon-star-white.svg');
+    background-image: url("../img/icon-star-white.svg");
   }
 
   &__star:nth-of-type(1) {

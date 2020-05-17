@@ -31,7 +31,6 @@
 
       img {
         object-fit: contain;
-        font-family: 'object-fit: contain;'; // для IE
       }
     }
 
@@ -249,5 +248,12 @@
 
   to {
     opacity: 1;
+  }
+}
+
+/* stylelint-disable */
+.cable-description-slider {
+  img {
+    font-family: "object-fit: contain;"; // для IE ( полифилл для картинок ofi.js)
   }
 }
