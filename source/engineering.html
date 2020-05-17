@@ -440,26 +440,24 @@
           <p class="footer-form__title">Отправить заявку</p>
           <form class="footer-form__form">
             <fieldset class="footer-form__content">
+              <input type="text" id="footer-form__mail" placeholder="Email">
               <label for="footer-form__mail" class="visually-hidden">Почта</label>
-              <input type="text" id="footer-form__mail" placeholder="Email" required>
-
 
               <div class="footer-form__upload">
-                <label class="footer-form__upload-btn" for="footer-form-file-upload">Загрузить файл</label>
-                <span class="footer-form__upload-files"></span>
                 <input type="file" id="footer-form-file-upload" class="visually-hidden">
+                <label class="footer-form__upload-btn" for="footer-form-file-upload">Загрузить файл</label>
               </div>
             </fieldset>
 
             <fieldset class="footer-form__textarea">
-              <label for="footer-form__message" class="visually-hidden">Поле для сообщения</label>
               <textarea id="footer-form__message" cols="30" rows="10" placeholder="Сообщение"></textarea>
+              <label for="footer-form__message" class="visually-hidden">Поле для сообщения</label>
             </fieldset>
 
             <fieldset class="footer-form__submit">
-              <button class="footer-form__submit-btn" type="submit">Отправить</button>
+              <button type="submit" class="footer-form__submit-btn">Отправить</button>
 
-              <input type="checkbox" id="footer-form__accept-rules" checked class="visually-hidden">
+              <input type="checkbox" id="footer-form__accept-rules" class="visually-hidden" checked>
               <label for="footer-form__accept-rules">Согласен на обработку персональных данных</label>
             </fieldset>
           </form>

@@ -19,6 +19,9 @@
   const showByClick = function (el) {
     el.classList.remove("hidden")
 
+    const focus = modal.querySelector("input").focus();
+    console.log(focus)
+
     const closeBtn = modal.querySelector(".modal__closeBtn");
 
     document.addEventListener("click", hideByClick);

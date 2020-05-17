@@ -40,16 +40,26 @@
     width: 148px;
     min-height: 31px;
     padding: 0;
-    padding-top: 6px;
     cursor: pointer;
-    border: 1px solid $lightblue;
+    outline: 1px solid $lightblue;
     color: $black;
     background-color: transparent;
 
     @include hover($white, $lightblue);
 
     label {
+      width: 100%;
+      height: inherit;
+      padding-top: 6px;
+      text-align: center;
       cursor: pointer;
+    }
+
+    & input {
+      &:focus + label {
+        color: $white;
+        background-color: $lightblue;
+      }
     }
   }
 
@@ -62,9 +72,8 @@
     border: none;
     margin-left: auto;
 
-    input {
-      bottom: 0;
-      left: 6px;
+    input:focus + label {
+      outline: 1px solid $lightblue;
     }
 
     &-btn {

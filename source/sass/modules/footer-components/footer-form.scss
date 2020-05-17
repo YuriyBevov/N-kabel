@@ -80,6 +80,10 @@
 
       @include hover($yellow, $form-grey);
     }
+
+    input:focus + label {
+      outline: 1px solid $lightblue;
+    }
   }
 
   &__textarea {
@@ -135,6 +139,10 @@
       background-size: 100%;
       background-position: center;
       border: 1px solid $one-more-grey;
+    }
+
+    input:focus + label {
+      outline: 1px solid $lightblue;
     }
 
     button {

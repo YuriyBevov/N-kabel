@@ -63,6 +63,10 @@
       &::placeholder {
         color: $white;
       }
+
+      &:focus + label {
+        outline: 1px solid $lightblue;
+      }
     }
 
     textarea {
@@ -159,12 +163,11 @@
       }
     }
 
-    &-score-box {
+    &-rating-box {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       width: 100%;
-      min-height: 50px;
       font-size: $prs;
       line-height: $prs*1.4;
       padding: 10px 20px;
@@ -172,12 +175,9 @@
       background-color: $form-grey;
       color: $white;
 
-      p {
-        margin-right: 15px;
-      }
-
-      & .stars {
-        cursor: pointer;
+      & input {
+        width: 20px;
+        min-height: 20px;
       }
     }
   }
