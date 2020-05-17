@@ -43,6 +43,12 @@ picture {
 
 .cover-img {
   object-fit: cover !important;
+  font-family: 'object-fit: cover;';
+}
+
+.contain-img {
+  object-fit: cover !important;
+  font-family: 'object-fit: contain;';
 }
 
 .form-invalid {

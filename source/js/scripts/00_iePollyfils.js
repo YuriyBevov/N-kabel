@@ -1,4 +1,8 @@
 "use strict";
+(function() {
+  console.log('ok')
+  objectFitImages();
+})();
 
 (function() {
   function remove() { this.parentNode && this.parentNode.removeChild(this); }
