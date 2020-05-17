@@ -222,6 +222,10 @@
 
     &__item {
       margin-right: 15px;
+
+      img {
+        width: 157px;
+      }
     }
 
     &__filter-box {
@@ -260,10 +264,6 @@
 
       &-mark {
         align-self: flex-start;
-      }
-
-      &-img {
-        object-fit: cover;
       }
     }
 
